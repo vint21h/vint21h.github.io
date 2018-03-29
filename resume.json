@@ -1,0 +1,329 @@
+{
+  "basics": {
+    "name": "Alexei Andrushievich",
+    "label": "Python/Django developer",
+    "email": "vint21h@vint21h.pp.ua",
+    "location": {
+      "countryCode": "UA"
+    }
+  },
+  "work": [
+    {
+      "company": "DCOD",
+      "position": "Python developer",
+      "website": "http://d-cod.com/",
+      "startDate": "2011-10-01"
+    },
+    {
+      "company": "ФПТП \"ДРФЦ\"",
+      "position": "System administrator",
+      "startDate": "2010-11-01",
+      "endDate": "2011-08-01"
+    },
+    {
+      "company": "ООО \"Норма-Пресс\"",
+      "position": "System administrator",
+      "startDate": "2009-10-01",
+      "endDate": "2010-11-01"
+    },
+    {
+      "company": "ООО \"Информбюро\"",
+      "position": "Perl developer",
+      "startDate": "2009-10-01",
+      "endDate": "2010-11-01"
+    },
+    {
+      "company": "ООО \"Донбасс Он-Лайн\"",
+      "position": "System administrator",
+      "startDate": "2008-08-01",
+      "endDate": "2009-04-01"
+    },
+    {
+      "company": "ООО \"Алекс Восток\"",
+      "position": "System administrator",
+      "startDate": "2007-08-01",
+      "endDate": "2008-07-01"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Донецький Державний Інститут Штучного Інтелекту",
+      "startDate": "2004-01-01",
+      "endDate": "2006-01-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python"
+    },
+    {
+      "name": "PostgreSQL"
+    },
+    {
+      "name": "Perl"
+    },
+    {
+      "name": "Django"
+    },
+    {
+      "name": "Linux"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "CentOS"
+    },
+    {
+      "name": "Fedora"
+    },
+    {
+      "name": "Nagios"
+    },
+    {
+      "name": "Subversion"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "MySQL"
+    },
+    {
+      "name": "SQL"
+    },
+    {
+      "name": "Backbone.js"
+    },
+    {
+      "name": "Underscore.js"
+    },
+    {
+      "name": "Redis"
+    },
+    {
+      "name": "Memcached"
+    },
+    {
+      "name": "Celery"
+    },
+    {
+      "name": "Nginx"
+    },
+    {
+      "name": "JSON"
+    },
+    {
+      "name": "RabbitMQ"
+    },
+    {
+      "name": "Amazon Web Services (AWS)"
+    },
+    {
+      "name": "Newrelic"
+    },
+    {
+      "name": "Highcharts"
+    },
+    {
+      "name": "jQuery"
+    },
+    {
+      "name": "PHP"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "AJAX"
+    },
+    {
+      "name": "XML"
+    },
+    {
+      "name": "jQuery UI"
+    },
+    {
+      "name": "Google Calendar API"
+    },
+    {
+      "name": "Sentry"
+    },
+    {
+      "name": "Google Maps API"
+    },
+    {
+      "name": "pnp4nagios"
+    },
+    {
+      "name": "Ext JS"
+    },
+    {
+      "name": "XML-RPC"
+    },
+    {
+      "name": "GTFS"
+    },
+    {
+      "name": "REST"
+    },
+    {
+      "name": "Remote Work"
+    },
+    {
+      "name": "Ansible"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Limited working proficiency"
+    },
+    {
+      "language": "Ukrainian",
+      "fluency": "Native or bilingual proficiency"
+    }
+  ],
+  "projects": [
+    {
+      "name": "django-opensearch",
+      "startDate": "2014-07-01",
+      "summary": "Handle opensearch.xml for django.",
+      "url": "https://github.com/vint21h/django-opensearch/"
+    },
+    {
+      "name": "GrainUkraine",
+      "startDate": "2011-10-01",
+      "summary": "",
+      "url": "http://www.grainukraine.com/"
+    },
+    {
+      "name": "django-po2xls",
+      "startDate": "2013-06-01",
+      "summary": "Convert gettext .po files to .xls",
+      "url": "https://github.com/vint21h/django-po2xls/"
+    },
+    {
+      "name": "nagios-check-hddtemp",
+      "startDate": "2011-09-01",
+      "summary": "Check HDD temperature Nagios plugin",
+      "url": "https://github.com/vint21h/nagios-check-hddtemp/"
+    },
+    {
+      "name": "nagios-notification-jabber",
+      "startDate": "2012-04-01",
+      "summary": "Notifications via jabber Nagios plugin",
+      "url": "https://github.com/vint21h/nagios-notification-jabber/"
+    },
+    {
+      "name": "nagios-notification-google-calendar",
+      "startDate": "2013-01-01",
+      "summary": "Notifications via Google Calendar Nagios plugin",
+      "url": "https://github.com/vint21h/nagios-notification-google-calendar/"
+    },
+    {
+      "name": "DioraShop",
+      "startDate": "2012-11-01",
+      "summary": "Handiwork commodities online shop",
+      "url": "http://www.diorashop.com/",
+      "endDate": "2013-09-01"
+    },
+    {
+      "name": "bstRating",
+      "startDate": "2013-08-01",
+      "summary": "Free companies catalog/rating",
+      "url": "http://www.bstrating.com/"
+    },
+    {
+      "name": "django-xls2po",
+      "startDate": "2014-01-01",
+      "summary": "django-xls2po is a django management command to convert django-po2xls generated .xls files to .po files",
+      "url": "https://github.com/vint21h/django-xls2po/"
+    },
+    {
+      "name": "FRB",
+      "startDate": "2013-10-01",
+      "summary": "FINROSTBANK official site",
+      "url": "http://www.frb.com.ua/"
+    },
+    {
+      "name": "anyfoodanyfeed",
+      "startDate": "2014-03-01",
+      "summary": "",
+      "url": "http://www.anyfoodanyfeed.com/"
+    },
+    {
+      "name": "AgroCharts",
+      "startDate": "2013-12-01",
+      "summary": "Increase the information content and traffic to your website by placing on it the latest data of USDA reports, foreign trade and futures. Learn how to get the embed code for your site...",
+      "url": "http://www.agrocharts.com/en/"
+    },
+    {
+      "name": "AgroChart",
+      "startDate": "2012-04-01",
+      "summary": "AgroChart - Prices. Trading. Balances. Statistics. News. Forecasts.",
+      "url": "http://www.agrochart.com/"
+    },
+    {
+      "name": "redactor-plugins-lineheight",
+      "startDate": "2014-10-01",
+      "summary": "redactor-plugins-lineheight is a plugin for Redactor Text Editor (http://imperavi.com/redactor/) to set selected text line height",
+      "url": "https://github.com/vint21h/redactor-plugins-lineheight/"
+    },
+    {
+      "name": "DCOD",
+      "startDate": "2013-04-01",
+      "summary": "DCOD site",
+      "url": "http://www.d-cod.com/"
+    },
+    {
+      "name": "nagios-check-supervisord",
+      "startDate": "2015-03-01",
+      "summary": "Check supervisord programs status Nagios plugin",
+      "url": "https://github.com/vint21h/nagios-check-supervisord/"
+    },
+    {
+      "name": "django-djcopyright",
+      "startDate": "2015-05-01",
+      "summary": "Django reusable app to show pretty formatted copyright years",
+      "url": "https://github.com/vint21h/django-djcopyright/"
+    },
+    {
+      "name": "Van #1",
+      "startDate": "2017-03-01",
+      "summary": "Van #1 - real coffee-rooms and shops on wheels, where it is comfortable to cook and to sell. This is a real catch for those who are willing to make their business profitable.",
+      "url": "http://www.van1.eu/"
+    },
+    {
+      "name": "django-simple-help",
+      "startDate": "2015-09-01",
+      "summary": "Django reusable application providing page help",
+      "url": "https://github.com/DCOD-OpenSource/django-simple-help/"
+    },
+    {
+      "name": "django-project-version",
+      "startDate": "206-02-01",
+      "summary": "Django reusable app to show your project version",
+      "url": "https://github.com/DCOD-OpenSource/django-project-version/"
+    },
+
+    {
+      "name": "django-messages-to-bootstrap-notify",
+      "startDate": "2017-05-01",
+      "summary": "Show django messages using bootstrap-notify",
+      "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/"
+    },
+    {
+      "name": "bootstrap-notify-simple-wrapper",
+      "startDate": "2017-05-01",
+      "summary": "Simple wrapper around bootstrap-notify (https://github.com/mouse0270/bootstrap-notify/) to make your life easier.",
+      "url": "https://github.com/DCOD-OpenSource/bootstrap-notify-simple-wrapper/"
+    },
+    {
+      "name": "django-read-only-admin",
+      "startDate": "2017-05-01",
+      "summary": "Really full django read only admin implementation",
+      "url": "https://github.com/vint21h/django-read-only-admin/"
+    }
+  ]
+}
