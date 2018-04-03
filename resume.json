@@ -175,6 +175,15 @@
     },
     {
       "name": "Android"
+    },
+    {
+      "name": "Java"
+    },
+    {
+      "name": "Solidity"
+    },
+    {
+      "name": "Web3"
     }
   ],
   "languages": [
