@@ -204,7 +204,7 @@
     {
       "name": "django-opensearch",
       "startDate": "2014-07-01",
-      "summary": "Handle opensearch.xml for django.",
+      "summary": "Handle opensearch.xml for django",
       "url": "https://github.com/vint21h/django-opensearch/"
     },
     {
@@ -325,7 +325,6 @@
       "summary": "Django reusable app to show your project version",
       "url": "https://github.com/DCOD-OpenSource/django-project-version/"
     },
-
     {
       "name": "django-messages-to-bootstrap-notify",
       "startDate": "2017-05-01",
@@ -343,6 +342,12 @@
       "startDate": "2017-05-01",
       "summary": "Really full django read only admin implementation",
       "url": "https://github.com/vint21h/django-read-only-admin/"
+    },
+    {
+      "name": "django-humans-txt",
+      "startDate": "2018-09-01",
+      "summary": "Handle humans.txt for django",
+      "url": "https://github.com/vint21h/django-humans-txt/"
     }
   ]
 }
