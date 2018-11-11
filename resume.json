@@ -204,63 +204,63 @@
     {
       "name": "django-opensearch",
       "startDate": "2014-07-01",
-      "summary": "Handle opensearch.xml for django",
+      "summary": "Handle opensearch.xml for django.",
       "url": "https://github.com/vint21h/django-opensearch/"
     },
     {
       "name": "GrainUkraine",
       "startDate": "2011-10-01",
-      "summary": "Grain Ukraine - modern bulletin board for ukrainian suppliers of agricultural commodities and services",
+      "summary": "Grain Ukraine - modern bulletin board for ukrainian suppliers of agricultural commodities and services.",
       "url": "http://www.grainukraine.com/"
     },
     {
       "name": "django-po2xls",
       "startDate": "2013-06-01",
-      "summary": "Convert gettext .po files to .xls",
+      "summary": "Convert gettext .po files to .xls.",
       "url": "https://github.com/vint21h/django-po2xls/"
     },
     {
       "name": "nagios-check-hddtemp",
       "startDate": "2011-09-01",
-      "summary": "Check HDD temperature Nagios plugin",
+      "summary": "Check HDD temperature Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-check-hddtemp/"
     },
     {
       "name": "nagios-notification-jabber",
       "startDate": "2012-04-01",
-      "summary": "Notifications via jabber Nagios plugin",
+      "summary": "Notifications via jabber Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-notification-jabber/"
     },
     {
       "name": "nagios-notification-google-calendar",
       "startDate": "2013-01-01",
-      "summary": "Notifications via Google Calendar Nagios plugin",
+      "summary": "Notifications via Google Calendar Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-notification-google-calendar/"
     },
     {
       "name": "DioraShop",
       "startDate": "2012-11-01",
-      "summary": "Handiwork commodities online shop",
+      "summary": "Handiwork commodities online shop.",
       "url": "http://www.diorashop.com/",
       "endDate": "2013-09-01"
     },
     {
       "name": "bstRating",
       "startDate": "2013-08-01",
-      "summary": "Free companies catalog/rating",
+      "summary": "Free companies catalog/rating.",
       "url": "http://www.bstrating.com/",
       "endDate": "2014-09-01"
     },
     {
       "name": "django-xls2po",
       "startDate": "2014-01-01",
-      "summary": "django-xls2po is a django management command to convert django-po2xls generated .xls files to .po files",
+      "summary": "django-xls2po is a django management command to convert django-po2xls generated .xls files to .po files.",
       "url": "https://github.com/vint21h/django-xls2po/"
     },
     {
       "name": "FRB",
       "startDate": "2013-10-01",
-      "summary": "FINROSTBANK official site",
+      "summary": "FINROSTBANK official site.",
       "url": "http://www.frb.com.ua/",
       "endDate": "2015-11-01"
     },
@@ -286,47 +286,48 @@
     {
       "name": "redactor-plugins-lineheight",
       "startDate": "2014-10-01",
-      "summary": "redactor-plugins-lineheight is a plugin for Redactor Text Editor (http://imperavi.com/redactor/) to set selected text line height",
+      "summary": "redactor-plugins-lineheight is a plugin for Redactor Text Editor (http://imperavi.com/redactor/) to set selected text line height.",
       "url": "https://github.com/vint21h/redactor-plugins-lineheight/"
     },
     {
       "name": "DCOD",
       "startDate": "2013-04-01",
-      "summary": "DCOD site",
+      "summary": "DCOD site.",
       "url": "http://www.d-cod.com/"
     },
     {
       "name": "nagios-check-supervisord",
       "startDate": "2015-03-01",
-      "summary": "Check supervisord programs status Nagios plugin",
+      "summary": "Check supervisord programs status Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-check-supervisord/"
     },
     {
       "name": "django-djcopyright",
       "startDate": "2015-05-01",
-      "summary": "Django reusable app to show pretty formatted copyright years",
+      "summary": "Django reusable app to show pretty formatted copyright years.",
       "url": "https://github.com/vint21h/django-djcopyright/"
     },
     {
       "name": "Van #1",
       "startDate": "2017-03-01",
       "summary": "Van #1 - real coffee-rooms and shops on wheels, where it is comfortable to cook and to sell. This is a real catch for those who are willing to make their business profitable.",
-      "url": "http://www.van1.eu/"
+      "url": "http://www.van1.eu/",
+      "endDate": "2018-08-01"
     },
     {
       "name": "django-simple-help",
       "startDate": "2015-09-01",
-      "summary": "Django reusable application providing page help",
+      "summary": "Django reusable application providing page help.",
       "url": "https://github.com/DCOD-OpenSource/django-simple-help/"
     },
     {
       "name": "django-project-version",
-      "startDate": "206-02-01",
-      "summary": "Django reusable app to show your project version",
+      "startDate": "2016-02-01",
+      "summary": "Django reusable app to show your project version.",
       "url": "https://github.com/DCOD-OpenSource/django-project-version/"
     },
     {
-      "name": "django-messages-to-bootstrap-notify",
+      "name": "django-messages-to-bootstrap-notify.",
       "startDate": "2017-05-01",
       "summary": "Show django messages using bootstrap-notify",
       "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/"
@@ -340,7 +341,7 @@
     {
       "name": "django-read-only-admin",
       "startDate": "2017-05-01",
-      "summary": "Really full django read only admin implementation",
+      "summary": "Really full django read only admin implementation.",
       "url": "https://github.com/vint21h/django-read-only-admin/"
     },
     {
@@ -348,6 +349,12 @@
       "startDate": "2018-09-01",
       "summary": "Handle humans.txt for django",
       "url": "https://github.com/vint21h/django-humans-txt/"
+    },
+    {
+      "name": "EterArt",
+      "startDate": "2018-01-01",
+      "summary": "EterArt - a unique blockchain platform for collecting and trading digital versions of art objects.",
+      "url": "https://www.eterart.com/"
     }
   ]
 }

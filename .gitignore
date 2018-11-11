@@ -17,6 +17,7 @@
 *sublime*
 *geany*
 *komodo*
+.vscode/*
 .env/*
 build/*
 dist/*
