@@ -356,6 +356,12 @@
       "startDate": "2018-01-01",
       "summary": "EterArt - a unique blockchain platform for collecting and trading digital versions of art objects.",
       "url": "https://www.eterart.com/"
+    },
+    {
+      "name": "BSTfeed",
+      "startDate": "2017-12-01",
+      "summary": "BSTfeed.com - your best independent source for grains, oilseeds and feedstuffs markets data.",
+      "url": "https://www.bstfeed.com/"
     }
   ]
 }
