@@ -212,7 +212,8 @@
       "name": "GrainUkraine",
       "startDate": "2011-10-01",
       "summary": "Grain Ukraine - modern bulletin board for ukrainian suppliers of agricultural commodities and services.",
-      "url": "http://www.grainukraine.com/"
+      "url": "http://www.grainukraine.com/",
+      "endDate": "2019-05-01"
     },
     {
       "name": "django-po2xls",
@@ -269,7 +270,8 @@
       "name": "anyfoodanyfeed",
       "startDate": "2014-03-01",
       "summary": "Prevailing news resource of an agrarian theme. One of the best in Ukraine.",
-      "url": "http://www.anyfoodanyfeed.com/"
+      "url": "http://www.anyfoodanyfeed.com/",
+      "endDate": "2019-05-01"
     },
     {
       "name": "AgroCharts",
