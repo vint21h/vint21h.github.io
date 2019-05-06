@@ -1,6 +1,7 @@
 /* vint21h.github.io */
 /* static/styles.css */
 
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300|Oswald:300);
 
 body {
@@ -80,6 +81,12 @@ section#id-skills .details {
 .website {
     line-height: 18px;
 }
+
+.company {
+    font-size: 15px;
+    line-height: 24px;
+}
+
 
 /* Fix for print */
 @media print {
