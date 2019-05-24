@@ -343,28 +343,28 @@
       "startDate": "2015-09-01",
       "summary": "Django reusable application providing page help.",
       "url": "https://github.com/DCOD-OpenSource/django-simple-help/",
-      "company": "DCOD"
+      "company": ["DCOD", "Open Source", ]
     },
     {
       "name": "django-project-version",
       "startDate": "2016-02-01",
       "summary": "Django reusable app to show your project version.",
       "url": "https://github.com/DCOD-OpenSource/django-project-version/",
-      "company": "DCOD"
+      "company": ["DCOD", "Open Source", ]
     },
     {
       "name": "django-messages-to-bootstrap-notify.",
       "startDate": "2017-05-01",
       "summary": "Show django messages using bootstrap-notify",
       "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/",
-      "company": "DCOD"
+      "company": ["DCOD", "Open Source", ]
     },
     {
       "name": "bootstrap-notify-simple-wrapper",
       "startDate": "2017-05-01",
       "summary": "Simple wrapper around bootstrap-notify (https://github.com/mouse0270/bootstrap-notify/) to make your life easier.",
       "url": "https://github.com/DCOD-OpenSource/bootstrap-notify-simple-wrapper/",
-      "company": "DCOD"
+      "company": ["DCOD", "Open Source", ]
     },
     {
       "name": "django-read-only-admin",
