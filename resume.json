@@ -13,7 +13,8 @@
       "company": "DCOD",
       "position": "Python developer",
       "website": "http://d-cod.com/",
-      "startDate": "2011-10-01"
+      "startDate": "2011-10-01",
+      "endDate": "2019-05-01"
     },
     {
       "company": "ФПТП \"ДРФЦ\"",
@@ -300,6 +301,7 @@
       "startDate": "2012-04-01",
       "summary": "AgroChart - Prices. Trading. Balances. Statistics. News. Forecasts.",
       "url": "http://www.agrochart.com/",
+      "endDate": "2019-05-01",
       "company": "DCOD"
     },
     {
@@ -314,6 +316,7 @@
       "startDate": "2013-04-01",
       "summary": "DCOD site.",
       "url": "http://www.d-cod.com/",
+      "endDate": "2019-05-01",
       "company": "DCOD"
     },
     {
@@ -343,6 +346,7 @@
       "startDate": "2015-09-01",
       "summary": "Django reusable application providing page help.",
       "url": "https://github.com/DCOD-OpenSource/django-simple-help/",
+      "endDate": "2019-05-01",
       "company": ["DCOD", "Open Source", ]
     },
     {
@@ -350,6 +354,7 @@
       "startDate": "2016-02-01",
       "summary": "Django reusable app to show your project version.",
       "url": "https://github.com/DCOD-OpenSource/django-project-version/",
+      "endDate": "2019-05-01",
       "company": ["DCOD", "Open Source", ]
     },
     {
@@ -357,6 +362,7 @@
       "startDate": "2017-05-01",
       "summary": "Show django messages using bootstrap-notify",
       "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/",
+      "endDate": "2019-05-01",
       "company": ["DCOD", "Open Source", ]
     },
     {
@@ -364,6 +370,7 @@
       "startDate": "2017-05-01",
       "summary": "Simple wrapper around bootstrap-notify (https://github.com/mouse0270/bootstrap-notify/) to make your life easier.",
       "url": "https://github.com/DCOD-OpenSource/bootstrap-notify-simple-wrapper/",
+      "endDate": "2019-05-01",
       "company": ["DCOD", "Open Source", ]
     },
     {
@@ -385,6 +392,7 @@
       "startDate": "2018-01-01",
       "summary": "EterArt - a unique blockchain platform for collecting and trading digital versions of art objects.",
       "url": "https://www.eterart.com/",
+      "endDate": "2019-05-01",
       "company": "DCOD"
     },
     {
@@ -392,6 +400,7 @@
       "startDate": "2017-12-01",
       "summary": "BSTfeed.com - your best independent source for grains, oilseeds and feedstuffs markets data.",
       "url": "https://www.bstfeed.com/",
+      "endDate": "2019-05-01",
       "company": "DCOD"
     }
   ]
