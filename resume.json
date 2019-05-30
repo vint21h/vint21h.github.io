@@ -17,31 +17,31 @@
       "endDate": "2019-05-01"
     },
     {
-      "company": "ФПТП \"ДРФЦ\"",
+      "company": "ФПТП \"ДРФЦ\" (FPTP \"DRFC\")",
       "position": "System administrator",
       "startDate": "2010-11-01",
       "endDate": "2011-08-01"
     },
     {
-      "company": "ООО \"Норма-Пресс\"",
+      "company": "ООО \"Норма-Пресс\" (\"Norma-Press\" Ltd.)",
       "position": "System administrator",
       "startDate": "2009-10-01",
       "endDate": "2010-11-01"
     },
     {
-      "company": "ООО \"Информбюро\"",
+      "company": "ООО \"Информбюро\" (\"InformBureau\" Ltd.)",
       "position": "Perl developer",
       "startDate": "2009-10-01",
       "endDate": "2010-11-01"
     },
     {
-      "company": "ООО \"Донбасс Он-Лайн\"",
+      "company": "ООО \"Донбасс Он-Лайн\" (\"Donbass-Online\" Ltd.)",
       "position": "System administrator",
       "startDate": "2008-08-01",
       "endDate": "2009-04-01"
     },
     {
-      "company": "ООО \"Алекс Восток\"",
+      "company": "ООО \"Алекс Восток\" (\"Alex-Vostok\" Ltd.)",
       "position": "System administrator",
       "startDate": "2007-08-01",
       "endDate": "2008-07-01"
@@ -49,7 +49,7 @@
   ],
   "education": [
     {
-      "institution": "Донецький Державний Інститут Штучного Інтелекту",
+      "institution": "Донецький Державний Інститут Штучного Інтелекту (State Institute of Artificial Intelligence)",
       "startDate": "2004-01-01",
       "endDate": "2006-01-01"
     }
@@ -347,7 +347,7 @@
       "summary": "Django reusable application providing page help.",
       "url": "https://github.com/DCOD-OpenSource/django-simple-help/",
       "endDate": "2019-05-01",
-      "company": ["DCOD", "Open Source", ]
+      "company": ["DCOD", "Open Source" ]
     },
     {
       "name": "django-project-version",
@@ -355,7 +355,7 @@
       "summary": "Django reusable app to show your project version.",
       "url": "https://github.com/DCOD-OpenSource/django-project-version/",
       "endDate": "2019-05-01",
-      "company": ["DCOD", "Open Source", ]
+      "company": ["DCOD", "Open Source" ]
     },
     {
       "name": "django-messages-to-bootstrap-notify.",
@@ -363,7 +363,7 @@
       "summary": "Show django messages using bootstrap-notify",
       "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/",
       "endDate": "2019-05-01",
-      "company": ["DCOD", "Open Source", ]
+      "company": ["DCOD", "Open Source" ]
     },
     {
       "name": "bootstrap-notify-simple-wrapper",
@@ -371,7 +371,7 @@
       "summary": "Simple wrapper around bootstrap-notify (https://github.com/mouse0270/bootstrap-notify/) to make your life easier.",
       "url": "https://github.com/DCOD-OpenSource/bootstrap-notify-simple-wrapper/",
       "endDate": "2019-05-01",
-      "company": ["DCOD", "Open Source", ]
+      "company": ["DCOD", "Open Source" ]
     },
     {
       "name": "django-read-only-admin",
