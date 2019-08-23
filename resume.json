@@ -388,6 +388,13 @@
       "company": "Open Source"
     },
     {
+      "name": "django-xicon",
+      "startDate": "2019-08-01",
+      "summary": "Handle modern bunch of site icons for django",
+      "url": "https://github.com/vint21h/django-xicon/",
+      "company": "Open Source"
+    },
+    {
       "name": "EterArt",
       "startDate": "2018-01-01",
       "summary": "EterArt - a unique blockchain platform for collecting and trading digital versions of art objects.",
