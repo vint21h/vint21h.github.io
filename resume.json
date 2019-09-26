@@ -189,6 +189,36 @@
     },
     {
       "name": "gulp.js"
+    },
+    {
+      "name": "SCSS"
+    },
+    {
+      "name": "GraphQL"
+    },
+    {
+      "name": "WebSockets"
+    },
+    {
+      "name": "Unit Tests"
+    },
+    {
+      "name": "Integration Tests"
+    },
+    {
+      "name": "Pushpin"
+    },
+    {
+      "name": "HAProxy"
+    },
+    {
+      "name": "Docker"
+    },
+    {
+      "name": "Vagrant"
+    },
+    {
+      "name": "consul-templaterb"
     }
   ],
   "languages": [
