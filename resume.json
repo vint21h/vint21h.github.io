@@ -321,7 +321,7 @@
       "summary": "DCOD site.",
       "url": "http://www.d-cod.com/",
       "company": ["DCOD"],
-      "technologies": ["Python", "Django", "Cactus", "JavaScript", "JQuery", "HTML", "CSS", "AWS"]
+      "technologies": ["Python", "Django", "Cactus", "JavaScript", "JQuery", "HTML", "CSS", "Ansible", "AWS"]
     },
     {
       "name": "django-po2xls",
