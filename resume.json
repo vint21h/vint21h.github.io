@@ -348,7 +348,7 @@
       "summary": "FINROSTBANK official site.",
       "url": "http://www.frb.com.ua/",
       "company": ["DCOD"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "AWS"]
+      "technologies": ["Python", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "AWS"]
     },
     {
       "name": "AgroCharts",
@@ -474,7 +474,7 @@
       "summary": "BSTfeed.com - your best independent source for grains, oilseeds and feedstuffs markets data.",
       "url": "https://www.bstfeed.com/",
       "company": ["DCOD"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Ansible", "AWS"]
     },
     {
       "name": "EterArt",
