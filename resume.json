@@ -10,38 +10,55 @@
   },
   "work": [
     {
-      "company": "DCOD",
+      "company": {
+        "original": "DCOD"
+      },
       "position": "Python developer",
       "website": "http://d-cod.com/",
       "startDate": "2011-10-01",
       "endDate": "2019-05-01"
     },
     {
-      "company": "ФПТП \"ДРФЦ\" (FPTP \"DRFC\")",
+      "company": {
+        "original": "ФПТП \"ДРФЦ\"",
+        "en": "FPTP \"DRFC\""
+      },
       "position": "System administrator",
       "startDate": "2010-11-01",
       "endDate": "2011-08-01"
     },
     {
-      "company": "ООО \"Норма-Пресс\" (\"Norma-Press\" Ltd.)",
+      "company": {
+        "original": "ООО \"Норма-Пресс\"",
+        "en": "\"Norma-Press\" Ltd."
+      },
       "position": "System administrator",
       "startDate": "2009-10-01",
       "endDate": "2010-11-01"
     },
     {
-      "company": "ООО \"Информбюро\" (\"InformBureau\" Ltd.)",
+      "company": {
+        "original": "ООО \"Информбюро\"",
+        "en": "\"InformBureau\" Ltd."
+      },
       "position": "Perl developer",
       "startDate": "2009-10-01",
       "endDate": "2010-11-01"
     },
     {
-      "company": "ООО \"Донбасс Он-Лайн\" (\"Donbass-Online\" Ltd.)",
+      "company": {
+        "original": "ООО \"Донбасс Он-Лайн\"",
+        "en": "\"Donbass-Online\" Ltd."
+      },
       "position": "System administrator",
       "startDate": "2008-08-01",
       "endDate": "2009-04-01"
     },
     {
-      "company": "ООО \"Алекс Восток\" (\"Alex-Vostok\" Ltd.)",
+      "company": {
+        "original": "ООО \"Алекс Восток\"",
+        "en": "\"Alex-Vostok\" Ltd."
+      },
       "position": "System administrator",
       "startDate": "2007-08-01",
       "endDate": "2008-07-01"
@@ -49,7 +66,10 @@
   ],
   "education": [
     {
-      "institution": "Донецький Державний Інститут Штучного Інтелекту (State Institute of Artificial Intelligence)",
+      "institution": {
+        "original": "Донецький Державний Інститут Штучного Інтелекту",
+        "en": "State Institute of Artificial Intelligence"
+      },
       "startDate": "2004-01-01",
       "endDate": "2006-01-01"
     }
@@ -201,6 +221,9 @@
     },
     {
       "name": "Unit Tests"
+    },
+    {
+      "name": "Functional Tests"
     },
     {
       "name": "Integration Tests"
