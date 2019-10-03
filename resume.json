@@ -11,7 +11,8 @@
   "work": [
     {
       "company": {
-        "original": "DCOD"
+        "original": "DCOD",
+        "en": "DCOD"
       },
       "position": "Python developer",
       "website": "http://d-cod.com/",
@@ -260,208 +261,220 @@
   ],
   "projects": [
     {
-      "name": "django-opensearch",
-      "startDate": "2014-07-01",
-      "summary": "Handle opensearch.xml for django.",
-      "url": "https://github.com/vint21h/django-opensearch/",
-      "company": "Open Source"
-    },
-    {
-      "name": "GrainUkraine",
-      "startDate": "2011-10-01",
-      "summary": "Grain Ukraine - modern bulletin board for ukrainian suppliers of agricultural commodities and services.",
-      "url": "http://www.grainukraine.com/",
-      "endDate": "2019-05-01",
-      "company": "DCOD"
-    },
-    {
-      "name": "django-po2xls",
-      "startDate": "2013-06-01",
-      "summary": "Convert gettext .po files to .xls.",
-      "url": "https://github.com/vint21h/django-po2xls/",
-      "company": "Open Source"
+      "name": "nagios-notification-jabber",
+      "startDate": "2011-03-01",
+      "endDate": null,
+      "summary": "Notifications via jabber Nagios plugin.",
+      "url": "https://github.com/vint21h/nagios-notification-jabber/",
+      "company": ["Open Source"]
     },
     {
       "name": "nagios-check-hddtemp",
       "startDate": "2011-09-01",
+      "endDate": null,
       "summary": "Check HDD temperature Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-check-hddtemp/",
-      "company": "Open Source"
+      "company": ["Open Source"]
     },
     {
-      "name": "nagios-notification-jabber",
-      "startDate": "2012-04-01",
-      "summary": "Notifications via jabber Nagios plugin.",
-      "url": "https://github.com/vint21h/nagios-notification-jabber/",
-      "company": "Open Source"
-    },
-    {
-      "name": "nagios-notification-google-calendar",
-      "startDate": "2013-01-01",
-      "summary": "Notifications via Google Calendar Nagios plugin.",
-      "url": "https://github.com/vint21h/nagios-notification-google-calendar/",
-      "company": "Open Source"
-    },
-    {
-      "name": "DioraShop",
-      "startDate": "2012-11-01",
-      "summary": "Handiwork commodities online shop.",
-      "url": "http://www.diorashop.com/",
-      "endDate": "2013-09-01",
-      "company": "Freelance"
-    },
-    {
-      "name": "bstRating",
-      "startDate": "2013-08-01",
-      "summary": "Free companies catalog/rating.",
-      "url": "http://www.bstrating.com/",
-      "endDate": "2014-09-01",
-      "company": "DCOD"
-    },
-    {
-      "name": "django-xls2po",
-      "startDate": "2014-01-01",
-      "summary": "django-xls2po is a django management command to convert django-po2xls generated .xls files to .po files.",
-      "url": "https://github.com/vint21h/django-xls2po/",
-      "company": "Open Source"
-    },
-    {
-      "name": "FRB",
-      "startDate": "2013-10-01",
-      "summary": "FINROSTBANK official site.",
-      "url": "http://www.frb.com.ua/",
-      "endDate": "2015-11-01",
-      "company": "DCOD"
-    },
-    {
-      "name": "anyfoodanyfeed",
-      "startDate": "2014-03-01",
-      "summary": "Prevailing news resource of an agrarian theme. One of the best in Ukraine.",
-      "url": "http://www.anyfoodanyfeed.com/",
+      "name": "GrainUkraine",
+      "startDate": "2011-10-01",
       "endDate": "2019-05-01",
-      "company": "DCOD"
-    },
-    {
-      "name": "AgroCharts",
-      "startDate": "2013-12-01",
-      "summary": "Increase the information content and traffic to your website by placing on it the latest data of USDA reports, foreign trade and futures. Learn how to get the embed code for your site...",
-      "url": "http://www.agrocharts.com/en/",
-      "endDate": "2016-10-01",
-      "company": "DCOD"
+      "summary": "Grain Ukraine - modern bulletin board for ukrainian suppliers of agricultural commodities and services.",
+      "url": "http://www.grainukraine.com/",
+      "company": ["DCOD"]
     },
     {
       "name": "AgroChart",
       "startDate": "2012-04-01",
+      "endDate": "2019-05-01",
       "summary": "AgroChart - Prices. Trading. Balances. Statistics. News. Forecasts.",
       "url": "http://www.agrochart.com/",
-      "endDate": "2019-05-01",
-      "company": "DCOD"
+      "company": ["DCOD"]
     },
     {
-      "name": "redactor-plugins-lineheight",
-      "startDate": "2014-10-01",
-      "summary": "redactor-plugins-lineheight is a plugin for Redactor Text Editor (http://imperavi.com/redactor/) to set selected text line height.",
-      "url": "https://github.com/vint21h/redactor-plugins-lineheight/",
-      "company": "Open Source"
+      "name": "DioraShop",
+      "startDate": "2012-11-01",
+      "endDate": "2013-09-01",
+      "summary": "Handiwork commodities online shop.",
+      "url": "http://www.diorashop.com/",
+      "company": ["Freelance"]
+    },
+    {
+      "name": "nagios-notification-google-calendar",
+      "startDate": "2013-01-01",
+      "endDate": null,
+      "summary": "Notifications via Google Calendar Nagios plugin.",
+      "url": "https://github.com/vint21h/nagios-notification-google-calendar/",
+      "company": ["Open Source"]
     },
     {
       "name": "DCOD",
       "startDate": "2013-04-01",
+      "endDate": "2019-05-01",
       "summary": "DCOD site.",
       "url": "http://www.d-cod.com/",
+      "company": ["DCOD"]
+    },
+    {
+      "name": "django-po2xls",
+      "startDate": "2013-06-01",
+      "endDate": null,
+      "summary": "Convert gettext .po files to .xls.",
+      "url": "https://github.com/vint21h/django-po2xls/",
+      "company": ["Open Source"]
+    },
+    {
+      "name": "bstRating",
+      "startDate": "2013-08-01",
+      "endDate": "2014-09-01",
+      "summary": "Free companies catalog/rating.",
+      "url": "http://www.bstrating.com/",
+      "company": ["DCOD"]
+    },
+    {
+      "name": "FRB",
+      "startDate": "2013-10-01",
+      "endDate": "2015-11-01",
+      "summary": "FINROSTBANK official site.",
+      "url": "http://www.frb.com.ua/",
+      "company": ["DCOD"]
+    },
+    {
+      "name": "AgroCharts",
+      "startDate": "2013-12-01",
+      "endDate": "2016-10-01",
+      "summary": "Increase the information content and traffic to your website by placing on it the latest data of USDA reports, foreign trade and futures. Learn how to get the embed code for your site...",
+      "url": "http://www.agrocharts.com/en/",
+      "company": ["DCOD"]
+    },
+    {
+      "name": "django-xls2po",
+      "startDate": "2014-01-01",
+      "endDate": null,
+      "summary": "django-xls2po is a django management command to convert django-po2xls generated .xls files to .po files.",
+      "url": "https://github.com/vint21h/django-xls2po/",
+      "company": ["Open Source"]
+    },
+    {
+      "name": "anyfoodanyfeed",
+      "startDate": "2014-03-01",
       "endDate": "2019-05-01",
-      "company": "DCOD"
+      "summary": "Prevailing news resource of an agrarian theme. One of the best in Ukraine.",
+      "url": "http://www.anyfoodanyfeed.com/",
+      "company": ["DCOD"]
+    },
+    {
+      "name": "django-opensearch",
+      "startDate": "2014-07-01",
+      "endDate": null,
+      "summary": "Handle opensearch.xml for django.",
+      "url": "https://github.com/vint21h/django-opensearch/",
+      "company": ["Open Source"]
+    },
+    {
+      "name": "redactor-plugins-lineheight",
+      "startDate": "2014-10-01",
+      "endDate": null,
+      "summary": "redactor-plugins-lineheight is a plugin for Redactor Text Editor (http://imperavi.com/redactor/) to set selected text line height.",
+      "url": "https://github.com/vint21h/redactor-plugins-lineheight/",
+      "company": ["Open Source"]
     },
     {
       "name": "nagios-check-supervisord",
       "startDate": "2015-03-01",
+      "endDate": null,
       "summary": "Check supervisord programs status Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-check-supervisord/",
-      "company": "Open Source"
+      "company": ["Open Source"]
     },
     {
       "name": "django-djcopyright",
       "startDate": "2015-05-01",
+      "endDate": null,
       "summary": "Django reusable app to show pretty formatted copyright years.",
       "url": "https://github.com/vint21h/django-djcopyright/",
-      "company": "Open Source"
-    },
-    {
-      "name": "Van #1",
-      "startDate": "2017-03-01",
-      "summary": "Van #1 - real coffee-rooms and shops on wheels, where it is comfortable to cook and to sell. This is a real catch for those who are willing to make their business profitable.",
-      "url": "http://www.van1.eu/",
-      "endDate": "2018-08-01",
-      "company": "DCOD"
+      "company": ["Open Source"]
     },
     {
       "name": "django-simple-help",
       "startDate": "2015-09-01",
+      "endDate": "2019-05-01",
       "summary": "Django reusable application providing page help.",
       "url": "https://github.com/DCOD-OpenSource/django-simple-help/",
-      "endDate": "2019-05-01",
       "company": ["DCOD", "Open Source" ]
     },
     {
       "name": "django-project-version",
       "startDate": "2016-02-01",
+      "endDate": "2019-05-01",
       "summary": "Django reusable app to show your project version.",
       "url": "https://github.com/DCOD-OpenSource/django-project-version/",
-      "endDate": "2019-05-01",
       "company": ["DCOD", "Open Source" ]
+    },
+    {
+      "name": "Van #1",
+      "startDate": "2017-03-01",
+      "endDate": "2018-08-01",
+      "summary": "Van #1 - real coffee-rooms and shops on wheels, where it is comfortable to cook and to sell. This is a real catch for those who are willing to make their business profitable.",
+      "url": "http://www.van1.eu/",
+      "company": ["DCOD"]
     },
     {
       "name": "django-messages-to-bootstrap-notify.",
       "startDate": "2017-05-01",
+      "endDate": "2019-05-01",
       "summary": "Show django messages using bootstrap-notify",
       "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/",
-      "endDate": "2019-05-01",
       "company": ["DCOD", "Open Source" ]
     },
     {
       "name": "bootstrap-notify-simple-wrapper",
       "startDate": "2017-05-01",
+      "endDate": "2019-05-01",
       "summary": "Simple wrapper around bootstrap-notify (https://github.com/mouse0270/bootstrap-notify/) to make your life easier.",
       "url": "https://github.com/DCOD-OpenSource/bootstrap-notify-simple-wrapper/",
-      "endDate": "2019-05-01",
       "company": ["DCOD", "Open Source" ]
     },
     {
       "name": "django-read-only-admin",
       "startDate": "2017-05-01",
+      "endDate": null,
       "summary": "Really full django read only admin implementation.",
       "url": "https://github.com/vint21h/django-read-only-admin/",
-      "company": "Open Source"
-    },
-    {
-      "name": "django-humans-txt",
-      "startDate": "2018-09-01",
-      "summary": "Handle humans.txt for django",
-      "url": "https://github.com/vint21h/django-humans-txt/",
-      "company": "Open Source"
-    },
-    {
-      "name": "django-xicon",
-      "startDate": "2019-08-01",
-      "summary": "Handle modern bunch of site icons for django",
-      "url": "https://github.com/vint21h/django-xicon/",
-      "company": "Open Source"
-    },
-    {
-      "name": "EterArt",
-      "startDate": "2018-01-01",
-      "summary": "EterArt - a unique blockchain platform for collecting and trading digital versions of art objects.",
-      "url": "https://www.eterart.com/",
-      "endDate": "2019-05-01",
-      "company": "DCOD"
+      "company": ["Open Source"]
     },
     {
       "name": "BSTfeed",
       "startDate": "2017-12-01",
+      "endDate": "2019-05-01",
       "summary": "BSTfeed.com - your best independent source for grains, oilseeds and feedstuffs markets data.",
       "url": "https://www.bstfeed.com/",
+      "company": ["DCOD"]
+    },
+    {
+      "name": "EterArt",
+      "startDate": "2018-01-01",
       "endDate": "2019-05-01",
-      "company": "DCOD"
+      "summary": "EterArt - a unique blockchain platform for collecting and trading digital versions of art objects.",
+      "url": "https://www.eterart.com/",
+      "company": ["DCOD"]
+    },
+    {
+      "name": "django-humans-txt",
+      "startDate": "2018-09-01",
+      "endDate": null,
+      "summary": "Handle humans.txt for django",
+      "url": "https://github.com/vint21h/django-humans-txt/",
+      "company": ["Open Source"]
+    },
+    {
+      "name": "django-xicon",
+      "startDate": "2019-08-01",
+      "endDate": null,
+      "summary": "Handle modern bunch of site icons for django",
+      "url": "https://github.com/vint21h/django-xicon/",
+      "company": ["Open Source"]
     }
   ]
 }
