@@ -268,6 +268,7 @@
       "url": "https://github.com/vint21h/nagios-notification-jabber/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -278,6 +279,7 @@
       "url": "https://github.com/vint21h/nagios-check-hddtemp/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -288,7 +290,8 @@
       "url": "http://www.grainukraine.com/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
-      "technologies": ["Python", "Django", "JavaScript", "JQuery", "HTML", "CSS", "PostgreSQL", "Sphinx", "Memcached", "Redis", "Nginx", "Fabric", "AWS"]
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Frontend development", "Deploy development and implementation"],
+      "technologies": ["Python", "Django", "JavaScript", "JQuery", "HTML", "CSS", "PostgreSQL", "Sphinx", "Memcached", "Redis", "Nginx", "Fabric", "Salt Stack", "AWS"]
     },
     {
       "name": "AgroChart",
@@ -298,6 +301,7 @@
       "url": "http://www.agrochart.com/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Distributed data caching system architecture development and implementation", "Distributed cache invalidation system architecture development and implementation", "Frontend development", "Deploy development and implementation"],
       "technologies": ["Python", "Django", "Multithreading", "JavaScript", "JQuery", "Backbone", "ExtJS", "Anychart", "AmChart", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "MySQL", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Fabric", "Salt Stack", "Ansible", "AWS"]
     },
     {
@@ -308,6 +312,7 @@
       "url": "http://www.diorashop.com/",
       "company": ["Freelance"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -318,6 +323,7 @@
       "url": "https://github.com/vint21h/nagios-notification-google-calendar/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -328,6 +334,7 @@
       "url": "http://www.d-cod.com/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
+      "responsibilities": ["Page generation system development", "Frontend development", "Deploy development and implementation"],
       "technologies": ["Python", "Django", "Cactus", "JavaScript", "JQuery", "HTML", "CSS", "Ansible", "AWS"]
     },
     {
@@ -338,6 +345,7 @@
       "url": "https://github.com/vint21h/django-po2xls/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -348,7 +356,8 @@
       "url": "http://www.bstrating.com/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
-      "technologies": ["Python", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "PostgreSQL", "Memcached", "Redis", "Nginx", "Salt Stack", "AWS"]
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Frontend development", "Deploy development and implementation"],
+      "technologies": ["Python", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "PostgreSQL", "Memcached", "Redis", "Nginx", "AWS"]
     },
     {
       "name": "FRB",
@@ -358,6 +367,7 @@
       "url": "http://www.frb.com.ua/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Frontend development", "Deploy development and implementation"],
       "technologies": ["Python", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "AWS"]
     },
     {
@@ -368,6 +378,7 @@
       "url": "http://www.agrocharts.com/en/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Distributed data caching system architecture development and implementation", "Distributed cache invalidation system architecture development and implementation", "Frontend development", "Deploy development and implementation"],
       "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
     },
     {
@@ -378,6 +389,7 @@
       "url": "https://github.com/vint21h/django-xls2po/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -388,6 +400,7 @@
       "url": "http://www.anyfoodanyfeed.com/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Distributed data caching system architecture development and implementation", "Distributed cache invalidation system architecture development and implementation", "Frontend development", "Deploy development and implementation"],
       "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "Google Maps API", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
     },
     {
@@ -398,6 +411,7 @@
       "url": "https://github.com/vint21h/django-opensearch/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -408,6 +422,7 @@
       "url": "https://github.com/vint21h/redactor-plugins-lineheight/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -418,6 +433,7 @@
       "url": "https://github.com/vint21h/nagios-check-supervisord/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -428,6 +444,7 @@
       "url": "https://github.com/vint21h/django-djcopyright/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -438,6 +455,7 @@
       "url": "https://github.com/DCOD-OpenSource/django-simple-help/",
       "company": ["DCOD", "Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -448,6 +466,7 @@
       "url": "https://github.com/DCOD-OpenSource/django-project-version/",
       "company": ["DCOD", "Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -458,6 +477,7 @@
       "url": "http://www.van1.eu/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Third part services integration", "Frontend development", "Deploy development and implementation"],
       "technologies": ["Python", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "Celery", "RabbitMQ", "PostgreSQL", "Memcached", "Redis", "Nginx", "Ansible", "AWS"]
     },
     {
@@ -468,6 +488,7 @@
       "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/",
       "company": ["DCOD", "Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -478,6 +499,7 @@
       "url": "https://github.com/DCOD-OpenSource/bootstrap-notify-simple-wrapper/",
       "company": ["DCOD", "Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -488,6 +510,7 @@
       "url": "https://github.com/vint21h/django-read-only-admin/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -498,6 +521,7 @@
       "url": "https://www.bstfeed.com/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Distributed data caching system architecture development and implementation", "Distributed cache invalidation system architecture development and implementation", "Frontend development", "Deploy development and implementation"],
       "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Ansible", "AWS"]
     },
     {
@@ -508,6 +532,7 @@
       "url": "https://www.eterart.com/",
       "company": ["DCOD"],
       "role": "Python/Django developer",
+      "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Partial Ethereum contract development and deploy implementation", "Frontend development", "Deploy development and implementation"],
       "technologies": ["Python", "Multithreading", "Django", "JavaScript", "Webpack", "JQuery", "Backbone", "Web3", "HTML", "CSS", "SCSS", "Gulp", "Solidity", "Truffle", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Ethereum", "Nginx", "Ansible", "AWS"]
     {
       "name": "django-humans-txt",
@@ -517,6 +542,7 @@
       "url": "https://github.com/vint21h/django-humans-txt/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     },
     {
@@ -527,6 +553,7 @@
       "url": "https://github.com/vint21h/django-xicon/",
       "company": ["Open Source"],
       "role": null,
+      "responsibilities": null,
       "technologies": null
     }
   ]
