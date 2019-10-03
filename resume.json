@@ -294,7 +294,7 @@
       "summary": "AgroChart - Prices. Trading. Balances. Statistics. News. Forecasts.",
       "url": "http://www.agrochart.com/",
       "company": ["DCOD"],
-      "technologies": ["Python", "Django", "Multithreading", "JavaScript", "JQuery", "Backbone", "Anychart", "AmChart", "Highcharts", "HTML", "CSS", "SCSS", "Celery", "RabbitMQ", "MySQL", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Fabric", "Salt Stack", "Ansible", "AWS"]
+      "technologies": ["Python", "Django", "Multithreading", "JavaScript", "JQuery", "Backbone", "ExtJS", "Anychart", "AmChart", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "MySQL", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Fabric", "Salt Stack", "Ansible", "AWS"]
     },
     {
       "name": "DioraShop",
@@ -357,7 +357,7 @@
       "summary": "Increase the information content and traffic to your website by placing on it the latest data of USDA reports, foreign trade and futures. Learn how to get the embed code for your site...",
       "url": "http://www.agrocharts.com/en/",
       "company": ["DCOD"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SCSS", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
     },
     {
       "name": "django-xls2po",
@@ -375,7 +375,7 @@
       "summary": "Prevailing news resource of an agrarian theme. One of the best in Ukraine.",
       "url": "http://www.anyfoodanyfeed.com/",
       "company": ["DCOD"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "Google Maps API", "HTML", "CSS", "SCSS", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "Google Maps API", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
     },
     {
       "name": "django-opensearch",
@@ -474,7 +474,7 @@
       "summary": "BSTfeed.com - your best independent source for grains, oilseeds and feedstuffs markets data.",
       "url": "https://www.bstfeed.com/",
       "company": ["DCOD"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "SCSS", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Ansible", "AWS"]
     },
     {
       "name": "EterArt",
@@ -483,7 +483,7 @@
       "summary": "EterArt - a unique blockchain platform for collecting and trading digital versions of art objects.",
       "url": "https://www.eterart.com/",
       "company": ["DCOD"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Web3", "HTML", "CSS", "SCSS", "Solidity", "Truffle", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Ethereum", "Nginx", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "Webpack", "JQuery", "Backbone", "Web3", "HTML", "CSS", "SCSS", "Gulp", "Solidity", "Truffle", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Ethereum", "Nginx", "Ansible", "AWS"]
     {
       "name": "django-humans-txt",
       "startDate": "2018-09-01",
