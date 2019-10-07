@@ -212,7 +212,7 @@
       "name": "gulp.js"
     },
     {
-      "name": "SCSS"
+      "name": "SASS"
     },
     {
       "name": "GraphQL"
@@ -302,7 +302,7 @@
       "company": ["DCOD"],
       "role": "Python/Django developer",
       "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Distributed data caching system architecture development and implementation", "Distributed cache invalidation system architecture development and implementation", "Frontend development", "Deploy development and implementation"],
-      "technologies": ["Python", "Django", "Multithreading", "JavaScript", "JQuery", "Backbone", "ExtJS", "Anychart", "AmChart", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "MySQL", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Fabric", "Salt Stack", "Ansible", "AWS"]
+      "technologies": ["Python", "Django", "Multithreading", "JavaScript", "JQuery", "Backbone", "ExtJS", "Anychart", "AmChart", "Highcharts", "HTML", "CSS", "SASS", "Gulp", "Celery", "RabbitMQ", "MySQL", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Fabric", "Salt Stack", "Ansible", "AWS"]
     },
     {
       "name": "DioraShop",
@@ -379,7 +379,7 @@
       "company": ["DCOD"],
       "role": "Python/Django developer",
       "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Distributed data caching system architecture development and implementation", "Distributed cache invalidation system architecture development and implementation", "Frontend development", "Deploy development and implementation"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SASS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
     },
     {
       "name": "django-xls2po",
@@ -401,7 +401,7 @@
       "company": ["DCOD"],
       "role": "Python/Django developer",
       "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Distributed data caching system architecture development and implementation", "Distributed cache invalidation system architecture development and implementation", "Frontend development", "Deploy development and implementation"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "Google Maps API", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "Google Maps API", "HTML", "CSS", "SASS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Salt Stack", "Ansible", "AWS"]
     },
     {
       "name": "django-opensearch",
@@ -522,7 +522,7 @@
       "company": ["DCOD"],
       "role": "Python/Django developer",
       "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Distributed data caching system architecture development and implementation", "Distributed cache invalidation system architecture development and implementation", "Frontend development", "Deploy development and implementation"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SCSS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "JQuery", "Backbone", "Highcharts", "HTML", "CSS", "SASS", "Gulp", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Nginx", "Ansible", "AWS"]
     },
     {
       "name": "EterArt",
@@ -533,7 +533,7 @@
       "company": ["DCOD"],
       "role": "Python/Django developer",
       "responsibilities": ["Project architecture development and implementation", "Main modules implementation", "Distributed data sources parsing architecture development and implementation", "Partial Ethereum contract development and deploy implementation", "Frontend development", "Deploy development and implementation"],
-      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "Webpack", "JQuery", "Backbone", "Web3", "HTML", "CSS", "SCSS", "Gulp", "Solidity", "Truffle", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Ethereum", "Nginx", "Ansible", "AWS"]
+      "technologies": ["Python", "Multithreading", "Django", "JavaScript", "Webpack", "JQuery", "Backbone", "Web3", "HTML", "CSS", "SASS", "Gulp", "Solidity", "Truffle", "Celery", "RabbitMQ", "PostgreSQL", "PostgreSQL FTS", "Memcached", "Redis", "Ethereum", "Nginx", "Ansible", "AWS"]
     {
       "name": "django-humans-txt",
       "startDate": "2018-09-01",
