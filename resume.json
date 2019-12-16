@@ -11,6 +11,16 @@
   "work": [
     {
       "company": {
+        "original": "Zakaz.ua",
+        "en": null
+      },
+      "position": "Python developer",
+      "website": "https://zakaz.ua/",
+      "startDate": "2019-10-01",
+      "endDate": null
+    },
+    {
+      "company": {
         "original": "DCOD",
         "en": null
       },
@@ -75,7 +85,7 @@
       "endDate": "2006-01-01"
     }
   ],
-  "skills": [
+  "skillsAndTechnologies": [
     {
       "name": "Python"
     },
@@ -243,6 +253,15 @@
     },
     {
       "name": "consul-templaterb"
+    },
+    {
+      "name": "Apache CouchDB"
+    },
+    {
+      "name": "Apache Solr"
+    },
+    {
+      "name": "RQ"
     }
   ],
   "languages": [
