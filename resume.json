@@ -16,8 +16,8 @@
       },
       "position": "Python developer",
       "website": "https://zakaz.ua/",
-      "startDate": "2019-10-01",
-      "endDate": null
+      "startDate": "2019-10-21",
+      "endDate": "2020-01-27"
     },
     {
       "company": {
@@ -26,8 +26,8 @@
       },
       "position": "Python developer",
       "website": "http://d-cod.com/",
-      "startDate": "2011-10-01",
-      "endDate": "2019-05-01"
+      "startDate": "2011-10-25",
+      "endDate": "2019-05-28"
     },
     {
       "company": {
@@ -35,8 +35,8 @@
         "en": "FPTP \"DRFC\""
       },
       "position": "System administrator",
-      "startDate": "2010-11-01",
-      "endDate": "2011-08-01"
+      "startDate": "2010-11-25",
+      "endDate": "2011-08-11"
     },
     {
       "company": {
@@ -62,7 +62,7 @@
         "en": "\"Donbass-Online\" Ltd."
       },
       "position": "System administrator",
-      "startDate": "2008-08-01",
+      "startDate": "2008-08-29",
       "endDate": "2009-04-01"
     },
     {
@@ -72,7 +72,7 @@
       },
       "position": "System administrator",
       "startDate": "2007-08-01",
-      "endDate": "2008-07-01"
+      "endDate": "2008-07-28"
     }
   ],
   "education": [
@@ -262,6 +262,9 @@
     },
     {
       "name": "RQ"
+    },
+    {
+      "name": "Python Code Analysis/Quality tools"
     }
   ],
   "languages": [
