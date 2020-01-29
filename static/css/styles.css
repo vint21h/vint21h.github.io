@@ -87,6 +87,19 @@ section#id-skills-and-technologies .details {
     line-height: 24px;
 }
 
+.avatar {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: inline-block;
+    }
+    .avatar .easter-egg {
+        display: none;
+        position: absolute;
+    }
+    .avatar:hover .easter-egg {
+        display: inline;
+    }
 
 /* Fix for print */
 @media print {
