@@ -9,7 +9,7 @@
     "location": {
       "countryCode": "UA"
     },
-    "updated": "2020-02-10"
+    "updated": "2020-02-12
   },
   "work": [
     {
@@ -491,6 +491,19 @@
         "Nginx",
         "AWS"
       ]
+    },
+    {
+      "name": "django-mcadmin",
+      "startDate": "2013-09-01",
+      "endDate": null,
+      "summary": "Easy run management commands from Django admin.",
+      "url": "https://github.com/vint21h/django-mcadmin/",
+      "company": [
+        "Open Source"
+      ],
+      "role": null,
+      "responsibilities": null,
+      "technologies": null
     },
     {
       "name": "FRB",
