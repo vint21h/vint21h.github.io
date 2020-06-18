@@ -9,9 +9,19 @@
     "location": {
       "countryCode": "UA"
     },
-    "updated": "2020-02-12
+    "updated": "2020-06-18"
   },
   "work": [
+    {
+      "company": {
+        "original": "Freelance",
+        "en": null
+      },
+      "position": "Python developer",
+      "website": null,
+      "startDate": "2020-04-27",
+      "endDate": null
+    },
     {
       "company": {
         "original": "Zakaz.ua",
@@ -27,7 +37,7 @@
         "original": "DCOD",
         "en": null
       },
-      "position": "Python developer",
+      "position": "Python/Django developer",
       "website": "http://d-cod.com/",
       "startDate": "2011-10-25",
       "endDate": "2019-05-28"
@@ -38,6 +48,7 @@
         "en": "FPTP \"DRFC\""
       },
       "position": "System administrator",
+      "website": null,
       "startDate": "2010-11-25",
       "endDate": "2011-08-11"
     },
@@ -47,6 +58,7 @@
         "en": "\"Norma-Press\" Ltd."
       },
       "position": "System administrator",
+      "website": null,
       "startDate": "2009-10-01",
       "endDate": "2010-11-01"
     },
@@ -56,6 +68,7 @@
         "en": "\"InformBureau\" Ltd."
       },
       "position": "Perl developer",
+      "website": null,
       "startDate": "2009-10-01",
       "endDate": "2010-11-01"
     },
@@ -65,6 +78,7 @@
         "en": "\"Donbass-Online\" Ltd."
       },
       "position": "System administrator",
+      "website": null,
       "startDate": "2008-08-29",
       "endDate": "2009-04-01"
     },
@@ -74,6 +88,7 @@
         "en": "\"Alex-Vostok\" Ltd."
       },
       "position": "System administrator",
+      "website": null,
       "startDate": "2007-08-01",
       "endDate": "2008-07-28"
     }
@@ -271,6 +286,12 @@
     },
     {
       "name": "Python Code Analysis/Quality tools"
+    },
+    {
+      "name": "aiohttp"
+    },
+    {
+      "name": "peewee"
     }
   ],
   "languages": [
