@@ -9,7 +9,7 @@
     "location": {
       "countryCode": "UA"
     },
-    "updated": "2020-07-12"
+    "updated": "2020-07-13"
   },
   "work": [
     {
@@ -100,7 +100,7 @@
         "en": "State Institute of Artificial Intelligence"
       },
       "startDate": "2004-01-01",
-      "endDate": "2006-01-01"
+      "endDate": "2006-12-31"
     }
   ],
   "skillsAndTechnologies": [
@@ -341,7 +341,7 @@
     {
       "name": "GrainUkraine",
       "startDate": "2011-10-01",
-      "endDate": "2019-05-01",
+      "endDate": "2019-04-28",
       "summary": "Grain Ukraine - modern bulletin board for ukrainian suppliers of agricultural commodities and services.",
       "url": "http://www.grainukraine.com/",
       "company": [
@@ -374,7 +374,7 @@
     {
       "name": "AgroChart",
       "startDate": "2012-04-01",
-      "endDate": "2019-05-01",
+      "endDate": "2019-05-28",
       "summary": "AgroChart - Prices. Trading. Balances. Statistics. News. Forecasts.",
       "url": "http://www.agrochart.com/",
       "company": [
@@ -448,7 +448,7 @@
     {
       "name": "DCOD",
       "startDate": "2013-04-01",
-      "endDate": "2019-05-01",
+      "endDate": "2019-05-28",
       "summary": "DCOD site.",
       "url": "http://www.d-cod.com/",
       "company": [
@@ -608,7 +608,7 @@
     },
     {
       "name": "django-xls2po",
-      "startDate": "2014-01-01",
+      "startDate": "2014-01-07",
       "endDate": null,
       "summary": "django-xls2po is a django management command to convert django-po2xls generated .xls files to .po files.",
       "url": "https://github.com/vint21h/django-xls2po/",
@@ -622,7 +622,7 @@
     {
       "name": "anyfoodanyfeed",
       "startDate": "2014-03-01",
-      "endDate": "2019-05-01",
+      "endDate": "2019-04-28",
       "summary": "Prevailing news resource of an agrarian theme. One of the best in Ukraine.",
       "url": "http://www.anyfoodanyfeed.com/",
       "company": [
@@ -935,8 +935,8 @@
     },
     {
       "name": "Zakaz.ua",
-      "startDate": "2019-11-01",
-      "endDate": "2020-01-01",
+      "startDate": "2019-10-21",
+      "endDate": "2020-01-27",
       "summary": "Hypermarket goods delivery service",
       "url": "https://zakaz.ua/",
       "company": [
