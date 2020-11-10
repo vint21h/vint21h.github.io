@@ -9,7 +9,7 @@
     "location": {
       "countryCode": "UA"
     },
-    "updated": "2020-09-07"
+    "updated": "2020-11-10"
   },
   "work": [
     {
@@ -295,6 +295,12 @@
     },
     {
       "name": "OpenAPI"
+    },
+    {
+      "name": "GitLab CI"
+    },
+    {
+      "name": "Dokku"
     }
   ],
   "languages": [
