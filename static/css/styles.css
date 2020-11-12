@@ -200,6 +200,11 @@ section#id-skills-and-technologies .details {
         background: var(--background-color);
     }
 
+.img-thumbnail {
+    border-radius: unset;
+    border: unset;
+}
+
 /* Fix for print */
 @media print {
 

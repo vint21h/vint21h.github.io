@@ -11,22 +11,27 @@ function setTheme(theme) {
 
     "use strict";
 
-    var on = theme;
     var off = theme === "light" ? "dark" : "light";
 
-    document.documentElement.classList.add(on);
+    document.documentElement.classList.add(theme);
     document.documentElement.classList.remove(off);
 }
 
 
-// TODO: make this work.
-var avatar = document.querySelector(".avatar");
-avatar.addEventListener("click", function() {
+/**
+ * Add theme switcher event listener on window load.
+ */
+window.onload = function () {
 
     "use strict";
 
-    var theme = avatar.dataset.checked ? "light" : "dark";
+    var themeSwitcher = document.getElementById("id-theme-switcher");
 
-    setTheme(theme);
-    avatar.dataset.checked = !avatar.dataset.checked;
-});
+    themeSwitcher.dataset.theme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    themeSwitcher.addEventListener("click", function () {
+        var theme = themeSwitcher.dataset.theme === "light" ? "dark" : "light";
+
+        setTheme(theme);
+        themeSwitcher.dataset.theme = theme;
+    });
+};
