@@ -183,26 +183,22 @@ section#id-skills-and-technologies .details {
     line-height: 24px;
 }
 
-.avatar {
-        width: auto;
-        height: auto;
-        position: relative;
-        display: inline-block;
-        background: var(--background-color);
-    }
-    .avatar .easter-egg {
-        display: none;
-        position: absolute;
-        background: var(--background-color);
-    }
-    .avatar:hover .easter-egg {
-        display: inline;
-        background: var(--background-color);
-    }
+.avatar img:last-child {
+    display: none;
+}
+
+.avatar:hover img:last-child {
+    display: block;
+}
+
+.avatar:hover img:first-child {
+    display: none;
+}
 
 .img-thumbnail {
     border-radius: unset;
-    border: unset;
+    background-color: var(--background-color);
+    border-color: var(--background-color);
 }
 
 /* Fix for print */
