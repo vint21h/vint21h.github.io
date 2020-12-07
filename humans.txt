@@ -10,5 +10,5 @@
 
 /* SITE */
 
-    Last update: 2020/10/24
+    Last update: 2020/12/07
     Language: English

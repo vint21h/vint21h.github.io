@@ -9,9 +9,19 @@
     "location": {
       "countryCode": "UA"
     },
-    "updated": "2020-11-24"
+    "updated": "2020-12-07"
   },
   "work": [
+    {
+      "company": {
+        "original": "Anadea Inc.",
+        "en": null
+      },
+      "position": "Python developer",
+      "website": "https://anadea.info/",
+      "startDate": "2020-09-07",
+      "endDate": null
+    },
     {
       "company": {
         "original": "Freelance",
