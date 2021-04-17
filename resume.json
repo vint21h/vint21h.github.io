@@ -311,6 +311,9 @@
     },
     {
       "name": "Dokku"
+    },
+    {
+      "name": "Dart"
     }
   ],
   "languages": [
@@ -975,6 +978,19 @@
         "Docker",
         "docker-compose"
       ]
+    },
+    {
+      "name": "dart-daap-client",
+      "startDate": "2020-08-19",
+      "endDate": null,
+      "summary": "A DAAP (Digital Audio Access Protocol) client library",
+      "url": "https://github.com/vint21h/dart-daap-client/",
+      "company": [
+        "Open Source"
+      ],
+      "role": null,
+      "responsibilities": null,
+      "technologies": null
     },
     {
       "name": "django-security-txt",
