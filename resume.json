@@ -9,7 +9,7 @@
     "location": {
       "countryCode": "UA"
     },
-    "updated": "2021-07-11"
+    "updated": "2021-11-18"
   },
   "work": [
     {
@@ -314,6 +314,9 @@
     },
     {
       "name": "Dart"
+    },
+    {
+      "name": "DAAP"
     },
     {
       "name": "gjs"
