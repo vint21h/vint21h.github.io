@@ -1,33 +1,32 @@
 {
   "basics": {
-    "name": "Alexei Andrushievich",
+    "name": "Oleksii Andrushevych",
     "label": "Python/Django developer",
     "email": "vint21h@vint21h.pp.ua",
-    "skype": "vint21h",
     "linkedin": "https://www.linkedin.com/in/vint21h/",
-    "site": "https://vint21h.github.io/",
+    "site": "http://vint21h.pp.ua/",
     "location": {
       "countryCode": "UA"
     },
-    "updated": "2021-11-18"
+    "updated": "2023-01-23"
   },
   "work": [
     {
       "company": {
-        "original": "Anadea Inc.",
+        "original": "Anadea",
         "en": null
       },
-      "position": "Python developer",
+      "position": "Python/Django developer",
       "website": "https://anadea.info/",
       "startDate": "2020-09-07",
-      "endDate": null
+      "endDate": "2023-01-10"
     },
     {
       "company": {
         "original": "Freelance",
         "en": null
       },
-      "position": "Python developer",
+      "position": "Python/Django developer",
       "website": null,
       "startDate": "2020-04-27",
       "endDate": "2020-08-28"
@@ -307,7 +306,7 @@
       "name": "OpenAPI"
     },
     {
-      "name": "GitLab CI"
+      "name": "GitLab CI/CD"
     },
     {
       "name": "Dokku"
@@ -320,6 +319,30 @@
     },
     {
       "name": "gjs"
+    },
+    {
+      "name": "gRPC"
+    },
+    {
+      "name": "PostGIS"
+    },
+    {
+      "name": "Bitbucket Pipelines"
+    },
+    {
+      "name": "GitHub Actions"
+    },
+    {
+      "name": "Django REST framework"
+    },
+    {
+      "name": "Vimeo API"
+    },
+    {
+      "name": "SQS"
+    },
+    {
+      "name": "YouTube API"
     }
   ],
   "languages": [
@@ -329,10 +352,6 @@
     },
     {
       "language": "Ukrainian",
-      "fluency": "Native or bilingual proficiency"
-    },
-    {
-      "language": "Russian",
       "fluency": "Native or bilingual proficiency"
     }
   ],
@@ -453,9 +472,31 @@
       "company": [
         "Freelance"
       ],
-      "role": null,
-      "responsibilities": null,
-      "technologies": null
+      "role": "Python/Django developer",
+      "responsibilities": [
+        "Project architecture development and implementation",
+        "Main modules implementation",
+        "Frontend development",
+        "Third part services integration",
+        "Deploy development and implementation"
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "JavaScript",
+        "JQuery",
+        "jQuery UI",
+        "HTML",
+        "CSS",
+        "Celery",
+        "RabbitMQ",
+        "PostgreSQL",
+        "Memcached",
+        "Redis",
+        "Nginx",
+        "AWS",
+        "YouTube API"
+      ]
     },
     {
       "name": "nagios-notification-google-calendar",
@@ -635,7 +676,7 @@
       "name": "django-xls2po",
       "startDate": "2014-01-07",
       "endDate": null,
-      "summary": "django-xls2po is a django management command to convert django-po2xls generated .xls files to .po files.",
+      "summary": "django-xls2po is a Django management command to convert django-po2xls generated .xls files to .po files.",
       "url": "https://github.com/vint21h/django-xls2po/",
       "company": [
         "Open Source"
@@ -692,7 +733,7 @@
       "name": "django-opensearch",
       "startDate": "2014-07-01",
       "endDate": null,
-      "summary": "Handle opensearch.xml for django.",
+      "summary": "Handle opensearch.xml for Django.",
       "url": "https://github.com/vint21h/django-opensearch/",
       "company": [
         "Open Source"
@@ -807,7 +848,7 @@
       "name": "django-messages-to-bootstrap-notify.",
       "startDate": "2017-05-01",
       "endDate": "2019-05-01",
-      "summary": "Show django messages using bootstrap-notify",
+      "summary": "Show Django messages using bootstrap-notify.",
       "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/",
       "company": [
         "DCOD",
@@ -835,7 +876,7 @@
       "name": "django-read-only-admin",
       "startDate": "2017-05-01",
       "endDate": null,
-      "summary": "Really full django read only admin implementation.",
+      "summary": "Really full Django read only admin implementation.",
       "url": "https://github.com/vint21h/django-read-only-admin/",
       "company": [
         "Open Source"
@@ -936,7 +977,7 @@
       "name": "django-humans-txt",
       "startDate": "2018-09-01",
       "endDate": null,
-      "summary": "Handle humans.txt for django",
+      "summary": "Handle humans.txt for Django.",
       "url": "https://github.com/vint21h/django-humans-txt/",
       "company": [
         "Open Source"
@@ -949,7 +990,7 @@
       "name": "django-xicon",
       "startDate": "2019-08-01",
       "endDate": null,
-      "summary": "Handle modern bunch of site icons for django",
+      "summary": "Handle modern bunch of site icons for Django.",
       "url": "https://github.com/vint21h/django-xicon/",
       "company": [
         "Open Source"
@@ -962,7 +1003,7 @@
       "name": "Zakaz.ua",
       "startDate": "2019-10-21",
       "endDate": "2020-01-27",
-      "summary": "Hypermarket goods delivery service",
+      "summary": "Hypermarket goods delivery service.",
       "url": "https://zakaz.ua/",
       "company": [
         "Zakaz.ua"
@@ -986,10 +1027,76 @@
       ]
     },
     {
+      "name": "Under NDA",
+      "startDate": "2020-04-28",
+      "endDate": "2020-08-28",
+      "summary": "Educational platform for crypto currencies traders/investors.",
+      "url": null,
+      "company": [
+        "Freelance"
+      ],
+      "role": "Python/Django developer",
+      "responsibilities": [
+        "Project architecture development and implementation",
+        "Main modules implementation",
+        "Third part services integration"
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST framework",
+        "Python Code Analysis/Quality tools",
+        "PostgreSQL",
+        "Celery",
+        "SQS",
+        "Docker",
+        "docker-compose",
+        "Bitbucket Pipelines",
+        "AWS",
+        "Vimeo API"
+      ]
+    },
+    {
+      "name": "Under NDA",
+      "startDate": "2020-06-24",
+      "endDate": "2020-08-19",
+      "summary": "Crypto currencies trading/investments/exchange platform.",
+      "url": null,
+      "company": [
+        "Freelance"
+      ],
+      "role": "Python/Django developer",
+      "responsibilities": [
+        "Back-office and business logic code enhancements",
+        "Internal ETL services architecture development and implementation",
+        "Internal ETL services main modules development and implementation",
+        "Internal ETL services integration",
+        "Third part services integration",
+        "Refactoring of the existing codebase to clean and split to reusable components"
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST framework",
+        "Python Code Analysis/Quality tools",
+        "PostgreSQL",
+        "Celery",
+        "SQS",
+        "Docker",
+        "docker-compose",
+        "Bitbucket Pipelines",
+        "AWS",
+        "Web3",
+        "aiohttp",
+        "peewee",
+        "Various blockchains"
+      ]
+    },
+    {
       "name": "dart-daap-client",
       "startDate": "2020-08-19",
       "endDate": null,
-      "summary": "A DAAP (Digital Audio Access Protocol) client library",
+      "summary": "A DAAP (Digital Audio Access Protocol) client library.",
       "url": "https://github.com/vint21h/dart-daap-client/",
       "company": [
         "Open Source"
@@ -997,6 +1104,47 @@
       "role": null,
       "responsibilities": null,
       "technologies": null
+    },
+    {
+      "name": "anadea-ai-api",
+      "startDate": "2021-01-04",
+      "endDate": "2023-01-10",
+      "summary": "Internal project that provides an easy possibility to create REST API for pretrained ML models.",
+      "url": null,
+      "company": [
+        "Anadea"
+      ],
+      "role": "Python/Django developer",
+      "responsibilities": [
+        "Project architecture development and implementation",
+        "Main modules implementation",
+        "Deploy development and implementation"
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST framework",
+        "Python Code Analysis/Quality tools",
+        "JavaScript Code Analysis/Quality tools",
+        "SASS Code Analysis/Quality tools",
+        "PostgreSQL",
+        "Redis",
+        "Ansible",
+        "Nginx",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SASS",
+        "Gulp",
+        "Webpack",
+        "Celery",
+        "RabbitMQ",
+        "gRPC",
+        "Dokku",
+        "Docker",
+        "docker-compose",
+        "GitLab CI/CD"
+      ]
     },
     {
       "name": "django-security-txt",
@@ -1012,10 +1160,61 @@
       "technologies": null
     },
     {
+      "name": "fedora-intel-remapped-nvme-device-support",
+      "startDate": "2021-04-15",
+      "endDate": null,
+      "summary": "Instruction and tools to build fedora custom kernel and live/installation media with kernel supporting Intel remapped NVME device.",
+      "url": "https://github.com/vint21h/fedora-intel-remapped-nvme-device-support/",
+      "company": [
+        "Open Source"
+      ],
+      "role": null,
+      "responsibilities": null,
+      "technologies": null
+    },
+    {
+      "name": "GeoKinesia",
+      "startDate": "2021-07-08",
+      "endDate": "2021-10-06",
+      "summary": "GeoKinesia interface for purchasing InSAR analysis for a selected area anywhere in the world.",
+      "url": "https://interfacegeokinesia.com/",
+      "company": [
+        "Anadea"
+      ],
+      "role": "Python/Django developer",
+      "responsibilities": [
+        "Project architecture development and implementation",
+        "Main modules implementation",
+        "Third part services integration"
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST framework",
+        "Python Code Analysis/Quality tools",
+        "JavaScript Code Analysis/Quality tools",
+        "PostgreSQL",
+        "Redis",
+        "Nginx",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Webpack",
+        "Celery",
+        "RabbitMQ",
+        "Docker",
+        "docker-compose",
+        "Google Maps API",
+        "React",
+        "PostGIS",
+        "AWS"
+      ]
+    },
+    {
       "name": "gnome-shell-extension-tuned-profile-switcher",
       "startDate": "2021-06-07",
       "endDate": null,
-      "summary": "Displays a list of the TuneD profiles and allows to switch between them",
+      "summary": "Displays a list of the TuneD profiles and allows to switch between them.",
       "url": "https://github.com/vint21h/gnome-shell-extension-tuned-profile-switcher/",
       "company": [
         "Open Source"
@@ -1023,6 +1222,87 @@
       "role": null,
       "responsibilities": null,
       "technologies": null
+    },
+    {
+      "name": "EncircleLabs",
+      "startDate": "2021-07-20",
+      "endDate": "2022-06-23",
+      "summary": "Powering the Future of Construction Finance.",
+      "url": null,
+      "company": [
+        "Anadea"
+      ],
+      "role": "Python/Django developer",
+      "responsibilities": [
+        "Internal ETL service architecture development and implementation",
+        "Internal ETL service modules development and implementation",
+        "Integration with internal ETL service",
+        "Improvements of third-party services integrations",
+        "Refactoring of the existing codebase to clean and split to reusable components"
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST framework",
+        "Python Code Analysis/Quality tools",
+        "PostgreSQL",
+        "Celery",
+        "RabbitMQ",
+        "Docker",
+        "docker-compose",
+        "AWS"
+      ]
+    },
+    {
+      "name": "pre-commit-config-shellcheck",
+      "startDate": "2022-08-01",
+      "endDate": "2023-01-10",
+      "summary": "Tool for checking entry points in the pre-commit config with ShellCheck.",
+      "url": "https://github.com/Anadea/pre-commit-config-shellcheck/",
+      "company": [
+        "Anadea",
+        "Open Source"
+      ],
+      "role": null,
+      "responsibilities": null,
+      "technologies": null
+    },
+    {
+      "name": "Swim Genius",
+      "startDate": "2022-08-18",
+      "endDate": "2023-01-10",
+      "summary": "Platform for swimming teams/competitions management.",
+      "url": "https://www.myswimgenius.com/",
+      "company": [
+        "Anadea"
+      ],
+      "role": "Python/Django developer",
+      "responsibilities": [
+        "Project architecture development and implementation",
+        "Main modules implementation",
+        "Third part services integration",
+        "Deploy development and implementation"
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST framework",
+        "Python Code Analysis/Quality tools",
+        "PostgreSQL",
+        "Redis",
+        "Nginx",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Celery",
+        "RabbitMQ",
+        "Docker",
+        "docker-compose",
+        "Google Maps API",
+        "React",
+        "AWS",
+        "Ansible"
+      ]
     }
   ]
 }

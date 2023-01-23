@@ -1,7 +1,2 @@
-# vint21h.github.io
-# robots.txt
-
-
 User-agent: *
 Allow: *
-

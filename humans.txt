@@ -1,15 +1,10 @@
-# vint21h.github.io
-# humans.txt
-
-
 /* TEAM */
 
-    Developer: Alexei Andrushievich
+    Developer: Oleksii Andrushevych
     Contact: vint21h [at] vint21h.pp.ua
     From: Ukraine
 
 /* SITE */
 
-    Last update: 2021/11/18
+    Last update: 2023/01/23
     Language: English
-
