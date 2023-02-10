@@ -15,9 +15,9 @@ function setTheme(theme) {
 
 
 /**
- * Add theme switcher event listener on window load.
+ * Set up theme switcher.
  */
-window.onload = () => {
+function setUpThemeSwitcher() {
 
     "use strict";
 
@@ -30,4 +30,15 @@ window.onload = () => {
         setTheme(theme);
         $themeSwitcher.dataset.theme = theme;
     });
+}
+
+
+/**
+ * Add theme switcher event listener on window load.
+ */
+window.onload = () => {
+
+    "use strict";
+
+    setUpThemeSwitcher();
 };
