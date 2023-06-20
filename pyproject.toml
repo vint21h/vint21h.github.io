@@ -1,0 +1,618 @@
+[project]
+name = "vint21h.github.io"
+version = "0.0.0"
+requires-python = "==3.11.*"
+
+dependencies = [
+  "pydantic==1.10.9"
+]
+
+[project.optional-dependencies]
+dev = [
+  "attrs==23.1.0",
+  "autoflake==2.1.1",
+  "bandit==1.7.5",
+  "black==23.3.0",
+  "bpython==0.24",
+  "coverage==7.2.7",
+  "darglint==1.8.1",
+  "dlint==0.14.1",
+  "dodgy==0.2.1",
+  "dotenv-linter==0.4.0",
+  "flake8-annotations-complexity==0.0.7",
+  "flake8-annotations-coverage==0.0.6",
+  "flake8-blind-except==0.2.1",
+  "flake8-boolean-trap==1.0.0",
+  "flake8-broken-line==1.0.0",
+  "flake8-bugbear==23.6.5",
+  "flake8-builtins==2.1.0",
+  "flake8-coding==1.3.2",
+  "flake8-cognitive-complexity==0.1.0",
+  "flake8-comprehensions==3.12.0",
+  "flake8-datetimez==20.10.0",
+  "flake8-debugger==4.1.2",
+  "flake8-docstrings==1.7.0",
+  "flake8-executable==2.1.3",
+  "flake8-expression-complexity==0.0.11",
+  "flake8-fixme==1.1.1",
+  "flake8-functions==0.0.8",
+  "flake8-gettext==0.0.0.1",
+  "flake8-logging-format==0.9.0",
+  "flake8-mutable==1.2.0",
+  "flake8-no-implicit-concat==0.3.4",
+  "flake8-no-pep420==2.4.0",
+  "flake8-pie==0.16.0",
+  "flake8-print==5.0.0",
+  "flake8-pyproject==1.2.3",
+  "flake8-raise==0.0.5",
+  "flake8-return==1.2.0",
+  "flake8-self==0.2.2",
+  "flake8-simplify==0.20.0",
+  'flake8-spellcheck==0.28.0',
+  "flake8-super==0.1.3",
+  'flake8-tidy-imports==4.8.0',
+  'flake8-todos==0.3.0',
+  "flake8-typing-imports==1.14.0",
+  "flake8-use-fstring==1.4",
+  "flake8-use-pathlib==0.3.0",
+  "flake8-variables-names==0.0.5",
+  "flake8==6.0.0",
+  "flynt==0.78",
+  "importlib-metadata==6.6.0",
+  "interrogate==1.5.0",
+  "isort==5.12.0",
+  "mypy==1.3.0",
+  "pep8-naming==0.13.3",
+  "perflint==0.7.3",
+  "pip-outdated==0.6.0",
+  "pre-commit-hooks==4.4.0",
+  "pre-commit==3.3.2",
+  "pylint==2.17.4",
+  "pytest-cov==4.1.0",
+  "pytest-extra-durations==0.1.3",
+  "pytest-instafail==0.5.0",
+  "pytest-sugar==0.9.7",
+  "pytest-timer[termcolor]==0.0.11",
+  "pytest==7.3.1",
+  "pymarkdownlnt==0.9.11",
+  "removestar==1.3.1",
+  "rstcheck==6.1.2",
+  "seed-isort-config==2.2.0",
+  "tabulate==0.9.0",
+  "tryceratops==2.3.2",
+  "yesqa==1.4.0",
+]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.mypy]
+python_version = "3.10"
+files = [
+  ".",
+]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+ignore_errors = true
+ignore_missing_imports = true
+implicit_reexport = true
+strict_optional = true
+strict_equality = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unreachable = true
+warn_no_return = true
+plugins = [
+  "pydantic.mypy"
+]
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+warn_untyped_fields = true
+
+[tool.flake8]
+max-line-length = 88
+select = [
+  "B",
+  "C",
+  "D",
+  "F",
+  "W",
+  "T4",
+  "C4",
+  "TAE",
+  "T",
+  "M511",
+  "T100",
+  "TYP",
+  "A",
+  "EXE",
+  "CFQ",
+  "SIM",
+  "DUO",
+  "N",
+  "DJ",
+  "ECE",
+  "FS",
+  "R",
+  "CCR",
+  "NIC",
+  "PL",
+  "I25",
+  "R1",
+  "SLF001",
+  "DTZ",
+  "GT",
+  "G",
+  "INP",
+  "PIE",
+  "B901",
+  "FBT",
+  "TRY"
+]
+doctests = true
+ignore = [
+  "C101",
+  "D100",
+  "D104",
+  "D401",
+  "FBT003",
+  "T003",
+  "T101",
+  "INP001"
+]
+max-annotations-complexity = 5
+max-expression-complexity = 5
+max-cognitive-complexity = 5
+min-python-version = 3.10
+dictionaries = [
+  "en_US",
+  "python",
+  "technical"
+]
+spellcheck-targets = [
+  "comments",
+  "names"
+]
+eradicate-whitelist = [
+  "mypy"
+]
+docstring_style = "sphinx"
+
+[tool.coverage.run]
+branch = true
+source = [
+  "."
+]
+omit =[
+  "*/__init__.py",
+  "*/__main__.py"
+]
+
+[tool.coverage.report]
+omit =[
+  "*/__init__.py",
+  "*/__main__.py"
+]
+exclude_lines = [
+  "pragma: no cover"
+]
+
+[tool.isort]
+balanced_wrapping = true
+combine_as_imports = true
+default_section = "FIRSTPARTY"
+force_grid_wrap = 0
+force_sort_within_sections = true
+force_to_top = true
+include_trailing_comma = true
+known_first_party = "."
+line_length = 88
+lines_after_imports = 2
+length_sort = true
+multi_line_output = 3
+use_parentheses = true
+virtual_env = "$VIRTUAL_ENV"
+known_third_party = []
+src_paths = ["."]
+
+[tool.bandit]
+skips = [
+  "B507"
+]
+tests = [
+  "B101",
+  "B102",
+  "B103",
+  "B104",
+  "B105",
+  "B106",
+  "B107",
+  "B108",
+  "B110",
+  "B112",
+  "B201",
+  "B301",
+  "B302",
+  "B303",
+  "B304",
+  "B305",
+  "B306",
+  "B307",
+  "B308",
+  "B310",
+  "B311",
+  "B312",
+  "B313",
+  "B314",
+  "B315",
+  "B316",
+  "B317",
+  "B318",
+  "B319",
+  "B320",
+  "B321",
+  "B323",
+  "B324",
+  "B401",
+  "B402",
+  "B403",
+  "B404",
+  "B405",
+  "B406",
+  "B407",
+  "B408",
+  "B409",
+  "B410",
+  "B411",
+  "B412",
+  "B413",
+  "B501",
+  "B502",
+  "B503",
+  "B504",
+  "B505",
+  "B506",
+  "B601",
+  "B602",
+  "B603",
+  "B604",
+  "B605",
+  "B606",
+  "B607",
+  "B608",
+  "B609",
+  "B610",
+  "B611",
+  "B701",
+  "B702",
+  "B703"
+]
+
+[tool.pylint.master]
+ignore = [
+  "CVS"
+]
+ignore-patterns = []
+persistent = true
+load-plugins = [
+  "perflint",
+  "pylint.extensions.bad_builtin",
+  "pylint.extensions.code_style",
+  "pylint.extensions.comparison_placement",
+  "pylint.extensions.consider_refactoring_into_while_condition",
+  "pylint.extensions.docparams",
+  "pylint.extensions.dunder",
+  "pylint.extensions.eq_without_hash",
+  "pylint.extensions.for_any_all",
+  "pylint.extensions.magic_value",
+  "pylint.extensions.mccabe",
+  "pylint.extensions.no_self_use",
+  "pylint.extensions.overlapping_exceptions",
+  "pylint.extensions.private_import",
+  "pylint.extensions.redefined_loop_name",
+  "pylint.extensions.redefined_variable_type",
+  "pylint.extensions.set_membership",
+  "pylint.extensions.typing",
+  "pylint.extensions.while_used"
+]
+jobs = 1
+unsafe-load-any-extension = false
+extension-pkg-whitelist = []
+optimize-ast = false
+
+[tool.pylint.messages_control]
+confidence = []
+disable = "all"
+enable = [
+  "E0001",
+  "E0100",
+  "E0101",
+  "E0102",
+  "E0103",
+  "E0104",
+  "E0105",
+  "E0106",
+  "E0107",
+  "E0110",
+  "E0113",
+  "E0114",
+  "E0115",
+  "E0116",
+  "E0117",
+  "E0108",
+  "E0202",
+  "E0203",
+  "E0211",
+  "E0236",
+  "E0238",
+  "E0239",
+  "E0240",
+  "E0241",
+  "E0301",
+  "E0302",
+  "E0601",
+  "E0603",
+  "E0604",
+  "E0701",
+  "E0702",
+  "E0703",
+  "E0704",
+  "E0710",
+  "E0711",
+  "E0712",
+  "E1003",
+  "E1102",
+  "E1111",
+  "E0112",
+  "E1120",
+  "E1121",
+  "E1123",
+  "E1124",
+  "E1125",
+  "E1126",
+  "E1127",
+  "E1132",
+  "E1200",
+  "E1201",
+  "E1205",
+  "E1206",
+  "E1300",
+  "E1301",
+  "E1302",
+  "E1303",
+  "E1304",
+  "E1305",
+  "E1306",
+  "C0123",
+  "C0200",
+  "C0303",
+  "C1001",
+  "W0101",
+  "W0102",
+  "W0104",
+  "W0105",
+  "W0106",
+  "W0107",
+  "W0108",
+  "W0109",
+  "W0110",
+  "W0120",
+  "W0122",
+  "W0124",
+  "W0150",
+  "W0199",
+  "W0221",
+  "W0222",
+  "W0233",
+  "W0404",
+  "W0410",
+  "W0601",
+  "W0602",
+  "W0604",
+  "W0611",
+  "W0612",
+  "W0622",
+  "W0623",
+  "W0702",
+  "W0705",
+  "W0711",
+  "W1300",
+  "W1301",
+  "W1302",
+  "W1303",
+  "W1305",
+  "W1306",
+  "W1307",
+  "R0102",
+  "R0201",
+  "R0202",
+  "R0203"
+]
+include-naming-hint = true
+
+[tool.pylint.reposrt]
+output-format = "text"
+files-output = false
+reports = true
+evaluation = "10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)"
+
+[tool.pylint.basic]
+good-names = [
+  "i",
+  "j",
+  "k",
+  "ex",
+  "Run",
+  "_"
+]
+bad-names = [
+  "foo",
+  "bar",
+  "baz",
+  "toto",
+  "tutu",
+  "tata"
+]
+name-group = []
+include-naming-hint = false
+property-classes = ["abc.abstractproperty"]
+const-rgx = "(([A-Z_][A-Z0-9_]*)|(__.*__))$"
+const-name-hint = "(([A-Z_][A-Z0-9_]*)|(__.*__))$"
+class-rgx = "[A-Z_][a-zA-Z0-9]+$"
+class-name-hint = "[A-Z_][a-zA-Z0-9]+$"
+argument-rgx = "[a-z_][a-z0-9_]{2,30}$"
+argument-name-hint = "[a-z_][a-z0-9_]{2,30}$"
+variable-rgx = "[a-z_][a-z0-9_]{2,30}$"
+variable-name-hint = "[a-z_][a-z0-9_]{2,30}$"
+class-attribute-rgx = "([A-Za-z_][A-Za-z0-9_]{2,30}|(__.*__))$"
+class-attribute-name-hint = "([A-Za-z_][A-Za-z0-9_]{2,30}|(__.*__))$"
+method-rgx = "[a-z_][a-z0-9_]{2,30}$"
+method-name-hint = "[a-z_][a-z0-9_]{2,30}$"
+module-rgx = "(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))$"
+module-name-hint = "(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))$"
+function-rgx = "[a-z_][a-z0-9_]{2,30}$"
+function-name-hint = "[a-z_][a-z0-9_]{2,30}$"
+attr-rgx = "[a-z_][a-z0-9_]{2,30}$"
+attr-name-hint = "[a-z_][a-z0-9_]{2,30}$"
+inlinevar-rgx = "[A-Za-z_][A-Za-z0-9_]*$"
+inlinevar-name-hint = "[A-Za-z_][A-Za-z0-9_]*$"
+no-docstring-rgx = "^_"
+docstring-min-length = -1
+
+[tool.pylint.elif]
+max-nested-blocks = 5
+
+[tool.pylint.format]
+max-line-length = 88
+ignore-long-lines = '^\s*(# )?<?https?://\S+>?$'
+single-line-if-stmt = false
+no-space-check = [
+  "trailing-comma",
+  "dict-separator"
+]
+max-module-lines = 1000
+indent-string = '    '
+indent-after-paren = 4
+expected-line-ending-format = "LF"
+
+[tool.pylint.logging]
+logging-modules = [
+  "logging"
+]
+
+[tool.pylint.miscellaneous]
+notes = [
+  "FIXME",
+  "XXX",
+  "TODO"
+]
+
+[tool.pylint.similarities]
+min-similarity-lines = 4
+ignore-comments = true
+ignore-docstrings = true
+ignore-imports = false
+
+[tool.pylint.spelling]
+spelling-dict = ""
+spelling-ignore-words = []
+spelling-private-dict-file = ""
+spelling-store-unknown-words = false
+
+[tool.pylint.string_constant]
+check-quote-consistency = true
+check-str-concat-over-line-jumps = true
+
+[tool.pylint.typecheck]
+ignore-mixin-members = true
+ignored-modules = []
+ignored-classes = [
+  "optparse.Values",
+  "thread._local",
+  "_thread._local"
+]
+generated-members = []
+contextmanager-decorators = [
+  "contextlib.contextmanager"
+]
+
+[tool.pylint.variables]
+init-import = false
+dummy-variables-rgx = "(_+[a-zA-Z0-9]*?$)|dummy"
+additional-builtins = []
+callbacks = [
+  "cb_",
+  "_cb"
+]
+redefining-builtins-modules = [
+  "six.moves",
+  "future.builtins"
+]
+
+[tool.pylint.classes]
+defining-attr-methods = [
+  "__init__",
+  "__new__",
+  "setUp"
+]
+valid-classmethod-first-arg = "cls"
+valid-metaclass-classmethod-first-arg = "mcs"
+exclude-protected = [
+  "_asdict",
+  "_fields",
+  "_replace",
+  "_source",
+  "_make"
+]
+
+[tool.pylint.design]
+max-args = 5
+ignored-argument-names = [
+  "_.*"
+]
+max-locals = 15
+max-returns = 6
+max-branches = 12
+max-statements = 50
+max-parents = 7
+max-attributes = 7
+min-public-methods = 2
+max-public-methods = 20
+max-bool-expr = 5
+
+[tool.pylint.imports]
+deprecated-modules = [
+  "optparse"
+]
+import-graph = []
+ext-import-graph = []
+int-import-graph = []
+known-standard-library = []
+known-third-party = ["enchant"]
+analyse-fallback-blocks = false
+
+[pylint.exceptions]
+overgeneral-exceptions = [
+  "Exception"
+]
+
+[tool.pytest]
+python_files = [
+  "tests.py",
+  "test_*.py",
+  "*_tests.py"
+]
+python_classes = []
+
+[tool.autoflake]
+check = true
+in-place = true
+remove-unused-variables = true
+ignore-pass-after-docstring = true
+remove-all-unused-imports = true
