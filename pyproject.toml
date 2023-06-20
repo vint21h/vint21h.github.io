@@ -4,7 +4,7 @@ version = "0.0.0"
 requires-python = "==3.11.*"
 
 dependencies = [
-  "pydantic==1.10.9"
+  "pydantic[email]==1.10.9"
 ]
 
 [project.optional-dependencies]
@@ -218,7 +218,7 @@ length_sort = true
 multi_line_output = 3
 use_parentheses = true
 virtual_env = "$VIRTUAL_ENV"
-known_third_party = []
+known_third_party = ["pydantic"]
 src_paths = ["."]
 
 [tool.bandit]
