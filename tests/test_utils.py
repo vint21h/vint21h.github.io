@@ -1,7 +1,7 @@
 from typing import List
 from unittest import TestCase, mock
 
-from resume import get_version
+from resume.utils import CliOptions, CliOptionsFormat, get_options, get_version
 
 __all__: List[str] = ["GetVersionTest"]
 
@@ -18,7 +18,7 @@ class GetVersionTest(TestCase):
     """
 
     @mock.patch(
-        target="resume.Path",
+        target="resume.utils.Path",
         new=mock.mock_open(read_data=PYPROJECT_TOML_MOCK__REGULAR),
         create=True,
     )
@@ -36,7 +36,7 @@ class GetVersionTest(TestCase):
         )
 
     @mock.patch(
-        target="resume.Path",
+        target="resume.utils.Path",
         new=mock.mock_open(read_data=PYPROJECT_TOML_MOCK__NO_VERSION),
         create=True,
     )
@@ -48,7 +48,32 @@ class GetVersionTest(TestCase):
 
     def test_get_version__no_version__no_file(self) -> None:
         """get_version must return resume version (no file case)."""
-        with mock.patch(target="resume.Path", side_effect=FileNotFoundError()):
+        with mock.patch(target="resume.utils.Path", side_effect=FileNotFoundError()):
             self.assertIsNone(
                 obj=get_version(),
             )
+
+    def test_get_version__no_version__no_permissions(self) -> None:
+        """get_version must return resume version (permission denied case)."""
+        with mock.patch(target="resume.utils.Path", side_effect=PermissionError()):
+            self.assertIsNone(
+                obj=get_version(),
+            )
+
+
+class GetOptionsTest(TestCase):
+    """get_options tests."""
+
+    @mock.patch("sys.argv", ["__main__.py", "-f", "json"])
+    def test_get_version(self) -> None:
+        """get_options must return CliOptions dataclass instance with corresponding properties."""
+        options = get_options()
+
+        self.assertIsInstance(
+            obj=options,
+            cls=CliOptions,
+        )
+        self.assertEqual(
+            first=options.format,
+            second=CliOptionsFormat.json,
+        )

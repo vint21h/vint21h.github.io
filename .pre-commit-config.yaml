@@ -12,17 +12,15 @@ repos:
       name: "removestar"
       stages: ["commit"]
       language: "system"
-      entry: "removestar -i ."
+      entry: "removestar -i resume tests"
       types: ["python"]
-      exclude: "^.direnv/"
     - id: "autoflake"
       name: "autoflake"
       stages: ["commit"]
       language: "system"
-      entry: "autoflake -r ."
+      entry: "autoflake -r resume tests"
       types: ["python"]
       pass_filenames: false
-      exclude: "^.direnv/"
     - id: "isort"
       name: "isort"
       stages: ["commit"]
@@ -33,18 +31,16 @@ repos:
       name: "flynt"
       stages: ["commit"]
       language: "system"
-      entry: "flynt -ll 88 --no-tf ."
+      entry: "flynt -ll 88 --no-tf resume tests"
       types: ["python"]
       pass_filenames: false
-      exclude: "^.direnv/"
     - id: "black"
       name: "black"
       stages: ["commit"]
       language: "system"
-      entry: "black ."
+      entry: "black resume tests"
       types: ["python"]
       pass_filenames: false
-      exclude: "^.direnv/"
     - id: "yesqa"
       name: "yesqa"
       stages: ["commit"]
@@ -52,7 +48,6 @@ repos:
       pass_filenames: false
       entry: "yesqa"
       types: ["python"]
-      exclude: "^.direnv/"
     - id: "flake8"
       name: "flake8"
       stages: ["commit"]
@@ -63,21 +58,20 @@ repos:
       name: "interrogate"
       stages: ["commit"]
       language: "system"
-      entry: "interrogate . -I -M -e .direnv"
+      entry: "interrogate resume tests -I -M"
       types: ["python"]
     - id: "pylint"
       name: "pylint"
       stages: ["commit"]
       language: "system"
-      entry: "pylint ."
+      entry: "pylint resume tests"
       types: ["python"]
       pass_filenames: false
-      exclude: "^.direnv/"
     - id: "bandit"
       name: "bandit"
       stages: ["commit"]
       language: "system"
-      entry: "bandit resume.py --ini=pyproject.toml"
+      entry: "bandit resume tests --ini=pyproject.toml"
       types: ["python"]
       pass_filenames: false
     - id: "dodgy"
@@ -92,7 +86,7 @@ repos:
       name: "mypy"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" mypy'"
+      entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" mypy resume tests'"
       types: ["python"]
       pass_filenames: false
     - id: "dotenv-linter"
