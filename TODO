@@ -1,1 +1,2 @@
 - made models properties camel case for JSON output
+- use constants for themes in JS

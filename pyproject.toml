@@ -4,7 +4,8 @@ version = "0.0.0"
 requires-python = "==3.11.*"
 
 dependencies = [
-  "pydantic[email]==1.10.9"
+  "pydantic[email]==1.10.9",
+  "rich==12.6.0"
 ]
 
 [project.optional-dependencies]
@@ -87,7 +88,7 @@ dev = [
 py-modules = []
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.11"
 files = [
   ".",
 ]
@@ -169,7 +170,7 @@ ignore = [
 max-annotations-complexity = 5
 max-expression-complexity = 5
 max-cognitive-complexity = 5
-min-python-version = 3.10
+min-python-version = 3.11
 dictionaries = [
   "en_US",
   "python",
@@ -218,7 +219,7 @@ length_sort = true
 multi_line_output = 3
 use_parentheses = true
 virtual_env = "$VIRTUAL_ENV"
-known_third_party = ["pydantic"]
+known_third_party = ["pydantic", "rich"]
 src_paths = ["."]
 
 [tool.bandit]

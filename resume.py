@@ -4,14 +4,35 @@ from datetime import date
 from typing import List, Optional
 
 from pydantic import BaseModel, EmailStr, HttpUrl
+from rich import print as rprint
 
 __all__: List[str] = []
+
+
+RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR: str = "label-primary"
+RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE: str = "label-success"
+RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE: str = "label-warning"
 
 
 class ResumeBasicsLocation(BaseModel):
     """Resume basics location field representation."""
 
+    name: str
     country_code: str
+
+
+class ResumeBasicsMetadataLanguage(BaseModel):
+    """Resume basics metadata language field representation."""
+
+    name: str
+    language_code: str
+
+
+class ResumeBasicsMetadata(BaseModel):
+    """Resume basics metadata field representation."""
+
+    updated: date
+    language: ResumeBasicsMetadataLanguage
 
 
 class ResumeBasics(BaseModel):
@@ -23,7 +44,7 @@ class ResumeBasics(BaseModel):
     linkedin: HttpUrl
     site: HttpUrl
     location: ResumeBasicsLocation
-    updated: date
+    metadata: ResumeBasicsMetadata
 
 
 class ResumeWorkCompany(BaseModel):
@@ -83,10 +104,17 @@ class ResumeProjectResponsibility(BaseModel):
     name: str
 
 
+class ResumeProjectCompanyMetadata(BaseModel):
+    """Resume projects list company metadata field representation."""
+
+    css_class: str
+
+
 class ResumeProjectCompany(BaseModel):
     """Resume projects list company field representation."""
 
     name: str
+    metadata: Optional[ResumeProjectCompanyMetadata]
 
 
 class ResumeProject(BaseModel):
@@ -129,9 +157,16 @@ if __name__ == "__main__":
             linkedin="https://www.linkedin.com/in/vint21h/",
             site="https://www.vint21h.pp.ua/",
             location=ResumeBasicsLocation(
+                name="Ukraine",
                 country_code="UA",
             ),
-            updated=date(year=2023, month=2, day=10),
+            metadata=ResumeBasicsMetadata(
+                language=ResumeBasicsMetadataLanguage(
+                    name="English",
+                    language_code="en",
+                ),
+                updated=date(year=2023, month=2, day=10),
+            ),
         ),
         work=[
             ResumeWork(
@@ -457,6 +492,33 @@ if __name__ == "__main__":
             ResumeSkillOrTechnology(
                 name="YouTube API",
             ),
+            ResumeSkillOrTechnology(
+                name="Salt Stack",
+            ),
+            ResumeSkillOrTechnology(
+                name="Sphinx",
+            ),
+            ResumeSkillOrTechnology(
+                name="Fabric",
+            ),
+            ResumeSkillOrTechnology(
+                name="Multithreading",
+            ),
+            ResumeSkillOrTechnology(
+                name="AnyChart",
+            ),
+            ResumeSkillOrTechnology(
+                name="amCharts",
+            ),
+            ResumeSkillOrTechnology(
+                name="PostgreSQL FTS",
+            ),
+            ResumeSkillOrTechnology(
+                name="Mercurial",
+            ),
+            ResumeSkillOrTechnology(
+                name="CVS",
+            ),
         ],
         languages=[
             ResumeLanguage(
@@ -468,4 +530,232 @@ if __name__ == "__main__":
                 fluency="Native or bilingual proficiency",
             ),
         ],
+        projects=[
+            ResumeProject(
+                name="nagios-notification-jabber",
+                start_date=date(year=2011, month=3, day=1),
+                summary="Notifications via jabber Nagios plugin.",
+                url="https://github.com/vint21h/nagios-notification-jabber/",
+                company=[
+                    ResumeProjectCompany(
+                        name="Open Source",
+                        metadata=ResumeProjectCompanyMetadata(
+                            css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE,
+                        ),
+                    )
+                ],
+            ),
+            ResumeProject(
+                name="nagios-check-hddtemp",
+                start_date=date(year=2011, month=9, day=1),
+                summary="Check HDD temperature Nagios plugin.",
+                url="https://github.com/vint21h/nagios-check-hddtemp/",
+                company=[
+                    ResumeProjectCompany(
+                        name="Open Source",
+                        metadata=ResumeProjectCompanyMetadata(
+                            css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE,
+                        ),
+                    )
+                ],
+            ),
+            ResumeProject(
+                name="GrainUkraine",
+                start_date=date(year=2011, month=10, day=1),
+                end_date=date(year=2019, month=4, day=28),
+                summary="Grain Ukraine - modern bulletin board for ukrainian suppliers of agricultural commodities and services.",
+                url="http://www.grainukraine.com/",
+                company=[
+                    ResumeProjectCompany(
+                        name="DCOD",
+                        metadata=ResumeProjectCompanyMetadata(
+                            css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        ),
+                    )
+                ],
+                role="Python/Django developer",
+                responsibilities=[
+                    ResumeProjectResponsibility(
+                        name="Project architecture development and implementation",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Main modules implementation",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Frontend development",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Deploy development and implementation",
+                    ),
+                ],
+                technologies=[
+                    ResumeProjectTechnology(
+                        name="Python",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Django",
+                    ),
+                    ResumeProjectTechnology(
+                        name="JavaScript",
+                    ),
+                    ResumeProjectTechnology(
+                        name="jQuery",
+                    ),
+                    ResumeProjectTechnology(
+                        name="HTML",
+                    ),
+                    ResumeProjectTechnology(
+                        name="CSS",
+                    ),
+                    ResumeProjectTechnology(
+                        name="PostgreSQL",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Sphinx",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Memcached",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Redis",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Nginx",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Fabric",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Salt Stack",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Amazon Web Services (AWS)",
+                    ),
+                ],
+            ),
+            ResumeProject(
+                name="AgroChart",
+                start_date=date(year=2012, month=4, day=1),
+                end_date=date(year=2019, month=5, day=28),
+                summary="AgroChart - Prices. Trading. Balances. Statistics. News. Forecasts.",
+                url="http://www.agrochart.com/",
+                company=[
+                    ResumeProjectCompany(
+                        name="DCOD",
+                        metadata=ResumeProjectCompanyMetadata(
+                            css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        ),
+                    )
+                ],
+                role="Python/Django developer",
+                responsibilities=[
+                    ResumeProjectResponsibility(
+                        name="Project architecture development and implementation",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Main modules implementation",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Distributed data sources parsing architecture development and implementation",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Distributed data caching system architecture development and implementation",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Distributed cache invalidation system architecture development and implementation",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Frontend development",
+                    ),
+                    ResumeProjectResponsibility(
+                        name="Deploy development and implementation",
+                    ),
+                ],
+                technologies=[
+                    ResumeProjectTechnology(
+                        name="Python",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Django",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Multithreading",
+                    ),
+                    ResumeProjectTechnology(
+                        name="JavaScript",
+                    ),
+                    ResumeProjectTechnology(
+                        name="jQuery",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Backbone.js",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Underscore.js",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Ext JS",
+                    ),
+                    ResumeProjectTechnology(
+                        name="AnyChart",
+                    ),
+                    ResumeProjectTechnology(
+                        name="amCharts",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Highcharts",
+                    ),
+                    ResumeProjectTechnology(
+                        name="HTML",
+                    ),
+                    ResumeProjectTechnology(
+                        name="CSS",
+                    ),
+                    ResumeProjectTechnology(
+                        name="SASS",
+                    ),
+                    ResumeProjectTechnology(
+                        name="gulp.js",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Celery",
+                    ),
+                    ResumeProjectTechnology(
+                        name="RabbitMQ",
+                    ),
+                    ResumeProjectTechnology(
+                        name="MySQL",
+                    ),
+                    ResumeProjectTechnology(
+                        name="PostgreSQL",
+                    ),
+                    ResumeProjectTechnology(
+                        name="PostgreSQL FTS",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Memcached",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Redis",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Nginx",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Fabric",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Salt Stack",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Ansible",
+                    ),
+                    ResumeProjectTechnology(
+                        name="Amazon Web Services (AWS)",
+                    ),
+                ],
+            ),
+        ],
     )
+    rprint(resume)
+    rprint(resume.json(indent=2, ensure_ascii=False))
