@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
 from datetime import date
+from pathlib import Path
 from typing import List, Optional
 
+import toml
 from pydantic import BaseModel, EmailStr, HttpUrl
 from rich import print as rprint
 
@@ -12,6 +14,21 @@ __all__: List[str] = []
 RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR: str = "label-primary"
 RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE: str = "label-success"
 RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE: str = "label-warning"
+RESUME_PYPROJECT_PATH: str = "pyproject.toml"
+
+
+def get_version() -> Optional[str]:
+    """
+    Get resume version.
+
+    :return: resume version
+    :rtype: Optional[str]
+    """
+    try:
+        with Path(RESUME_PYPROJECT_PATH) as file_:
+            return toml.load(f=file_).get("project", {}).get("version")
+    except (FileNotFoundError, PermissionError):
+        return None
 
 
 class ResumeBasicsLocation(BaseModel):
@@ -33,6 +50,7 @@ class ResumeBasicsMetadata(BaseModel):
 
     updated: date
     language: ResumeBasicsMetadataLanguage
+    version: Optional[str]
 
 
 class ResumeBasics(BaseModel):
@@ -166,6 +184,7 @@ if __name__ == "__main__":
                     language_code="en",
                 ),
                 updated=date(year=2023, month=2, day=10),
+                version=get_version(),
             ),
         ),
         work=[

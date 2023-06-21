@@ -17,7 +17,7 @@ check:
 
 
 test:
-	PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}" pytest resume.py --import-mode=importlib --cov=resume.py;\
+	PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}" pytest --import-mode=importlib --cov=.;\
 
 
 setup-env:

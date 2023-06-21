@@ -192,13 +192,15 @@ source = [
 ]
 omit =[
   "*/__init__.py",
-  "*/__main__.py"
+  "*/__main__.py",
+  "tests/*"
 ]
 
 [tool.coverage.report]
 omit =[
   "*/__init__.py",
-  "*/__main__.py"
+  "*/__main__.py",
+  "tests/*"
 ]
 exclude_lines = [
   "pragma: no cover"
@@ -219,7 +221,7 @@ length_sort = true
 multi_line_output = 3
 use_parentheses = true
 virtual_env = "$VIRTUAL_ENV"
-known_third_party = ["pydantic", "rich"]
+known_third_party = ["pydantic", "rich", "toml"]
 src_paths = ["."]
 
 [tool.bandit]
