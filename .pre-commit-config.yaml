@@ -12,13 +12,13 @@ repos:
       name: "removestar"
       stages: ["commit"]
       language: "system"
-      entry: "removestar -i resume tests"
+      entry: "bash -c 'removestar -i \"${NAME}\" tests'"
       types: ["python"]
     - id: "autoflake"
       name: "autoflake"
       stages: ["commit"]
       language: "system"
-      entry: "autoflake -r resume tests"
+      entry: "bash -c 'autoflake -r \"${NAME}\" tests'"
       types: ["python"]
       pass_filenames: false
     - id: "isort"
@@ -31,14 +31,14 @@ repos:
       name: "flynt"
       stages: ["commit"]
       language: "system"
-      entry: "flynt -ll 88 --no-tf resume tests"
+      entry: "bash -c 'flynt -ll 88 --no-tf \"${NAME}\" tests'"
       types: ["python"]
       pass_filenames: false
     - id: "black"
       name: "black"
       stages: ["commit"]
       language: "system"
-      entry: "black resume tests"
+      entry: "bash -c 'black \"${NAME}\" tests'"
       types: ["python"]
       pass_filenames: false
     - id: "yesqa"
@@ -58,20 +58,20 @@ repos:
       name: "interrogate"
       stages: ["commit"]
       language: "system"
-      entry: "interrogate resume tests -I -M"
+      entry: "bash -c 'interrogate \"${NAME}\" tests -I -M'"
       types: ["python"]
     - id: "pylint"
       name: "pylint"
       stages: ["commit"]
       language: "system"
-      entry: "pylint resume tests"
+      entry: "bash -c 'pylint \"${NAME}\" tests'"
       types: ["python"]
       pass_filenames: false
     - id: "bandit"
       name: "bandit"
       stages: ["commit"]
       language: "system"
-      entry: "bandit resume tests --ini=pyproject.toml"
+      entry: "bash -c 'bandit \"${NAME}\" tests --ini=pyproject.toml'"
       types: ["python"]
       pass_filenames: false
     - id: "dodgy"
@@ -81,12 +81,11 @@ repos:
       entry: "dodgy"
       types: ["python"]
       pass_filenames: false
-      exclude: "^.direnv/"
     - id: "mypy"
       name: "mypy"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" mypy resume tests'"
+      entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" mypy \"${NAME}\" tests'"
       types: ["python"]
       pass_filenames: false
     - id: "dotenv-linter"
