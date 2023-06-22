@@ -1,9 +1,14 @@
+import sys
 from typing import List
 
 from rich import print as rprint
 
-from resume.utils import get_resume, get_options
-from resume.constants import JSON_DUMPS_KWARGS, JSON_EXCLUDE_FIELDS
+from resume.utils import get_output, get_resume, get_options
+from resume.exceptions import (
+    NotResumeError,
+    IncorrectResumePathError,
+    IncorrectResumePathFormatError,
+)
 
 
 __all__: List[str] = ["main"]
@@ -12,9 +17,16 @@ __all__: List[str] = ["main"]
 # TODO (@vint21h): implement it!!1
 def main() -> None:
     """Resume CLI."""
-    options = get_options()
-    resume = get_resume(path=options.resume)
+    try:
+        options = get_options()
+        resume = get_resume(path=options.resume)
+        output = get_output(resume=resume, format_=options.format)
+    except (
+        NotResumeError,
+        IncorrectResumePathFormatError,
+        IncorrectResumePathError,
+    ) as error:
+        sys.stderr.write(f"Something happened wrong :(. {error}\n")
+        sys.exit(2)
 
-    # rprint(resume)
-    rprint(resume.json(exclude=JSON_EXCLUDE_FIELDS, **JSON_DUMPS_KWARGS))
-    # rprint(options)
+    rprint(output)

@@ -8,7 +8,11 @@ from importlib import import_module
 import toml
 
 from resume.schemas import BaseResume
-from resume.constants import RESUME_PYPROJECT_PATH
+from resume.constants import (
+    JSON_DUMPS_KWARGS,
+    JSON_EXCLUDE_FIELDS,
+    RESUME_PYPROJECT_PATH,
+)
 from resume.exceptions import (
     NotResumeError,
     IncorrectResumePathError,
@@ -16,7 +20,7 @@ from resume.exceptions import (
 )
 
 
-__all__: List[str] = ["get_options", "get_version", "get_resume"]
+__all__: List[str] = ["get_options", "get_version", "get_resume", "get_output"]
 
 
 class CliOptionsFormat(Enum):
@@ -114,3 +118,24 @@ def get_resume(path: str) -> BaseResume:
         raise NotResumeError(resume=resume)
 
     return resume
+
+
+def get_output(resume: BaseResume, format_: CliOptionsFormat) -> str:
+    """
+    Generate resume text output in specified format.
+
+    :param resume: resume class instance
+    :type resume: BaseResume
+    :param format_: output format
+    :type format_: CliOptionsFormat
+    :return: resume in specified format
+    :rtype: str
+    """
+    if format_ == CliOptionsFormat.json:
+        return resume.json(exclude=JSON_EXCLUDE_FIELDS, **JSON_DUMPS_KWARGS)
+
+    if format_ == CliOptionsFormat.html:
+        return ""
+
+    # TODO (@vint21h): raise exceptions about wrong format
+    return ""
