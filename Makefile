@@ -2,6 +2,7 @@
 default: help
 PHONY: install check test setup-env install-pre-commit-hook bootstrap help
 ENVIRONMENT ?= dev
+NAME ?= resume
 
 
 install:
@@ -17,7 +18,7 @@ check:
 
 
 test:
-	PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}" pytest --import-mode=importlib --cov=.;\
+	PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}" pytest --import-mode=importlib --cov=$(NAME) -n auto $(TESTS);\
 
 
 setup-env:
@@ -44,7 +45,7 @@ help:
 	@echo "    check:"
 	@echo "        Perform some code checks."
 	@echo "    test:"
-	@echo "        Run tests."
+	@echo "        Run tests, can specify tests with 'TESTS' variable."
 	@echo "    setup-env:"
 	@echo "        Copy example environment config for development and setup virtualenv."
 	@echo "    install-pre-commit-hook:"

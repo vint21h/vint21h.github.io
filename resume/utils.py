@@ -1,14 +1,21 @@
 from argparse import ArgumentParser
 from dataclasses import dataclass
 from enum import Enum
+from importlib import import_module
 from pathlib import Path
 from typing import List, Optional
 
 import toml
 
 from resume.constants import RESUME_PYPROJECT_PATH
+from resume.exceptions import (
+    IncorrectResumePathError,
+    IncorrectResumePathFormatError,
+    NotResumeError,
+)
+from resume.schemas import BaseResume
 
-__all__: List[str] = ["get_options", "get_version"]
+__all__: List[str] = ["get_options", "get_version", "get_resume"]
 
 
 class CliOptionsFormat(Enum):
@@ -16,7 +23,6 @@ class CliOptionsFormat(Enum):
 
     json = "json"
     html = "html"
-    python = "python"
 
 
 @dataclass
@@ -24,7 +30,7 @@ class CliOptions:
     """Resume CLI options representation."""
 
     format: CliOptionsFormat  # noqa: A003
-    output: Optional[str] = None
+    resume: str
 
 
 def get_options() -> CliOptions:
@@ -46,14 +52,14 @@ def get_options() -> CliOptions:
         help=f"output format ({', '.join([fmt.value for fmt in CliOptionsFormat])})",
     )
     parser.add_argument(
-        "-o",
-        "--output",
+        "-r",
+        "--resume",
         action="store",
-        dest="output",
+        dest="resume",
         type=str,
-        required=False,
-        metavar="OUTPUT",
-        help="output file path",
+        required=True,
+        metavar="RESUME",
+        help="resume class module:variable path, for example 'my:RESUME'",
     )
     parser.add_argument(
         "-v",
@@ -79,3 +85,31 @@ def get_version() -> Optional[str]:
         return None
 
     return toml.load(f=file_).get("project", {}).get("version")
+
+
+def get_resume(path: str) -> BaseResume:
+    """
+    Loads resume variable from supplied module path.
+
+    :param path: resume variable path
+    :type path: str
+    :return: resume variable
+    :rtype: BaseResume
+    :raises NotResumeError: in case when variable is not inherited from 'BaseResume class'
+    :raises IncorrectResumePathError: in case of wrong module/variable path
+    :raises IncorrectResumePathFormatError: in case of bad resume variable path format
+    """
+    try:
+        module, variable = path.strip(" ").split(":")
+    except ValueError as error:
+        raise IncorrectResumePathFormatError(resume=path, error=error) from error
+
+    try:  # noqa: TRY101
+        resume = import_module(name=module).__getattribute__(variable)
+    except (ModuleNotFoundError, AttributeError) as error:
+        raise IncorrectResumePathError(resume=path, error=error) from error
+
+    if not isinstance(resume, BaseResume):
+        raise NotResumeError(resume=resume)
+
+    return resume

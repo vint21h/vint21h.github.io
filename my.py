@@ -4,26 +4,15 @@ from typing import List
 from resume.constants import (
     RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE,
     RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE,
-    RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
-)
-from resume.schemas import (
-    BaseResume,
-    ResumeBasics,
-    ResumeBasicsLocation,
-    ResumeBasicsMetadata,
-    ResumeBasicsMetadataLanguage,
-    ResumeEducation,
-    ResumeEducationInstitution,
-    ResumeLanguage,
-    ResumeProject,
-    ResumeProjectCompany,
-    ResumeProjectCompanyMetadata,
-    ResumeProjectResponsibility,
-    ResumeProjectTechnology,
-    ResumeSkillOrTechnology,
-    ResumeWork,
-    ResumeWorkCompany,
-)
+    RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR)
+from resume.schemas import (BaseResume, ResumeBasics, ResumeBasicsLocation,
+                            ResumeBasicsMetadata, ResumeBasicsMetadataLanguage,
+                            ResumeEducation, ResumeEducationInstitution,
+                            ResumeLanguage, ResumeProject,
+                            ResumeProjectCompany, ResumeProjectCompanyMetadata,
+                            ResumeProjectResponsibility,
+                            ResumeProjectTechnology, ResumeSkillOrTechnology,
+                            ResumeWork, ResumeWorkCompany)
 from resume.utils import get_version
 
 __all__: List[str] = ["RESUME"]
@@ -737,7 +726,7 @@ RESUME = BaseResume(
             name="DCOD",
             start_date=date(year=2013, month=1, day=1),
             end_date=date(year=2019, month=5, day=28),
-            summary="DCOD site.",
+            summary="DCOD company site.",
             url="http://www.d-cod.com/",
             company=[
                 ResumeProjectCompany(
