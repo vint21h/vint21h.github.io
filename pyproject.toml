@@ -218,7 +218,7 @@ length_sort = true
 multi_line_output = 3
 use_parentheses = true
 virtual_env = "$VIRTUAL_ENV"
-known_third_party = ["pydantic", "rich", "toml"]
+known_third_party = ["jinja2", "pydantic", "rich", "toml"]
 src_paths = ["resume", "tests"]
 
 [tool.bandit]

@@ -21,6 +21,8 @@ __all__: List[str] = [
     "ResumeBasicsLocation",
     "ResumeBasicsMetadataLanguage",
     "BaseResume",
+    "ResumeBasicsAvatar",
+    "ResumeBasicsAvatarEasterEgg",
 ]
 
 
@@ -46,6 +48,22 @@ class ResumeBasicsMetadata(BaseModel):
     version: Optional[str]
 
 
+class ResumeBasicsAvatarEasterEgg(BaseModel):
+    """Resume basics avatar easter-egg field representation."""
+
+    path: str
+    nickname: str
+
+
+class ResumeBasicsAvatar(BaseModel):
+    """Resume basics avatar field representation."""
+
+    path: str
+    width: int
+    height: int
+    easter_egg: Optional[ResumeBasicsAvatarEasterEgg]
+
+
 class ResumeBasics(BaseModel):
     """Resume basics field representation."""
 
@@ -55,7 +73,8 @@ class ResumeBasics(BaseModel):
     linkedin: HttpUrl
     site: HttpUrl
     location: ResumeBasicsLocation
-    metadata: ResumeBasicsMetadata
+    metadata: Optional[ResumeBasicsMetadata]
+    avatar: Optional[ResumeBasicsAvatar]
 
 
 class ResumeWorkCompany(BaseModel):
@@ -134,7 +153,7 @@ class ResumeProject(BaseModel):
     name: str
     start_date: date
     end_date: Optional[date]
-    summary: Optional[str]
+    summary: str
     url: Optional[HttpUrl]
     company: List[ResumeProjectCompany]
     role: Optional[str]

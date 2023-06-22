@@ -8,6 +8,9 @@ __all__: List[str] = [
     "RESUME_PYPROJECT_PATH",
     "JSON_DUMPS_KWARGS",
     "JSON_EXCLUDE_FIELDS",
+    "HTML_MONTH_YEAR_FORMAT",
+    "HTML_DAY_MONTH_YEAR_FORMAT",
+    "HTML_YEAR_FORMAT",
 ]
 
 
@@ -25,6 +28,10 @@ JSON_EXCLUDE_FIELDS: Final[  # noqa: ECE001,TAE002
         ],
     ]
 ] = {
-    "basics": {"location": {"name"}, "metadata": True},
+    "basics": {"location": {"name"}, "metadata": True, "avatar": True},
     "projects": {"__all__": {"company": {"__all__": {"metadata"}}}},
 }
+
+HTML_MONTH_YEAR_FORMAT: str = "%b. %Y"
+HTML_DAY_MONTH_YEAR_FORMAT: str = "%d.%m.%Y"
+HTML_YEAR_FORMAT: str = "%Y"

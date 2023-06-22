@@ -6,17 +6,21 @@ from argparse import ArgumentParser
 from importlib import import_module
 
 import toml
+from jinja2 import Environment, PackageLoader, select_autoescape
 
 from resume.schemas import BaseResume
-from resume.constants import (
-    JSON_DUMPS_KWARGS,
-    JSON_EXCLUDE_FIELDS,
-    RESUME_PYPROJECT_PATH,
-)
 from resume.exceptions import (
     NotResumeError,
     IncorrectResumePathError,
     IncorrectResumePathFormatError,
+)
+from resume.constants import (
+    HTML_YEAR_FORMAT,
+    JSON_DUMPS_KWARGS,
+    JSON_EXCLUDE_FIELDS,
+    RESUME_PYPROJECT_PATH,
+    HTML_MONTH_YEAR_FORMAT,
+    HTML_DAY_MONTH_YEAR_FORMAT,
 )
 
 
@@ -135,7 +139,17 @@ def get_output(resume: BaseResume, format_: CliOptionsFormat) -> str:
         return resume.json(exclude=JSON_EXCLUDE_FIELDS, **JSON_DUMPS_KWARGS)
 
     if format_ == CliOptionsFormat.html:
-        return ""
+        jinja = Environment(
+            loader=PackageLoader("resume"), autoescape=select_autoescape()
+        )
+        template = jinja.get_template("resume.html")
+
+        return template.render(
+            RESUME=resume,
+            HTML_MONTH_YEAR_FORMAT=HTML_MONTH_YEAR_FORMAT,
+            HTML_DAY_MONTH_YEAR_FORMAT=HTML_DAY_MONTH_YEAR_FORMAT,
+            HTML_YEAR_FORMAT=HTML_YEAR_FORMAT,
+        )
 
     # TODO (@vint21h): raise exceptions about wrong format
     return ""

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="{{ RESUME.basics.metadata.language.language_code }}">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{{ RESUME.basics.name }}: {{ RESUME.basics.label }}</title>
+        <meta name="description" content="Oleksii Andrushevych: Python/Django developer" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="shortcut icon" href="favicon.png" type="image/png" sizes="64x64" />
+        <!--    TODO (@vint21h): mb use custom bootstrap bundle    -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+        <link href="static/css/styles.css" rel="stylesheet" />
+        <meta property="og:url" content="{{ RESUME.basics.site }}" />
+        <meta property="og:title" content="{{ RESUME.basics.name }}" />
+        {% if RESUME.basics.avatar %}
+            <meta property="og:image" content="{{ RESUME.basics.avatar.path }}" />
+        {% endif %}
+        <meta property="og:type" content="website" />
+        {% if RESUME.basics.avatar %}
+            <meta property="og:image:width" content="{{ RESUME.basics.avatar.width }}" />
+            <meta property="og:image:height" content="{{ RESUME.basics.avatar.height }}" />
+        {% endif %}
+        <meta property="og:description" content="{{ RESUME.basics.name }}: {{ RESUME.basics.label }}" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <main class="row">
+                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                    <section id="id-header" class="row">
+                        <div class="col-sm-9 col-xs-12 title">
+                            <h1><a href="{{ RESUME.basics.site }}">{{ RESUME.basics.name }}</a></h1>
+                            <h2 class="vr"></h2>
+                            <h2>{{ RESUME.basics.label }}</h2>
+                        </div>
+                        {% if RESUME.basics.avatar %}
+                            <div class="col-sm-3 col-xs-12 avatar pull-right" id="id-theme-switcher">
+                                <img class="img-circle img-responsive" alt="{{ RESUME.basics.name }}" src="{{ RESUME.basics.avatar.path }}" />
+                                {% if RESUME.basics.avatar.easter_egg %}
+                                    <img class="img-thumbnail img-responsive" alt="{{ RESUME.basics.avatar.easter_egg.nickname }}" src="{{ RESUME.basics.avatar.easter_egg.path }}" />
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    </section>
+                    <hr>
+                    <section id="id-about" class="row">
+                        <header class="col-sm-2">
+                            <h3>About</h3>
+                        </header>
+                        <div class="col-sm-10">
+                            <p>
+                                <strong>Email:</strong>&nbsp;<a href="mailto:{{ RESUME.basics.email }}">{{ RESUME.basics.email }}</a>
+                            </p>
+                            <p>
+                                <strong>LinkedIn:</strong>&nbsp;<a href="{{ RESUME.basics.linkedin }}" target="_blank" rel="noreferrer">{{ RESUME.basics.linkedin }}</a>
+                            </p>
+                            <p>
+                                <strong>Location:</strong>&nbsp;{{ RESUME.basics.location.name }}
+                            </p>
+                        </div>
+                    </section>
+                    <hr />
+                    {% if RESUME.work %}
+                        <section id="id-works" class="row">
+                            <header class="col-sm-2">
+                                <h3>Work Experience</h3>
+                            </header>
+                            <div class="col-sm-10">
+                                <div class="details">
+                                    {% for work in RESUME.work %}
+                                        <div class="work">
+                                            <h3>{{ work.company.original }}{% if work.company.en %} <span class="small">({{ work.company.en }})</span>{% endif %}<abbr class="date pull-right" title="{{ work.start_date.strftime(HTML_DAY_MONTH_YEAR_FORMAT) }} - {% if work.end_date %}{{ work.end_date.strftime(HTML_DAY_MONTH_YEAR_FORMAT) }}{% else %}Present{% endif %}">{{ work.start_date.strftime(HTML_MONTH_YEAR_FORMAT) }} - {% if work.end_date %}{{ work.end_date.strftime(HTML_MONTH_YEAR_FORMAT) }}{% else %}Present{% endif %}</abbr></h3>
+                                            <strong>{{ work.position }}</strong>
+                                            {% if work.website %}
+                                                <div class="website pull-right">
+                                                    <a target="_blank" href="{{ work.website }}" rel="noreferrer">{{ work.website }}</a>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </section>
+                        <hr />
+                    {% endif %}
+                    {% if RESUME.projects %}
+                        <section id="id-projects" class="row">
+                            <header class="col-sm-2">
+                                <h3>Projects</h3>
+                            </header>
+                            <div class="col-sm-10">
+                                <div class="details">
+                                    {% for project in RESUME.projects %}
+                                        <div class="project">
+                                            <h3>
+                                                {% for company in project.company %}
+                                                    <span class="company label{% if company.metadata %} {{ company.metadata.css_class }}{% endif %}">{{ company.name }}</span>
+                                                {% endfor %}
+                                                {{ project.name }}
+                                                <abbr class="date pull-right" title="{{ project.start_date.strftime(HTML_DAY_MONTH_YEAR_FORMAT) }} - {% if project.end_date %}{{ project.end_date.strftime(HTML_DAY_MONTH_YEAR_FORMAT) }}{% else %}Present{% endif %}">{{ project.start_date.strftime(HTML_YEAR_FORMAT) }} - {% if project.end_date %}{{ project.end_date.strftime(HTML_YEAR_FORMAT) }}{% else %}Present{% endif %}</abbr>
+                                            </h3>
+                                            <span>{{ project.summary }}</span>
+                                            {% if project.url %}
+                                                <div class="website pull-right">
+                                                    <a target="_blank" href="{{ project.url }}" rel="noreferrer">{{ project.url }}</a>
+                                                </div>
+                                            {% endif %}
+                                            {% if project.role %}
+                                            <div class="role">
+                                                <span class="glyphicon glyphicon-user" aria-hidden="true" title="Role"></span>&nbsp;<strong>{{ project.role }}</strong>
+                                            </div>
+                                            {% endif %}
+                                            {% if project.responsibilities %}
+                                            <div class="responsibilities">
+                                                <ul>
+                                                    {% for responsibility in project.responsibilities %}
+                                                    <li>{{ responsibility.name }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            {% endif %}
+                                            {% if project.technologies %}
+                                                <div class="technologies"><span class="glyphicon glyphicon-tag" aria-hidden="true" title="Technologies"></span>&nbsp;{% for technology in project.technologies %}{{ technology.name }}{% if not loop.last %}, {% endif %}{% endfor %}</div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </section>
+                        <hr />
+                    {% endif %}
+                    {% if RESUME.education %}
+                        <section id="id-education" class="row">
+                            <header class="col-sm-2">
+                                <h3>Education</h3>
+                            </header>
+                            <div class="col-sm-10">
+                                <div class="details">
+                                    <div class="education">
+                                        {% for education in RESUME.education %}
+                                            <h3>{{ education.institution.original }}{% if education.institution.en %} <span class="small">({{ education.institution.en }})</span>{% endif %}<span class="date pull-right">{{ education.start_date.strftime(HTML_YEAR_FORMAT) }} - {% if education.end_date %}{{ education.end_date.strftime(HTML_YEAR_FORMAT) }}{% else %}Present{% endif %}</span></h3>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <hr />
+                    {% endif %}
+                    {% if RESUME.skills_and_technologies %}
+                        <section id="id-skills-and-technologies" class="row">
+                            <header class="col-sm-2">
+                                <h3>Skills and technologies</h3>
+                            </header>
+                            <div class="col-sm-10">
+                                <div class="details row">
+                                    <div class="col-sm-12">
+                                        <ul>
+                                            {% for skill in RESUME.skills_and_technologies %}
+                                                <li class="skill">
+                                                    <h4>{{ skill.name }}</h4>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <hr />
+                    {% endif %}
+                    {% if RESUME.languages %}
+                        <section id="id-languages" class="row">
+                            <header class="col-sm-2">
+                                <h3>Languages</h3>
+                            </header>
+                            <div class="col-sm-10">
+                                <div class="details">
+                                    <ul>
+                                        {% for language in RESUME.languages %}
+                                            <li class="language">
+                                                <h4>{{ language.language }} <span class="pull-right">{{ language.fluency }}</span></h4>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    {% endif %}
+                    {% if RESUME.basics.metadata %}
+                        <hr />
+                        <section id="id-updated" class="row">
+                            <header class="col-sm-3">
+                                <strong>Updated:</strong>&nbsp;<abbr class="date" title="{{ RESUME.basics.metadata.updated.strftime(HTML_DAY_MONTH_YEAR_FORMAT) }}">{{ RESUME.basics.metadata.updated.strftime(HTML_MONTH_YEAR_FORMAT) }}</abbr>
+                            </header>
+                            <div class="col-sm-9"></div>
+                        </section>
+                    {% endif %}
+                </div>
+            </main>
+        </div>
+        <script async="async" src="static/js/index.js" type="application/javascript"></script>
+    </body>
+</html>
