@@ -5,7 +5,8 @@ requires-python = "==3.11.*"
 
 dependencies = [
   "pydantic[email]==1.10.9",
-  "rich==12.6.0"
+  "rich==12.6.0",
+  "Jinja2==3.1.2",
 ]
 
 [project.optional-dependencies]
@@ -206,9 +207,9 @@ exclude_lines = [
 balanced_wrapping = true
 combine_as_imports = true
 default_section = "FIRSTPARTY"
-force_grid_wrap = 0
+force_grid_wrap = false
 force_sort_within_sections = true
-force_to_top = true
+force_to_top = []
 include_trailing_comma = true
 known_first_party = "resume"
 line_length = 88

@@ -1,7 +1,8 @@
 from datetime import date
 from typing import List, Optional
 
-from pydantic import BaseModel, EmailStr, HttpUrl
+from pydantic import HttpUrl, EmailStr, BaseModel
+
 
 __all__: List[str] = [
     "ResumeLanguage",

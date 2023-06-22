@@ -1,4 +1,5 @@
-from typing import Any, Dict, Final, List, Set, Union
+from typing import Any, Set, Dict, List, Final, Union
+
 
 __all__: List[str] = [
     "RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR",

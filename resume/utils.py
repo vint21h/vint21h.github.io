@@ -1,19 +1,20 @@
-from argparse import ArgumentParser
-from dataclasses import dataclass
 from enum import Enum
-from importlib import import_module
 from pathlib import Path
+from dataclasses import dataclass
 from typing import List, Optional
+from argparse import ArgumentParser
+from importlib import import_module
 
 import toml
 
+from resume.schemas import BaseResume
 from resume.constants import RESUME_PYPROJECT_PATH
 from resume.exceptions import (
+    NotResumeError,
     IncorrectResumePathError,
     IncorrectResumePathFormatError,
-    NotResumeError,
 )
-from resume.schemas import BaseResume
+
 
 __all__: List[str] = ["get_options", "get_version", "get_resume"]
 

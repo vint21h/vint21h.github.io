@@ -2,8 +2,9 @@ from typing import List
 
 from rich import print as rprint
 
+from resume.utils import get_resume, get_options
 from resume.constants import JSON_DUMPS_KWARGS, JSON_EXCLUDE_FIELDS
-from resume.utils import get_options, get_resume
+
 
 __all__: List[str] = ["main"]
 

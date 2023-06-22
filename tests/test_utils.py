@@ -1,11 +1,18 @@
-from datetime import date
 from typing import List
+from datetime import date
 from unittest import TestCase, mock
 
+from resume.utils import (
+    CliOptions,
+    CliOptionsFormat,
+    get_resume,
+    get_options,
+    get_version,
+)
 from resume.exceptions import (
+    NotResumeError,
     IncorrectResumePathError,
     IncorrectResumePathFormatError,
-    NotResumeError,
 )
 from resume.schemas import (
     BaseResume,
@@ -14,13 +21,7 @@ from resume.schemas import (
     ResumeBasicsMetadata,
     ResumeBasicsMetadataLanguage,
 )
-from resume.utils import (
-    CliOptions,
-    CliOptionsFormat,
-    get_options,
-    get_resume,
-    get_version,
-)
+
 
 __all__: List[str] = ["GetVersionTest", "GetOptionsTest", "GetResumeTest"]
 
