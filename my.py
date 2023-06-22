@@ -1409,7 +1409,7 @@ RESUME = BaseResume(
             start_date=date(year=2017, month=5, day=1),
             end_date=date(year=2019, month=5, day=28),
             summary="Simple wrapper around bootstrap-notify (https://github.com/mouse0270/bootstrap-notify/) to make your life easier.",
-            url="Simple wrapper around bootstrap-notify (https://github.com/mouse0270/bootstrap-notify/) to make your life easier.",
+            url="https://github.com/DCOD-OpenSource/bootstrap-notify-simple-wrapper/",
             company=[
                 ResumeProjectCompany(
                     name="DCOD",
