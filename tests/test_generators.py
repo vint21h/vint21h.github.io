@@ -3,9 +3,9 @@ from datetime import date
 from unittest import TestCase, mock
 
 from resume.generators import (
-    CliOptions,
+    Options,
+    OptionsFormat,
     ResumeGenerator,
-    CliOptionsFormat,
     ResumeGeneratorCli,
 )
 from resume.exceptions import (
@@ -53,25 +53,25 @@ class ResumeGeneratorTest(TestCase):
 
     def test___init__(self) -> None:
         """__init__ method must set up options."""
-        options = CliOptions(
-            format_=CliOptionsFormat.json,
+        options = Options(
+            format_=OptionsFormat.json,
             resume="my:RESUME",
         )
         generator = ResumeGenerator(options=options)
 
         self.assertIsInstance(
             obj=generator._options,
-            cls=CliOptions,
+            cls=Options,
         )
         self.assertEqual(
             first=generator._options.format_,
-            second=CliOptionsFormat.json,
+            second=OptionsFormat.json,
         )
 
     def test__get_resume_path(self) -> None:
         """_get_resume_path method must return resume module name and variable name from path."""
-        options = CliOptions(
-            format_=CliOptionsFormat.json,
+        options = Options(
+            format_=OptionsFormat.json,
             resume="my:RESUME",
         )
         generator = ResumeGenerator(options=options)
@@ -88,8 +88,8 @@ class ResumeGeneratorTest(TestCase):
 
     def test__get_resume_path__error__bad_format(self) -> None:
         """_get_resume_path method must return resume module name and variable name from path (bad resume variable path format case)."""
-        options = CliOptions(
-            format_=CliOptionsFormat.json,
+        options = Options(
+            format_=OptionsFormat.json,
             resume="TEST_RESUME",
         )
         generator = ResumeGenerator(options=options)
@@ -99,8 +99,8 @@ class ResumeGeneratorTest(TestCase):
 
     def test__get_resume(self) -> None:
         """_get_resume method must return resume variable from supplied module path."""
-        options = CliOptions(
-            format_=CliOptionsFormat.json,
+        options = Options(
+            format_=OptionsFormat.json,
             resume=f"{__name__}:TEST_RESUME",
         )
         generator = ResumeGenerator(options=options)
@@ -113,8 +113,8 @@ class ResumeGeneratorTest(TestCase):
 
     def test__get_resume__error__bad_path(self) -> None:
         """_get_resume method must return resume variable from supplied module path (bad resume path case)."""
-        options = CliOptions(
-            format_=CliOptionsFormat.json,
+        options = Options(
+            format_=OptionsFormat.json,
             resume="tests:TEST_RESUME",
         )
         generator = ResumeGenerator(options=options)
@@ -127,8 +127,8 @@ class ResumeGeneratorTest(TestCase):
 
     def test__get_resume__error__not_resume(self) -> None:
         """_get_resume method must return resume variable from supplied module path (not a resume case)."""
-        options = CliOptions(
-            format_=CliOptionsFormat.json,
+        options = Options(
+            format_=OptionsFormat.json,
             resume=f"{__name__}:TEST_RESUME__NOT_RESUME",
         )
         generator = ResumeGenerator(options=options)
@@ -150,24 +150,24 @@ class ResumeGeneratorCliTest(TestCase):
 
         self.assertIsInstance(
             obj=generator._options,
-            cls=CliOptions,
+            cls=Options,
         )
         self.assertEqual(
             first=generator._options.format_,
-            second=CliOptionsFormat.json,
+            second=OptionsFormat.json,
         )
 
     @mock.patch("sys.argv", ["__main__.py", "-f", "json", "-r", "my:RESUME"])
     def test__get_options(self) -> None:
-        """_get_options method must return CliOptions dataclass instance with corresponding properties."""
+        """_get_options method must return Options dataclass instance with corresponding properties."""
         generator = ResumeGeneratorCli()
         options = generator._get_options()
 
         self.assertIsInstance(
             obj=options,
-            cls=CliOptions,
+            cls=Options,
         )
         self.assertEqual(
             first=options.format_,
-            second=CliOptionsFormat.json,
+            second=OptionsFormat.json,
         )

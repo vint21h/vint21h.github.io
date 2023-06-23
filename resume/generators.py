@@ -1,26 +1,15 @@
 import sys
 from enum import Enum
-from abc import ABC, abstractmethod
 from argparse import ArgumentParser
 from importlib import import_module
 from typing import List, Final, Tuple
 
 from pydantic import BaseModel
 from rich import print as rprint
-from jinja2.loaders import PackageLoader
-from jinja2.environment import Environment
-from jinja2.utils import select_autoescape
-from jinja2.exceptions import TemplateError
 
 from resume.schemas import Resume
 from resume.utils import get_version
-from resume.constants import (
-    HTML_YEAR_FORMAT,
-    JSON_DUMPS_KWARGS,
-    JSON_EXCLUDE_FIELDS,
-    HTML_MONTH_YEAR_FORMAT,
-    HTML_DAY_MONTH_YEAR_FORMAT,
-)
+from resume.outputs import HtmlResumeOutput, JsonResumeOutput
 from resume.exceptions import (
     NotResumeError,
     ResumeGeneratorError,
@@ -33,114 +22,35 @@ from resume.exceptions import (
 __all__: List[str] = ["ResumeGenerator", "ResumeGeneratorCli"]
 
 
-class CliOptionsFormat(Enum):
+class OptionsFormat(Enum):
     """Output format CLI option choices."""
 
     json = "json"
     html = "html"
 
 
-class CliOptions(BaseModel):
+class Options(BaseModel):
     """Resume CLI options representation."""
 
-    format_: CliOptionsFormat
+    format_: OptionsFormat
     resume: str
-
-
-class BaseResumeOutput(ABC):
-    """Base resume output generator."""
-
-    resume: Resume
-
-    def __init__(self, resume: Resume) -> None:
-        """
-        Set up some properties.
-
-        :param resume: resume instance
-        :type resume: Resume
-        """
-        self.resume = resume
-
-    def generate(self) -> str:
-        """
-        Generate resume in specified format.
-
-        :return: resume in specified format
-        :rtype: str
-        """
-        return self._generate()
-
-    @abstractmethod
-    def _generate(self) -> str:
-        """
-        Generate resume in specified format.
-
-        :return: resume in specified format
-        :rtype: str
-        """
-        ...
-
-
-class JsonResumeOutput(BaseResumeOutput):
-    """JSON resume output generator."""
-
-    def _generate(self) -> str:
-        """
-        Generate resume in JSON format.
-
-        :return: resume in JSON format
-        :rtype: str
-        """
-        return self.resume.json(
-            exclude=JSON_EXCLUDE_FIELDS, by_alias=True, **JSON_DUMPS_KWARGS
-        )
-
-
-class HtmlResumeOutput(BaseResumeOutput):
-    """HTML resume output generator."""
-
-    def _generate(self) -> str:
-        """
-        Generate resume in HTML format.
-
-        :return: resume in HTML format
-        :rtype: str
-        :raises ResumeGeneratorError: in case something go wrong during resume rendering
-        """
-        try:
-            jinja = Environment(
-                loader=PackageLoader("resume"), autoescape=select_autoescape()
-            )
-            template = jinja.get_template("resume.html.jinja")
-            output = template.render(
-                RESUME=self.resume,
-                HTML_MONTH_YEAR_FORMAT=HTML_MONTH_YEAR_FORMAT,
-                HTML_DAY_MONTH_YEAR_FORMAT=HTML_DAY_MONTH_YEAR_FORMAT,
-                HTML_YEAR_FORMAT=HTML_YEAR_FORMAT,
-            )
-        except TemplateError as error:
-            raise ResumeGeneratorError(
-                f"A problem occurred during generating output for: {self.resume}. {error}"
-            ) from error
-
-        return output
 
 
 class ResumeGenerator:
     """Resume output generator."""
 
-    _options: CliOptions
+    _options: Options
     _OUTPUTS: Final = {
-        CliOptionsFormat.json: JsonResumeOutput,
-        CliOptionsFormat.html: HtmlResumeOutput,
+        OptionsFormat.json: JsonResumeOutput,
+        OptionsFormat.html: HtmlResumeOutput,
     }
 
-    def __init__(self, options: CliOptions) -> None:
+    def __init__(self, options: Options) -> None:
         """
         Set up options.
 
         :param options: CLI options
-        :type options: CliOptions
+        :type options: Options
         """
         self._options = options
 
@@ -222,7 +132,7 @@ class ResumeGenerator:
 class ResumeGeneratorCli:
     """Resume output generator CLI."""
 
-    _options: CliOptions
+    _options: Options
 
     def __init__(self) -> None:
         """Set up options."""
@@ -250,12 +160,12 @@ class ResumeGeneratorCli:
         rprint(output)
 
     @staticmethod
-    def _get_options() -> CliOptions:
+    def _get_options() -> Options:
         """
         Parse commandline options arguments.
 
         :return: parsed command line arguments
-        :rtype: CliOptions
+        :rtype: Options
         """
         parser = ArgumentParser(description="Resume as Python code")
         parser.add_argument(
@@ -263,10 +173,10 @@ class ResumeGeneratorCli:
             "--format",
             action="store",
             dest="format_",
-            type=CliOptionsFormat,
+            type=OptionsFormat,
             required=True,
             metavar="FORMAT",
-            help=f"output format ({', '.join([fmt.value for fmt in CliOptionsFormat])})",
+            help=f"output format ({', '.join([fmt.value for fmt in OptionsFormat])})",
         )
         parser.add_argument(
             "-r",
@@ -286,4 +196,4 @@ class ResumeGeneratorCli:
         )
         options = parser.parse_args()
 
-        return CliOptions(**vars(options))
+        return Options(**vars(options))
