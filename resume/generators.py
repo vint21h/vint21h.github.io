@@ -144,7 +144,7 @@ class ResumeGeneratorCli:
         self._generate()
 
     # TODO (@vint21h): write tests for HTML case
-    # and for error case
+    #  and for error case
     def _generate(self) -> None:
         """Generate resume in specified format and write it pretty formatted in to stdout."""
         try:

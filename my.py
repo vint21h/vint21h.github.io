@@ -13,11 +13,11 @@ from resume.schemas import (
     ResumeBasics,
     ResumeProject,
     ResumeLanguage,
+    ResumeMetadata,
     ResumeEducation,
     ResumeWorkCompany,
     ResumeBasicsAvatar,
     ResumeBasicsLocation,
-    ResumeBasicsMetadata,
     ResumeProjectCompany,
     ResumeProjectTechnology,
     ResumeSkillOrTechnology,
@@ -42,14 +42,6 @@ RESUME = Resume(
         location=ResumeBasicsLocation(
             name="Ukraine",
             country_code="UA",
-        ),
-        metadata=ResumeBasicsMetadata(
-            language=ResumeBasicsMetadataLanguage(
-                name="English",
-                language_code="en",
-            ),
-            updated=date(year=2023, month=2, day=10),
-            version=get_version(),
         ),
         avatar=ResumeBasicsAvatar(
             path="static/images/avatar.png",
@@ -2314,4 +2306,12 @@ RESUME = Resume(
             ],
         ),
     ],
+    metadata=ResumeMetadata(
+            language=ResumeBasicsMetadataLanguage(
+                name="English",
+                language_code="en",
+            ),
+            updated=date(year=2023, month=2, day=10),
+            version=get_version(),
+        ),
 )

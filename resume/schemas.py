@@ -18,9 +18,9 @@ __all__: List[str] = [
     "ResumeSkillOrTechnology",
     "ResumeProjectResponsibility",
     "ResumeEducationInstitution",
-    "ResumeBasicsMetadata",
+    "ResumeMetadata",
     "ResumeBasicsLocation",
-    "ResumeBasicsMetadataLanguage",
+    "ResumeMetadataLanguage",
     "Resume",
     "ResumeBasicsAvatar",
     "ResumeBasicsAvatarEasterEgg",
@@ -34,18 +34,18 @@ class ResumeBasicsLocation(CamelModel):
     country_code: str
 
 
-class ResumeBasicsMetadataLanguage(CamelModel):
-    """Resume basics metadata language field representation."""
+class ResumeMetadataLanguage(CamelModel):
+    """Resume metadata language field representation."""
 
     name: str
     language_code: str
 
 
-class ResumeBasicsMetadata(CamelModel):
-    """Resume basics metadata field representation."""
+class ResumeMetadata(CamelModel):
+    """Resume metadata field representation."""
 
     updated: date
-    language: ResumeBasicsMetadataLanguage
+    language: ResumeMetadataLanguage
     version: Optional[str]
 
 
@@ -74,7 +74,6 @@ class ResumeBasics(CamelModel):
     linkedin: HttpUrl
     site: HttpUrl
     location: ResumeBasicsLocation
-    metadata: Optional[ResumeBasicsMetadata]
     avatar: Optional[ResumeBasicsAvatar]
 
 
@@ -176,3 +175,4 @@ class Resume(CamelModel):
     skills_and_technologies: Optional[List[ResumeSkillOrTechnology]]
     languages: Optional[List[ResumeLanguage]]
     projects: Optional[List[ResumeProject]]
+    metadata: Optional[ResumeMetadata]

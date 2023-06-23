@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ RESUME.basics.metadata.language.language_code }}">
+<html lang="{{ RESUME.metadata.language.language_code }}">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>{{ RESUME.basics.name }}: {{ RESUME.basics.label }}</title>
@@ -183,11 +183,11 @@
                             </div>
                         </section>
                     {% endif %}
-                    {% if RESUME.basics.metadata %}
+                    {% if RESUME.metadata %}
                         <hr />
                         <section id="id-updated" class="row">
                             <header class="col-sm-3">
-                                <strong>Updated:</strong>&nbsp;<abbr class="date" title="{{ RESUME.basics.metadata.updated.strftime(HTML_DAY_MONTH_YEAR_FORMAT) }}">{{ RESUME.basics.metadata.updated.strftime(HTML_MONTH_YEAR_FORMAT) }}</abbr>
+                                <strong>Updated:</strong>&nbsp;<abbr class="date" title="{{ RESUME.metadata.updated.strftime(HTML_DAY_MONTH_YEAR_FORMAT) }}">{{ RESUME.metadata.updated.strftime(HTML_MONTH_YEAR_FORMAT) }}</abbr>
                             </header>
                             <div class="col-sm-9"></div>
                         </section>

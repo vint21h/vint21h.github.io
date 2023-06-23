@@ -15,9 +15,9 @@ from resume.generators import (
 from resume.schemas import (
     Resume,
     ResumeBasics,
+    ResumeMetadata,
     ResumeBasicsLocation,
-    ResumeBasicsMetadata,
-    ResumeBasicsMetadataLanguage,
+    ResumeMetadataLanguage,
 )
 from resume.exceptions import (
     NotResumeError,
@@ -41,14 +41,14 @@ TEST_RESUME = Resume(
             name="United States of America",
             country_code="US",
         ),
-        metadata=ResumeBasicsMetadata(
-            language=ResumeBasicsMetadataLanguage(
-                name="English",
-                language_code="en",
-            ),
-            updated=date(year=1991, month=8, day=24),
+    ),
+    metadata=ResumeMetadata(
+        language=ResumeMetadataLanguage(
+            name="English",
+            language_code="en",
         ),
-    )
+        updated=date(year=1991, month=8, day=24),
+    ),
 )
 TEST_RESUME__NOT_RESUME = object()
 

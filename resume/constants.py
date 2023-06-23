@@ -21,8 +21,9 @@ RESUME_PYPROJECT_PATH: Final[str] = "pyproject.toml"
 
 JSON_DUMPS_KWARGS: Final[Dict[str, Any]] = {"indent": 2, "ensure_ascii": False}
 JSON_EXCLUDE_FIELDS: Final = {  # noqa: ECE001
-    "basics": {"location": {"name"}, "metadata": True, "avatar": True},
+    "basics": {"location": {"name"}, "avatar": True},
     "projects": {"__all__": {"company": {"__all__": {"metadata"}}}},
+    "metadata": True,
 }
 
 HTML_MONTH_YEAR_FORMAT: str = "%b. %Y"

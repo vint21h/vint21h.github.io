@@ -10,9 +10,9 @@ from resume.outputs import HtmlResumeOutput, JsonResumeOutput
 from resume.schemas import (
     Resume,
     ResumeBasics,
+    ResumeMetadata,
     ResumeBasicsLocation,
-    ResumeBasicsMetadata,
-    ResumeBasicsMetadataLanguage,
+    ResumeMetadataLanguage,
 )
 
 
@@ -30,14 +30,14 @@ TEST_RESUME = Resume(
             name="United States of America",
             country_code="US",
         ),
-        metadata=ResumeBasicsMetadata(
-            language=ResumeBasicsMetadataLanguage(
-                name="English",
-                language_code="en",
-            ),
-            updated=date(year=1991, month=8, day=24),
+    ),
+    metadata=ResumeMetadata(
+        language=ResumeMetadataLanguage(
+            name="English",
+            language_code="en",
         ),
-    )
+        updated=date(year=1991, month=8, day=24),
+    ),
 )
 
 
