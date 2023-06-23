@@ -1,3 +1,4 @@
+import sys
 from enum import Enum
 from abc import ABC, abstractmethod
 from argparse import ArgumentParser
@@ -5,6 +6,7 @@ from importlib import import_module
 from typing import List, Final, Tuple
 
 from pydantic import BaseModel
+from rich import print as rprint
 from jinja2.loaders import PackageLoader
 from jinja2.environment import Environment
 from jinja2.utils import select_autoescape
@@ -28,7 +30,7 @@ from resume.exceptions import (
 )
 
 
-__all__: List[str] = ["ResumeGenerator"]
+__all__: List[str] = ["ResumeGenerator", "ResumeGeneratorCli"]
 
 
 class CliOptionsFormat(Enum):
@@ -41,7 +43,7 @@ class CliOptionsFormat(Enum):
 class CliOptions(BaseModel):
     """Resume CLI options representation."""
 
-    format: CliOptionsFormat  # noqa: A003
+    format_: CliOptionsFormat
     resume: str
 
 
@@ -124,7 +126,6 @@ class HtmlResumeOutput(BaseResumeOutput):
         return output
 
 
-# TODO (@vint21h): split to generator and CLI!!1
 class ResumeGenerator:
     """Resume output generator."""
 
@@ -134,9 +135,14 @@ class ResumeGenerator:
         CliOptionsFormat.html: HtmlResumeOutput,
     }
 
-    def __init__(self) -> None:
-        """Set up options."""
-        self._options = self._get_options()
+    def __init__(self, options: CliOptions) -> None:
+        """
+        Set up options.
+
+        :param options: CLI options
+        :type options: CliOptions
+        """
+        self._options = options
 
     def generate(self) -> str:
         """
@@ -158,52 +164,13 @@ class ResumeGenerator:
         module, variable = self._get_resume_path(self._options.resume)
         resume = self._get_resume(module=module, variable=variable)
         try:
-            output = self._OUTPUTS[self._options.format](resume=resume)
+            output = self._OUTPUTS[self._options.format_](resume=resume)
         except KeyError as error:
             raise ResumeGeneratorOptionsError(
-                f"'{self._options.format}' output generator does not exist."
+                f"'{self._options.format_}' output generator does not exist."
             ) from error
 
         return output.generate()
-
-    @staticmethod
-    def _get_options() -> CliOptions:
-        """
-        Parse commandline options arguments.
-
-        :return: parsed command line arguments
-        :rtype: CliOptions
-        """
-        parser = ArgumentParser(description="Resume as Python code")
-        parser.add_argument(
-            "-f",
-            "--format",
-            action="store",
-            dest="format",
-            type=CliOptionsFormat,
-            required=True,
-            metavar="FORMAT",
-            help=f"output format ({', '.join([fmt.value for fmt in CliOptionsFormat])})",
-        )
-        parser.add_argument(
-            "-r",
-            "--resume",
-            action="store",
-            dest="resume",
-            type=str,
-            required=True,
-            metavar="RESUME",
-            help="resume class module:variable path, for example 'my:RESUME'",
-        )
-        parser.add_argument(
-            "-v",
-            "--version",
-            action="version",
-            version=get_version(),
-        )
-        options = parser.parse_args()
-
-        return CliOptions(**vars(options))
 
     @staticmethod
     def _get_resume_path(path: str) -> Tuple[str, str]:
@@ -250,3 +217,73 @@ class ResumeGenerator:
             raise NotResumeError(f"{resume} is not an instance of 'Resume'.")
 
         return resume
+
+
+class ResumeGeneratorCli:
+    """Resume output generator CLI."""
+
+    _options: CliOptions
+
+    def __init__(self) -> None:
+        """Set up options."""
+        self._options = self._get_options()
+
+    def generate(self) -> None:
+        """Generate resume in specified format and write it pretty formatted in to stdout."""
+        self._generate()
+
+    def _generate(self) -> None:
+        """Generate resume in specified format and write it pretty formatted in to stdout."""
+        try:
+            generator = ResumeGenerator(options=self._options)
+            output = generator.generate()
+        except (
+            NotResumeError,
+            IncorrectResumePathFormatError,
+            IncorrectResumePathError,
+            ResumeGeneratorOptionsError,
+            ResumeGeneratorError,
+        ) as error:
+            sys.stderr.write(f"Something happened wrong :(. {error}\n")
+            sys.exit(2)
+
+        rprint(output)
+
+    @staticmethod
+    def _get_options() -> CliOptions:
+        """
+        Parse commandline options arguments.
+
+        :return: parsed command line arguments
+        :rtype: CliOptions
+        """
+        parser = ArgumentParser(description="Resume as Python code")
+        parser.add_argument(
+            "-f",
+            "--format",
+            action="store",
+            dest="format_",
+            type=CliOptionsFormat,
+            required=True,
+            metavar="FORMAT",
+            help=f"output format ({', '.join([fmt.value for fmt in CliOptionsFormat])})",
+        )
+        parser.add_argument(
+            "-r",
+            "--resume",
+            action="store",
+            dest="resume",
+            type=str,
+            required=True,
+            metavar="RESUME",
+            help="resume class module:variable path, for example 'my:RESUME'",
+        )
+        parser.add_argument(
+            "-v",
+            "--version",
+            action="version",
+            version=get_version(),
+        )
+        options = parser.parse_args()
+
+        return CliOptions(**vars(options))

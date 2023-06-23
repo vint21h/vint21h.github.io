@@ -1,9 +1,9 @@
 from typing import List
 
-from resume import main
+from resume.generators import ResumeGeneratorCli
 
 
 __all__: List[str] = []
 
 
-main()
+ResumeGeneratorCli().generate()
