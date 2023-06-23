@@ -8,7 +8,7 @@ from importlib import import_module
 import toml
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from resume.schemas import BaseResume
+from resume.schemas import Resume
 from resume.exceptions import (
     NotResumeError,
     IncorrectResumePathError,
@@ -96,40 +96,44 @@ def get_version() -> Optional[str]:
     return toml.load(f=file_).get("project", {}).get("version")
 
 
-def get_resume(path: str) -> BaseResume:
+def get_resume(path: str) -> Resume:
     """
     Loads resume variable from supplied module path.
 
     :param path: resume variable path
     :type path: str
     :return: resume variable
-    :rtype: BaseResume
-    :raises NotResumeError: in case when variable is not inherited from 'BaseResume class'
+    :rtype: Resume
+    :raises NotResumeError: in case when variable is not inherited from 'Resume class'
     :raises IncorrectResumePathError: in case of wrong module/variable path
     :raises IncorrectResumePathFormatError: in case of bad resume variable path format
     """
     try:
         module, variable = path.strip(" ").split(":")
     except ValueError as error:
-        raise IncorrectResumePathFormatError(resume=path, error=error) from error
+        raise IncorrectResumePathFormatError(
+            f"Incorrect resume variable path: {path}. Should be in format: 'module:variable', for example: 'my:RESUME'. {error}"
+        ) from error
 
     try:  # noqa: TRY101
         resume = import_module(name=module).__getattribute__(variable)
     except (ModuleNotFoundError, AttributeError) as error:
-        raise IncorrectResumePathError(resume=path, error=error) from error
+        raise IncorrectResumePathError(
+            f"Incorrect resume variable path. {error}"
+        ) from error
 
-    if not isinstance(resume, BaseResume):
-        raise NotResumeError(resume=resume)
+    if not isinstance(resume, Resume):
+        raise NotResumeError(f"{resume} is not an instance of 'Resume'.")
 
     return resume
 
 
-def get_output(resume: BaseResume, format_: CliOptionsFormat) -> str:
+def get_output(resume: Resume, format_: CliOptionsFormat) -> str:
     """
     Generate resume text output in specified format.
 
     :param resume: resume class instance
-    :type resume: BaseResume
+    :type resume: Resume
     :param format_: output format
     :type format_: CliOptionsFormat
     :return: resume in specified format

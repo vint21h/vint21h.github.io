@@ -1,4 +1,4 @@
-from typing import Any, Set, Dict, List, Final, Union
+from typing import Any, Dict, List, Final
 
 
 __all__: List[str] = [
@@ -20,14 +20,7 @@ RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE: Final[str] = "label-warnin
 RESUME_PYPROJECT_PATH: Final[str] = "pyproject.toml"
 
 JSON_DUMPS_KWARGS: Final[Dict[str, Any]] = {"indent": 2, "ensure_ascii": False}
-JSON_EXCLUDE_FIELDS: Final[  # noqa: ECE001,TAE002
-    Dict[
-        str,
-        Union[
-            Dict[str, Union[Set[str], bool]], Dict[str, Dict[str, Dict[str, Set[str]]]]
-        ],
-    ]
-] = {
+JSON_EXCLUDE_FIELDS: Final = {  # noqa: ECE001
     "basics": {"location": {"name"}, "metadata": True, "avatar": True},
     "projects": {"__all__": {"company": {"__all__": {"metadata"}}}},
 }

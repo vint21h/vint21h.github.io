@@ -20,7 +20,7 @@ __all__: List[str] = [
     "ResumeBasicsMetadata",
     "ResumeBasicsLocation",
     "ResumeBasicsMetadataLanguage",
-    "BaseResume",
+    "Resume",
     "ResumeBasicsAvatar",
     "ResumeBasicsAvatarEasterEgg",
 ]
@@ -161,9 +161,9 @@ class ResumeProject(BaseModel):
     technologies: Optional[List[ResumeProjectTechnology]]
 
 
-class BaseResume(BaseModel):
+class Resume(BaseModel):
     """
-    Base resume representation.
+    Resume representation.
 
     An opinionated imagination of "https://jsonresume.org/".
     All fields representation are also opinionated.

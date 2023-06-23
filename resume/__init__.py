@@ -3,10 +3,12 @@ from typing import List
 
 from rich import print as rprint
 
-from resume.utils import get_output, get_resume, get_options
+from resume.generators import ResumeGenerator
 from resume.exceptions import (
     NotResumeError,
+    ResumeGeneratorError,
     IncorrectResumePathError,
+    ResumeGeneratorOptionsError,
     IncorrectResumePathFormatError,
 )
 
@@ -14,17 +16,17 @@ from resume.exceptions import (
 __all__: List[str] = ["main"]
 
 
-# TODO (@vint21h): implement it!!1
 def main() -> None:
     """Resume CLI."""
     try:
-        options = get_options()
-        resume = get_resume(path=options.resume)
-        output = get_output(resume=resume, format_=options.format)
+        generator = ResumeGenerator()
+        output = generator.generate()
     except (
         NotResumeError,
         IncorrectResumePathFormatError,
         IncorrectResumePathError,
+        ResumeGeneratorOptionsError,
+        ResumeGeneratorError,
     ) as error:
         sys.stderr.write(f"Something happened wrong :(. {error}\n")
         sys.exit(2)

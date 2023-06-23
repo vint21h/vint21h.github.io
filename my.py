@@ -8,7 +8,7 @@ from resume.constants import (
     RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE,
 )
 from resume.schemas import (
-    BaseResume,
+    Resume,
     ResumeWork,
     ResumeBasics,
     ResumeProject,
@@ -32,7 +32,7 @@ from resume.schemas import (
 __all__: List[str] = ["RESUME"]
 
 
-RESUME = BaseResume(
+RESUME = Resume(
     basics=ResumeBasics(
         name="Oleksii Andrushevych",
         label="Python/Django developer",

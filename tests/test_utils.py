@@ -15,7 +15,7 @@ from resume.exceptions import (
     IncorrectResumePathFormatError,
 )
 from resume.schemas import (
-    BaseResume,
+    Resume,
     ResumeBasics,
     ResumeBasicsLocation,
     ResumeBasicsMetadata,
@@ -26,7 +26,7 @@ from resume.schemas import (
 __all__: List[str] = ["GetVersionTest", "GetOptionsTest", "GetResumeTest"]
 
 
-TEST_RESUME = BaseResume(
+TEST_RESUME = Resume(
     basics=ResumeBasics(
         name="John Doe",
         label="Python/Django developer",
@@ -133,7 +133,7 @@ class GetResumeTest(TestCase):
 
         self.assertIsInstance(
             obj=resume,
-            cls=BaseResume,
+            cls=Resume,
         )
 
     def test_get_resume__not_resume(self) -> None:
