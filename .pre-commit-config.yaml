@@ -125,6 +125,7 @@ repos:
       - id: "end-of-file-fixer"
       - id: "forbid-new-submodules"
       - id: "trailing-whitespace"
+        exclude: "tests/fixtures/output.*"
 - repo: "https://github.com/Anadea/pre-commit-config-shellcheck"
   rev: "0.3.4"
   hooks:

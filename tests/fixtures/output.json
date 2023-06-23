@@ -1,0 +1,17 @@
+{
+  "basics": {
+    "name": "John Doe",
+    "label": "Python developer",
+    "email": "john.doe@example.com",
+    "linkedin": "https://www.linkedin.com/in/john.doe/",
+    "site": "https://www.example.com/",
+    "location": {
+      "countryCode": "US"
+    }
+  },
+  "work": null,
+  "education": null,
+  "skillsAndTechnologies": null,
+  "languages": null,
+  "projects": null
+}
