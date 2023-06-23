@@ -7,34 +7,41 @@ __all__: List[str] = [
     "IncorrectResumePathError",
     "ResumeGeneratorError",
     "ResumeGeneratorOptionsError",
+    "BaseResumeError",
 ]
 
 
-class NotResumeError(Exception):
+class BaseResumeError(Exception):
+    """Base resume error exception."""
+
+    ...
+
+
+class NotResumeError(BaseResumeError):
     """Resume variable is not inherited from 'Resume' class error exception."""
 
     ...
 
 
-class IncorrectResumePathFormatError(Exception):
+class IncorrectResumePathFormatError(BaseResumeError):
     """Bad resume variable path format error exception."""
 
     ...
 
 
-class IncorrectResumePathError(Exception):
+class IncorrectResumePathError(BaseResumeError):
     """Bad resume variable path error exception."""
 
     ...
 
 
-class ResumeGeneratorError(Exception):
+class ResumeGeneratorError(BaseResumeError):
     """Resume generator error exception."""
 
     ...
 
 
-class ResumeGeneratorOptionsError(Exception):
+class ResumeGeneratorOptionsError(BaseResumeError):
     """Resume generator CLI options error exception."""
 
     ...

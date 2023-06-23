@@ -77,7 +77,7 @@ class HtmlResumeOutputTest(TestCase):
             second=expected.strip(),
         )
 
-    def test__generate__error__resume_rendering_error(self) -> None:
+    def test__generate__error__rendering(self) -> None:
         """_generate method must return resume in HTML format (resume rendering error case)."""
         with mock.patch(  # noqa: SIM117
             target="jinja2.environment.Template.render", side_effect=TemplateError()

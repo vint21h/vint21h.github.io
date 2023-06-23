@@ -1,6 +1,10 @@
+from io import StringIO
 from typing import List
+from pathlib import Path
 from datetime import date
 from unittest import TestCase, mock
+
+from contextlib2 import redirect_stderr, redirect_stdout
 
 from resume.generators import (
     Options,
@@ -8,17 +12,19 @@ from resume.generators import (
     ResumeGenerator,
     ResumeGeneratorCli,
 )
-from resume.exceptions import (
-    NotResumeError,
-    IncorrectResumePathError,
-    IncorrectResumePathFormatError,
-)
 from resume.schemas import (
     Resume,
     ResumeBasics,
     ResumeBasicsLocation,
     ResumeBasicsMetadata,
     ResumeBasicsMetadataLanguage,
+)
+from resume.exceptions import (
+    NotResumeError,
+    BaseResumeError,
+    IncorrectResumePathError,
+    ResumeGeneratorOptionsError,
+    IncorrectResumePathFormatError,
 )
 
 
@@ -55,7 +61,7 @@ class ResumeGeneratorTest(TestCase):
         """__init__ method must set up options."""
         options = Options(
             format_=OptionsFormat.json,
-            resume="my:RESUME",
+            resume=f"{__file__}:TEST_RESUME",
         )
         generator = ResumeGenerator(options=options)
 
@@ -139,11 +145,100 @@ class ResumeGeneratorTest(TestCase):
         ):
             generator._get_resume(module=module, variable=variable)
 
+    def test__generate__html(self) -> None:
+        """_generate method must return resume in specified format (HTML case)."""
+        options = Options(
+            format_=OptionsFormat.html,
+            resume=f"{__name__}:TEST_RESUME",
+        )
+        output = ResumeGenerator(options=options)._generate()
+        fixture = Path(__file__).parent.joinpath("fixtures", "output.html")
+        expected = fixture.open().read()
+
+        self.assertIsInstance(
+            obj=output,
+            cls=str,
+        )
+        self.assertEqual(
+            first=output,
+            second=expected.strip(),
+        )
+
+    def test__generate__json(self) -> None:
+        """_generate method must return resume in specified format (JSON case)."""
+        options = Options(
+            format_=OptionsFormat.json,
+            resume=f"{__name__}:TEST_RESUME",
+        )
+        output = ResumeGenerator(options=options)._generate()
+        fixture = Path(__file__).parent.joinpath("fixtures", "output.json")
+        expected = fixture.open().read()
+
+        self.assertIsInstance(
+            obj=output,
+            cls=str,
+        )
+        self.assertEqual(
+            first=output,
+            second=expected.strip(),
+        )
+
+    def test__generate__error__options(self) -> None:
+        """_generate method must return resume in specified format (options error case)."""
+        options = Options(
+            format_=OptionsFormat.json,
+            resume=f"{__name__}:TEST_RESUME",
+        )
+        ResumeGenerator._OUTPUTS = {}
+
+        with self.assertRaises(expected_exception=ResumeGeneratorOptionsError):
+            ResumeGenerator(options=options)._generate()
+
+    def test_generate__html(self) -> None:
+        """'generate' method must return resume in specified format (HTML case)."""
+        options = Options(
+            format_=OptionsFormat.html,
+            resume=f"{__name__}:TEST_RESUME",
+        )
+        output = ResumeGenerator(options=options).generate()
+        fixture = Path(__file__).parent.joinpath("fixtures", "output.html")
+        expected = fixture.open().read()
+
+        self.assertIsInstance(
+            obj=output,
+            cls=str,
+        )
+        self.assertEqual(
+            first=output,
+            second=expected.strip(),
+        )
+
+    def test_generate__json(self) -> None:
+        """'generate' method must return resume in specified format (JSON case)."""
+        options = Options(
+            format_=OptionsFormat.json,
+            resume=f"{__name__}:TEST_RESUME",
+        )
+        output = ResumeGenerator(options=options).generate()
+        fixture = Path(__file__).parent.joinpath("fixtures", "output.json")
+        expected = fixture.open().read()
+
+        self.assertIsInstance(
+            obj=output,
+            cls=str,
+        )
+        self.assertEqual(
+            first=output,
+            second=expected.strip(),
+        )
+
 
 class ResumeGeneratorCliTest(TestCase):
     """ResumeGeneratorCli tests."""
 
-    @mock.patch("sys.argv", ["__main__.py", "-f", "json", "-r", "my:RESUME"])
+    @mock.patch(
+        "sys.argv", ["__main__.py", "-f", "json", "-r", f"{__name__}:TEST_RESUME"]
+    )
     def test___init__(self) -> None:
         """__init__ method must set up options."""
         generator = ResumeGeneratorCli()
@@ -157,7 +252,9 @@ class ResumeGeneratorCliTest(TestCase):
             second=OptionsFormat.json,
         )
 
-    @mock.patch("sys.argv", ["__main__.py", "-f", "json", "-r", "my:RESUME"])
+    @mock.patch(
+        "sys.argv", ["__main__.py", "-f", "json", "-r", f"{__name__}:TEST_RESUME"]
+    )
     def test__get_options(self) -> None:
         """_get_options method must return Options dataclass instance with corresponding properties."""
         generator = ResumeGeneratorCli()
@@ -170,4 +267,106 @@ class ResumeGeneratorCliTest(TestCase):
         self.assertEqual(
             first=options.format_,
             second=OptionsFormat.json,
+        )
+
+    @mock.patch(
+        "sys.argv", ["__main__.py", "-f", "json", "-r", f"{__name__}:TEST_RESUME"]
+    )
+    def test__generate__json(self) -> None:
+        """_generate method must pretty print resume in specified format (JSON case)."""
+        fixture = Path(__file__).parent.joinpath("fixtures", "output.json")
+        expected = fixture.open().read()
+        output = StringIO()
+
+        with redirect_stdout(output):
+            ResumeGeneratorCli()._generate()
+
+        self.assertIsInstance(
+            obj=output.getvalue(),
+            cls=str,
+        )
+        self.assertEqual(
+            first=output.getvalue().strip(),
+            second=expected.strip(),
+        )
+
+    @mock.patch(
+        "sys.argv", ["__main__.py", "-f", "html", "-r", f"{__name__}:TEST_RESUME"]
+    )
+    def test__generate__html(self) -> None:
+        """_generate method must pretty print resume in specified format (HTML case)."""
+        fixture = Path(__file__).parent.joinpath("fixtures", "output.html")
+        expected = fixture.open().read()
+        output = StringIO()
+
+        with redirect_stdout(output):
+            ResumeGeneratorCli()._generate()
+
+        self.assertIsInstance(
+            obj=output.getvalue(),
+            cls=str,
+        )
+        self.assertEqual(
+            first=output.getvalue().strip(),
+            second=expected.strip(),
+        )
+
+    @mock.patch(
+        "sys.argv", ["__main__.py", "-f", "json", "-r", f"{__name__}:TEST_RESUME"]
+    )
+    def test__generate__error(self) -> None:
+        """_generate method must pretty print resume in specified format (error case)."""
+        output = StringIO()
+
+        with mock.patch(
+            target="resume.generators.ResumeGenerator.generate",
+            side_effect=BaseResumeError(),
+        ):
+            with self.assertRaises(
+                expected_exception=SystemExit
+            ) as excinfo, redirect_stderr(output):
+                ResumeGeneratorCli()._generate()
+
+            self.assertTupleEqual(tuple1=excinfo.exception.code, tuple2=(2,))
+
+    @mock.patch(
+        "sys.argv", ["__main__.py", "-f", "json", "-r", f"{__name__}:TEST_RESUME"]
+    )
+    def test_generate__json(self) -> None:
+        """'generate' method must pretty print resume in specified format (JSON case)."""
+        fixture = Path(__file__).parent.joinpath("fixtures", "output.json")
+        expected = fixture.open().read()
+        output = StringIO()
+
+        with redirect_stdout(output):
+            ResumeGeneratorCli().generate()
+
+        self.assertIsInstance(
+            obj=output.getvalue(),
+            cls=str,
+        )
+        self.assertEqual(
+            first=output.getvalue().strip(),
+            second=expected.strip(),
+        )
+
+    @mock.patch(
+        "sys.argv", ["__main__.py", "-f", "html", "-r", f"{__name__}:TEST_RESUME"]
+    )
+    def test_generate__html(self) -> None:
+        """'generate' method must pretty print resume in specified format (HTML case)."""
+        fixture = Path(__file__).parent.joinpath("fixtures", "output.html")
+        expected = fixture.open().read()
+        output = StringIO()
+
+        with redirect_stdout(output):
+            ResumeGeneratorCli().generate()
+
+        self.assertIsInstance(
+            obj=output.getvalue(),
+            cls=str,
+        )
+        self.assertEqual(
+            first=output.getvalue().strip(),
+            second=expected.strip(),
         )

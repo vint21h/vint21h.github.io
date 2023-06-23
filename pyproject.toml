@@ -17,6 +17,7 @@ dev = [
   "bandit==1.7.5",
   "black==23.3.0",
   "bpython==0.24",
+  "contextlib2==21.6.0",
   "coverage==7.2.7",
   "darglint==1.8.1",
   "dlint==0.14.1",
@@ -225,7 +226,7 @@ length_sort = true
 multi_line_output = 3
 use_parentheses = true
 virtual_env = "$VIRTUAL_ENV"
-known_third_party = ["fastapi_camelcase", "jinja2", "pydantic", "rich", "toml"]
+known_third_party = ["contextlib2", "fastapi_camelcase", "jinja2", "pydantic", "rich", "toml"]
 src_paths = ["resume", "tests"]
 
 [tool.bandit]

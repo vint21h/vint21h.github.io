@@ -51,7 +51,7 @@ class BaseResumeOutput(ABC):
         :return: resume in specified format
         :rtype: str
         """
-        ...
+        ...  # pragma: no cover
 
 
 class JsonResumeOutput(BaseResumeOutput):

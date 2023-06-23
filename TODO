@@ -2,3 +2,5 @@
 - mb add .rst/.md formats
 - mb rewrite html output markup using bootstrap 5
 - mb rewrite JS using TS
+- mb generate humans.txt file
+- mb generate CNAME file
