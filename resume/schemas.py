@@ -165,7 +165,7 @@ class Resume(BaseModel):
     """
     Resume representation.
 
-    An opinionated imagination of "https://jsonresume.org/".
+    Deeply opinionated imagination of the "https://jsonresume.org/".
     All fields representation are also opinionated.
     """
 

@@ -195,10 +195,16 @@ branch = true
 source = [
   "src"
 ]
-omit =[]
+omit =[
+  "*/__init__.py",
+  "*/__main__.py"
+]
 
 [tool.coverage.report]
-omit =[]
+omit =[
+  "*/__init__.py",
+  "*/__main__.py"
+]
 exclude_lines = [
   "pragma: no cover"
 ]

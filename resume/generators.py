@@ -1,10 +1,10 @@
 from enum import Enum
-from dataclasses import dataclass
 from abc import ABC, abstractmethod
 from argparse import ArgumentParser
 from importlib import import_module
 from typing import List, Final, Tuple
 
+from pydantic import BaseModel
 from jinja2.loaders import PackageLoader
 from jinja2.environment import Environment
 from jinja2.utils import select_autoescape
@@ -38,8 +38,7 @@ class CliOptionsFormat(Enum):
     html = "html"
 
 
-@dataclass
-class CliOptions:
+class CliOptions(BaseModel):
     """Resume CLI options representation."""
 
     format: CliOptionsFormat  # noqa: A003
@@ -53,7 +52,7 @@ class BaseResumeOutput(ABC):
 
     def __init__(self, resume: Resume) -> None:
         """
-        Set-up some properties.
+        Set up some properties.
 
         :param resume: resume instance
         :type resume: Resume
@@ -123,6 +122,7 @@ class HtmlResumeOutput(BaseResumeOutput):
         return output
 
 
+# TODO (@vint21h): split to generator and CLI!!1
 class ResumeGenerator:
     """Resume output generator."""
 
@@ -133,7 +133,7 @@ class ResumeGenerator:
     }
 
     def __init__(self) -> None:
-        """Set-up options."""
+        """Set up options."""
         self._options = self._get_options()
 
     def generate(self) -> str:
