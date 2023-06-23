@@ -89,7 +89,9 @@ class JsonResumeOutput(BaseResumeOutput):
         :return: resume in JSON format
         :rtype: str
         """
-        return self.resume.json(exclude=JSON_EXCLUDE_FIELDS, **JSON_DUMPS_KWARGS)
+        return self.resume.json(
+            exclude=JSON_EXCLUDE_FIELDS, by_alias=True, **JSON_DUMPS_KWARGS
+        )
 
 
 class HtmlResumeOutput(BaseResumeOutput):

@@ -1,7 +1,8 @@
 from datetime import date
 from typing import List, Optional
 
-from pydantic import HttpUrl, EmailStr, BaseModel
+from pydantic import HttpUrl, EmailStr
+from fastapi_camelcase import CamelModel
 
 
 __all__: List[str] = [
@@ -26,21 +27,21 @@ __all__: List[str] = [
 ]
 
 
-class ResumeBasicsLocation(BaseModel):
+class ResumeBasicsLocation(CamelModel):
     """Resume basics location field representation."""
 
     name: str
     country_code: str
 
 
-class ResumeBasicsMetadataLanguage(BaseModel):
+class ResumeBasicsMetadataLanguage(CamelModel):
     """Resume basics metadata language field representation."""
 
     name: str
     language_code: str
 
 
-class ResumeBasicsMetadata(BaseModel):
+class ResumeBasicsMetadata(CamelModel):
     """Resume basics metadata field representation."""
 
     updated: date
@@ -48,14 +49,14 @@ class ResumeBasicsMetadata(BaseModel):
     version: Optional[str]
 
 
-class ResumeBasicsAvatarEasterEgg(BaseModel):
+class ResumeBasicsAvatarEasterEgg(CamelModel):
     """Resume basics avatar easter-egg field representation."""
 
     path: str
     nickname: str
 
 
-class ResumeBasicsAvatar(BaseModel):
+class ResumeBasicsAvatar(CamelModel):
     """Resume basics avatar field representation."""
 
     path: str
@@ -64,7 +65,7 @@ class ResumeBasicsAvatar(BaseModel):
     easter_egg: Optional[ResumeBasicsAvatarEasterEgg]
 
 
-class ResumeBasics(BaseModel):
+class ResumeBasics(CamelModel):
     """Resume basics field representation."""
 
     name: str
@@ -77,14 +78,14 @@ class ResumeBasics(BaseModel):
     avatar: Optional[ResumeBasicsAvatar]
 
 
-class ResumeWorkCompany(BaseModel):
+class ResumeWorkCompany(CamelModel):
     """Resume work company list field representation."""
 
     original: str
     en: Optional[str]
 
 
-class ResumeWork(BaseModel):
+class ResumeWork(CamelModel):
     """Resume work list field representation."""
 
     company: ResumeWorkCompany
@@ -94,14 +95,14 @@ class ResumeWork(BaseModel):
     end_date: Optional[date]
 
 
-class ResumeEducationInstitution(BaseModel):
+class ResumeEducationInstitution(CamelModel):
     """Resume education institution field representation."""
 
     original: str
     en: Optional[str]
 
 
-class ResumeEducation(BaseModel):
+class ResumeEducation(CamelModel):
     """Resume education list field representation."""
 
     institution: ResumeEducationInstitution
@@ -109,45 +110,45 @@ class ResumeEducation(BaseModel):
     end_date: Optional[date]
 
 
-class ResumeSkillOrTechnology(BaseModel):
+class ResumeSkillOrTechnology(CamelModel):
     """Resume skills and technologies list field representation."""
 
     name: str
 
 
-class ResumeLanguage(BaseModel):
+class ResumeLanguage(CamelModel):
     """Resume languages list field representation."""
 
     language: str
     fluency: str
 
 
-class ResumeProjectTechnology(BaseModel):
+class ResumeProjectTechnology(CamelModel):
     """Resume projects list technologies field representation."""
 
     name: str
 
 
-class ResumeProjectResponsibility(BaseModel):
+class ResumeProjectResponsibility(CamelModel):
     """Resume projects list responsibilities field representation."""
 
     name: str
 
 
-class ResumeProjectCompanyMetadata(BaseModel):
+class ResumeProjectCompanyMetadata(CamelModel):
     """Resume projects list company metadata field representation."""
 
     css_class: str
 
 
-class ResumeProjectCompany(BaseModel):
+class ResumeProjectCompany(CamelModel):
     """Resume projects list company field representation."""
 
     name: str
     metadata: Optional[ResumeProjectCompanyMetadata]
 
 
-class ResumeProject(BaseModel):
+class ResumeProject(CamelModel):
     """Resume projects list field representation."""
 
     name: str
@@ -161,7 +162,7 @@ class ResumeProject(BaseModel):
     technologies: Optional[List[ResumeProjectTechnology]]
 
 
-class Resume(BaseModel):
+class Resume(CamelModel):
     """
     Resume representation.
 
