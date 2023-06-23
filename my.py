@@ -19,12 +19,12 @@ from resume.schemas import (
     ResumeBasicsAvatar,
     ResumeBasicsLocation,
     ResumeProjectCompany,
+    ResumeMetadataLanguage,
     ResumeProjectTechnology,
     ResumeSkillOrTechnology,
     ResumeEducationInstitution,
     ResumeBasicsAvatarEasterEgg,
     ResumeProjectResponsibility,
-    ResumeBasicsMetadataLanguage,
     ResumeProjectCompanyMetadata,
 )
 
@@ -2307,7 +2307,7 @@ RESUME = Resume(
         ),
     ],
     metadata=ResumeMetadata(
-            language=ResumeBasicsMetadataLanguage(
+            language=ResumeMetadataLanguage(
                 name="English",
                 language_code="en",
             ),
