@@ -24,7 +24,7 @@ class GetVersionTest(TestCase):
         create=True,
     )
     def test_get_version(self) -> None:
-        """get_version must return resume version."""
+        """'get_version' function must return resume version."""
         version = get_version()
 
         self.assertIsInstance(
@@ -42,20 +42,20 @@ class GetVersionTest(TestCase):
         create=True,
     )
     def test_get_version___error__no_version(self) -> None:
-        """get_version must return resume version (bad schema case)."""
+        """'get_version' function must return resume version (bad schema case)."""
         self.assertIsNone(
             obj=get_version(),
         )
 
     def test_get_version__error__no_version__no_file(self) -> None:
-        """get_version must return resume version (no file case)."""
+        """'get_version' function must return resume version (no file case)."""
         with mock.patch(target="resume.utils.Path", side_effect=FileNotFoundError()):
             self.assertIsNone(
                 obj=get_version(),
             )
 
     def test_get_version__error__no_version__no_permissions(self) -> None:
-        """get_version must return resume version (permission denied case)."""
+        """'get_version' function must return resume version (permission denied case)."""
         with mock.patch(target="resume.utils.Path", side_effect=PermissionError()):
             self.assertIsNone(
                 obj=get_version(),

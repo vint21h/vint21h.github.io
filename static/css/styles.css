@@ -178,6 +178,8 @@ section#id-skills-and-technologies .details {
 .company {
     font-size: 15px;
     line-height: 24px;
+    margin-right: 6px;
+    padding-right: 6px;
 }
 
 .avatar img:last-child {

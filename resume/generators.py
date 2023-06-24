@@ -5,7 +5,7 @@ from importlib import import_module
 from typing import List, Final, Tuple
 
 from pydantic import BaseModel
-from rich import print as rprint
+from rich.console import Console
 
 from resume.schemas import Resume
 from resume.utils import get_version
@@ -138,13 +138,11 @@ class ResumeGeneratorCli:
         """Set up options."""
         self._options = self._get_options()
 
-    # TODO (@vint21h): write tests for HTML case
     def generate(self) -> None:
         """Generate resume in specified format and write it pretty formatted in to stdout."""
         self._generate()
 
-    # TODO (@vint21h): write tests for HTML case
-    #  and for error case
+    # TODO (@vint21h): write tests for error case
     def _generate(self) -> None:
         """Generate resume in specified format and write it pretty formatted in to stdout."""
         try:
@@ -160,7 +158,9 @@ class ResumeGeneratorCli:
             sys.stderr.write(f"Something happened wrong :(. {error}\n")
             sys.exit(2)
 
-        rprint(output)
+        # use rich to pretty print
+        console = Console()
+        console.print(output, soft_wrap=True)
 
     @staticmethod
     def _get_options() -> Options:

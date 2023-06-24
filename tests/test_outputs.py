@@ -16,7 +16,7 @@ from resume.schemas import (
 )
 
 
-__all__: List[str] = []
+__all__: List[str] = ["HtmlResumeOutputTest", "JsonResumeOutputTest"]
 
 
 TEST_RESUME = Resume(
@@ -45,7 +45,7 @@ class JsonResumeOutputTest(TestCase):
     """JsonResumeOutput tests."""
 
     def test__generate(self) -> None:
-        """_generate method must return resume in JSON format."""
+        """'_generate' method must return resume in JSON format."""
         output = JsonResumeOutput(resume=TEST_RESUME).generate()
         fixture = Path(__file__).parent.joinpath("fixtures", "output.json")
         expected = fixture.open().read()
@@ -63,7 +63,7 @@ class HtmlResumeOutputTest(TestCase):
     """HtmlResumeOutput tests."""
 
     def test__generate(self) -> None:
-        """_generate method must return resume in HTML format."""
+        """'_generate' method must return resume in HTML format."""
         output = HtmlResumeOutput(resume=TEST_RESUME).generate()
         fixture = Path(__file__).parent.joinpath("fixtures", "output.html")
         expected = fixture.open().read()
@@ -74,11 +74,11 @@ class HtmlResumeOutputTest(TestCase):
         )
         self.assertEqual(
             first=output,
-            second=expected.strip(),
+            second=expected,
         )
 
     def test__generate__error__rendering(self) -> None:
-        """_generate method must return resume in HTML format (resume rendering error case)."""
+        """'_generate' method must return resume in HTML format (resume rendering error case)."""
         with mock.patch(  # noqa: SIM117
             target="jinja2.environment.Template.render", side_effect=TemplateError()
         ):

@@ -1,6 +1,7 @@
 from typing import List
 from abc import ABC, abstractmethod
 
+from bs4 import BeautifulSoup
 from jinja2.loaders import PackageLoader
 from jinja2.environment import Environment
 from jinja2.utils import select_autoescape
@@ -91,6 +92,9 @@ class HtmlResumeOutput(BaseResumeOutput):
                 HTML_DAY_MONTH_YEAR_FORMAT=HTML_DAY_MONTH_YEAR_FORMAT,
                 HTML_YEAR_FORMAT=HTML_YEAR_FORMAT,
             )
+            # prettify HTML
+            document = BeautifulSoup(markup=output, features="html.parser")
+            output = document.prettify(formatter="html5")
         except TemplateError as error:
             raise ResumeGeneratorError(
                 f"A problem occurred during generating output for: {self.resume}. {error}"

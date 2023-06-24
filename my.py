@@ -61,7 +61,7 @@ RESUME = Resume(
             position="Python/Django developer",
             website="https://anadea.info/",
             start_date=date(year=2020, month=9, day=7),
-            end_date=date(year=2023, month=1, day=1),
+            end_date=date(year=2023, month=1, day=10),
         ),
         ResumeWork(
             company=ResumeWorkCompany(

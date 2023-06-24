@@ -7,8 +7,7 @@
     "site": "https://www.vint21h.pp.ua/",
     "location": {
       "countryCode": "UA"
-    },
-    "updated": "2023-02-10"
+    }
   },
   "work": [
     {
@@ -343,6 +342,48 @@
     },
     {
       "name": "YouTube API"
+    },
+    {
+      "name": "Salt Stack"
+    },
+    {
+      "name": "Sphinx"
+    },
+    {
+      "name": "Fabric"
+    },
+    {
+      "name": "Multithreading"
+    },
+    {
+      "name": "AnyChart"
+    },
+    {
+      "name": "amCharts"
+    },
+    {
+      "name": "PostgreSQL FTS"
+    },
+    {
+      "name": "Mercurial"
+    },
+    {
+      "name": "CVS"
+    },
+    {
+      "name": "Truffle"
+    },
+    {
+      "name": "Ethereum"
+    },
+    {
+      "name": "JavaScript Code Analysis/Quality tools"
+    },
+    {
+      "name": "SASS Code Analysis/Quality tools"
+    },
+    {
+      "name": "Docker Code Analysis/Quality tools"
     }
   ],
   "languages": [
@@ -363,7 +404,9 @@
       "summary": "Notifications via jabber Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-notification-jabber/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -376,7 +419,9 @@
       "summary": "Check HDD temperature Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-check-hddtemp/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -389,30 +434,68 @@
       "summary": "Grain Ukraine - modern bulletin board for ukrainian suppliers of agricultural commodities and services.",
       "url": "http://www.grainukraine.com/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "JavaScript",
-        "JQuery",
-        "HTML",
-        "CSS",
-        "PostgreSQL",
-        "Sphinx",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "Fabric",
-        "Salt Stack",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Sphinx"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Fabric"
+        },
+        {
+          "name": "Salt Stack"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        }
       ]
     },
     {
@@ -422,45 +505,116 @@
       "summary": "AgroChart - Prices. Trading. Balances. Statistics. News. Forecasts.",
       "url": "http://www.agrochart.com/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Distributed data sources parsing architecture development and implementation",
-        "Distributed data caching system architecture development and implementation",
-        "Distributed cache invalidation system architecture development and implementation",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Distributed data sources parsing architecture development and implementation"
+        },
+        {
+          "name": "Distributed data caching system architecture development and implementation"
+        },
+        {
+          "name": "Distributed cache invalidation system architecture development and implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "Multithreading",
-        "JavaScript",
-        "JQuery",
-        "Backbone",
-        "ExtJS",
-        "Anychart",
-        "AmChart",
-        "Highcharts",
-        "HTML",
-        "CSS",
-        "SASS",
-        "Gulp",
-        "Celery",
-        "RabbitMQ",
-        "MySQL",
-        "PostgreSQL",
-        "PostgreSQL FTS",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "Fabric",
-        "Salt Stack",
-        "Ansible",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "Multithreading"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Backbone.js"
+        },
+        {
+          "name": "Underscore.js"
+        },
+        {
+          "name": "Ext JS"
+        },
+        {
+          "name": "AnyChart"
+        },
+        {
+          "name": "amCharts"
+        },
+        {
+          "name": "Highcharts"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "SASS"
+        },
+        {
+          "name": "gulp.js"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "MySQL"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "PostgreSQL FTS"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Fabric"
+        },
+        {
+          "name": "Salt Stack"
+        },
+        {
+          "name": "Ansible"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        }
       ]
     },
     {
@@ -470,32 +624,77 @@
       "summary": "Handiwork commodities online shop.",
       "url": "http://www.diorashop.com/",
       "company": [
-        "Freelance"
+        {
+          "name": "Freelance"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Frontend development",
-        "Third part services integration",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Third-party services integration"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "JavaScript",
-        "JQuery",
-        "jQuery UI",
-        "HTML",
-        "CSS",
-        "Celery",
-        "RabbitMQ",
-        "PostgreSQL",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "AWS",
-        "YouTube API"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "jQuery UI"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Fabric"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "YouTube API"
+        }
       ]
     },
     {
@@ -505,7 +704,9 @@
       "summary": "Notifications via Google Calendar Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-notification-google-calendar/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -513,29 +714,55 @@
     },
     {
       "name": "DCOD",
-      "startDate": "2013-04-01",
+      "startDate": "2013-01-01",
       "endDate": "2019-05-28",
-      "summary": "DCOD site.",
+      "summary": "DCOD company site.",
       "url": "http://www.d-cod.com/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Page generation system development",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Page generation system development"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "Cactus",
-        "JavaScript",
-        "JQuery",
-        "HTML",
-        "CSS",
-        "Ansible",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "Cactus"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Ansible"
+        }
       ]
     },
     {
@@ -545,7 +772,9 @@
       "summary": "Convert gettext .po files to .xls.",
       "url": "https://github.com/vint21h/django-po2xls/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -558,28 +787,65 @@
       "summary": "Free companies catalog/rating.",
       "url": "http://www.bstrating.com/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "JavaScript",
-        "JQuery",
-        "Backbone",
-        "HTML",
-        "CSS",
-        "PostgreSQL",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Backbone.js"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Salt Stack"
+        }
       ]
     },
     {
@@ -589,7 +855,9 @@
       "summary": "Easy run management commands from Django admin.",
       "url": "https://github.com/vint21h/django-mcadmin/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -602,31 +870,74 @@
       "summary": "FINROSTBANK official site.",
       "url": "http://www.frb.com.ua/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "JavaScript",
-        "JQuery",
-        "Backbone",
-        "HTML",
-        "CSS",
-        "Celery",
-        "RabbitMQ",
-        "PostgreSQL",
-        "PostgreSQL FTS",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Backbone.js"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "PostgreSQL FTS"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Salt Stack"
+        }
       ]
     },
     {
@@ -636,40 +947,95 @@
       "summary": "Increase the information content and traffic to your website by placing on it the latest data of USDA reports, foreign trade and futures. Learn how to get the embed code for your site...",
       "url": "http://www.agrocharts.com/en/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Distributed data sources parsing architecture development and implementation",
-        "Distributed data caching system architecture development and implementation",
-        "Distributed cache invalidation system architecture development and implementation",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Distributed data sources parsing architecture development and implementation"
+        },
+        {
+          "name": "Distributed data caching system architecture development and implementation"
+        },
+        {
+          "name": "Distributed cache invalidation system architecture development and implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Multithreading",
-        "Django",
-        "JavaScript",
-        "JQuery",
-        "Backbone",
-        "Highcharts",
-        "HTML",
-        "CSS",
-        "SASS",
-        "Gulp",
-        "Celery",
-        "RabbitMQ",
-        "PostgreSQL",
-        "PostgreSQL FTS",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "Salt Stack",
-        "Ansible",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Backbone.js"
+        },
+        {
+          "name": "Highcharts"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "SASS"
+        },
+        {
+          "name": "gulp.js"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "PostgreSQL FTS"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Salt Stack"
+        },
+        {
+          "name": "Ansible"
+        }
       ]
     },
     {
@@ -679,7 +1045,9 @@
       "summary": "django-xls2po is a Django management command to convert django-po2xls generated .xls files to .po files.",
       "url": "https://github.com/vint21h/django-xls2po/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -692,41 +1060,98 @@
       "summary": "Prevailing news resource of an agrarian theme. One of the best in Ukraine.",
       "url": "http://www.anyfoodanyfeed.com/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Distributed data sources parsing architecture development and implementation",
-        "Distributed data caching system architecture development and implementation",
-        "Distributed cache invalidation system architecture development and implementation",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Distributed data sources parsing architecture development and implementation"
+        },
+        {
+          "name": "Distributed data caching system architecture development and implementation"
+        },
+        {
+          "name": "Distributed cache invalidation system architecture development and implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Multithreading",
-        "Django",
-        "JavaScript",
-        "JQuery",
-        "Backbone",
-        "Highcharts",
-        "Google Maps API",
-        "HTML",
-        "CSS",
-        "SASS",
-        "Gulp",
-        "Celery",
-        "RabbitMQ",
-        "PostgreSQL",
-        "PostgreSQL FTS",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "Salt Stack",
-        "Ansible",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Backbone.js"
+        },
+        {
+          "name": "Highcharts"
+        },
+        {
+          "name": "Google Maps API"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "SASS"
+        },
+        {
+          "name": "gulp.js"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "PostgreSQL FTS"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Salt Stack"
+        },
+        {
+          "name": "Ansible"
+        }
       ]
     },
     {
@@ -736,7 +1161,9 @@
       "summary": "Handle opensearch.xml for Django.",
       "url": "https://github.com/vint21h/django-opensearch/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -749,7 +1176,9 @@
       "summary": "redactor-plugins-lineheight is a plugin for Redactor Text Editor (http://imperavi.com/redactor/) to set selected text line height.",
       "url": "https://github.com/vint21h/redactor-plugins-lineheight/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -762,7 +1191,9 @@
       "summary": "Check supervisord programs status Nagios plugin.",
       "url": "https://github.com/vint21h/nagios-check-supervisord/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -775,7 +1206,9 @@
       "summary": "Django reusable app to show pretty formatted copyright years.",
       "url": "https://github.com/vint21h/django-djcopyright/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -784,12 +1217,16 @@
     {
       "name": "django-simple-help",
       "startDate": "2015-09-01",
-      "endDate": "2019-05-01",
+      "endDate": "2019-05-28",
       "summary": "Django reusable application providing page help.",
       "url": "https://github.com/DCOD-OpenSource/django-simple-help/",
       "company": [
-        "DCOD",
-        "Open Source"
+        {
+          "name": "DCOD"
+        },
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -802,8 +1239,12 @@
       "summary": "Django reusable app to show your project version.",
       "url": "https://github.com/DCOD-OpenSource/django-project-version/",
       "company": [
-        "DCOD",
-        "Open Source"
+        {
+          "name": "DCOD"
+        },
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -816,43 +1257,92 @@
       "summary": "Van #1 - real coffee-rooms and shops on wheels, where it is comfortable to cook and to sell. This is a real catch for those who are willing to make their business profitable.",
       "url": "http://www.van1.eu/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Third part services integration",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Third-party services integration"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "JavaScript",
-        "JQuery",
-        "Backbone",
-        "HTML",
-        "CSS",
-        "Celery",
-        "RabbitMQ",
-        "PostgreSQL",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "Ansible",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Backbone.js"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "PostgreSQL FTS"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Ansible"
+        }
       ]
     },
     {
       "name": "django-messages-to-bootstrap-notify.",
       "startDate": "2017-05-01",
-      "endDate": "2019-05-01",
+      "endDate": "2019-05-28",
       "summary": "Show Django messages using bootstrap-notify.",
       "url": "https://github.com/DCOD-OpenSource/django-messages-to-bootstrap-notify/",
       "company": [
-        "DCOD",
-        "Open Source"
+        {
+          "name": "DCOD"
+        },
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -861,12 +1351,16 @@
     {
       "name": "bootstrap-notify-simple-wrapper",
       "startDate": "2017-05-01",
-      "endDate": "2019-05-01",
+      "endDate": "2019-05-28",
       "summary": "Simple wrapper around bootstrap-notify (https://github.com/mouse0270/bootstrap-notify/) to make your life easier.",
       "url": "https://github.com/DCOD-OpenSource/bootstrap-notify-simple-wrapper/",
       "company": [
-        "DCOD",
-        "Open Source"
+        {
+          "name": "DCOD"
+        },
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -879,7 +1373,9 @@
       "summary": "Really full Django read only admin implementation.",
       "url": "https://github.com/vint21h/django-read-only-admin/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -888,99 +1384,218 @@
     {
       "name": "BSTfeed",
       "startDate": "2017-12-01",
-      "endDate": "2019-05-01",
+      "endDate": "2019-05-28",
       "summary": "BSTfeed.com - your best independent source for grains, oilseeds and feedstuffs markets data.",
       "url": "https://www.bstfeed.com/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Distributed data sources parsing architecture development and implementation",
-        "Distributed data caching system architecture development and implementation",
-        "Distributed cache invalidation system architecture development and implementation",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Distributed data sources parsing architecture development and implementation"
+        },
+        {
+          "name": "Distributed data caching system architecture development and implementation"
+        },
+        {
+          "name": "Distributed cache invalidation system architecture development and implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Multithreading",
-        "Django",
-        "JavaScript",
-        "JQuery",
-        "Backbone",
-        "Highcharts",
-        "HTML",
-        "CSS",
-        "SASS",
-        "Gulp",
-        "Celery",
-        "RabbitMQ",
-        "PostgreSQL",
-        "PostgreSQL FTS",
-        "Memcached",
-        "Redis",
-        "Nginx",
-        "Ansible",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Backbone.js"
+        },
+        {
+          "name": "Highcharts"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "SASS"
+        },
+        {
+          "name": "gulp.js"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "PostgreSQL FTS"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Ansible"
+        }
       ]
     },
     {
       "name": "EterArt",
-      "startDate": "2018-01-01",
-      "endDate": "2019-05-01",
+      "startDate": "2018-12-01",
+      "endDate": "2019-05-28",
       "summary": "EterArt - a unique blockchain platform for collecting and trading digital versions of art objects.",
       "url": "https://www.eterart.com/",
       "company": [
-        "DCOD"
+        {
+          "name": "DCOD"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Distributed data sources parsing architecture development and implementation",
-        "Partial Ethereum contract development and deploy implementation",
-        "Frontend development",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Distributed data sources parsing architecture development and implementation"
+        },
+        {
+          "name": "Partial Ethereum contract development and deploy implementation"
+        },
+        {
+          "name": "Frontend development"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Multithreading",
-        "Django",
-        "JavaScript",
-        "Webpack",
-        "JQuery",
-        "Backbone",
-        "Web3",
-        "HTML",
-        "CSS",
-        "SASS",
-        "Gulp",
-        "Solidity",
-        "Truffle",
-        "Celery",
-        "RabbitMQ",
-        "PostgreSQL",
-        "PostgreSQL FTS",
-        "Memcached",
-        "Redis",
-        "Ethereum",
-        "Nginx",
-        "Ansible",
-        "AWS",
-        "Python Code Analysis/Quality tools"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Multithreading"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "Webpack"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Backbone.js"
+        },
+        {
+          "name": "Web3"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "SASS"
+        },
+        {
+          "name": "gulp.js"
+        },
+        {
+          "name": "Solidity"
+        },
+        {
+          "name": "Truffle"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "PostgreSQL FTS"
+        },
+        {
+          "name": "Memcached"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Ethereum"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Ansible"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        }
       ]
     },
     {
       "name": "django-humans-txt",
-      "startDate": "2018-09-01",
+      "startDate": "2019-08-01",
       "endDate": null,
       "summary": "Handle humans.txt for Django.",
       "url": "https://github.com/vint21h/django-humans-txt/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -988,12 +1603,14 @@
     },
     {
       "name": "django-xicon",
-      "startDate": "2019-08-01",
+      "startDate": "2018-10-21",
       "endDate": null,
       "summary": "Handle modern bunch of site icons for Django.",
       "url": "https://github.com/vint21h/django-xicon/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -1006,24 +1623,50 @@
       "summary": "Hypermarket goods delivery service.",
       "url": "https://zakaz.ua/",
       "company": [
-        "Zakaz.ua"
+        {
+          "name": "Zakaz.ua"
+        }
       ],
       "role": "Python developer",
       "responsibilities": [
-        "Back-office business workflow requirements implementation",
-        "Business logic problems investigation",
-        "Back-end services intercommunication mechanisms development and implementation"
+        {
+          "name": "Back-office business workflow requirements implementation"
+        },
+        {
+          "name": "Business logic problems investigation"
+        },
+        {
+          "name": "Back-end services intercommunication mechanisms development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Apache CouchDB",
-        "Apache Solr",
-        "RQ",
-        "Python Code Analysis/Quality tools",
-        "PostgreSQL",
-        "Redis",
-        "Docker",
-        "docker-compose"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Apache CouchDB"
+        },
+        {
+          "name": "Apache Solr"
+        },
+        {
+          "name": "RQ"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        }
       ]
     },
     {
@@ -1033,27 +1676,59 @@
       "summary": "Educational platform for crypto currencies traders/investors.",
       "url": null,
       "company": [
-        "Freelance"
+        {
+          "name": "Freelance"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Third part services integration"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Third-party services integration"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "Django REST framework",
-        "Python Code Analysis/Quality tools",
-        "PostgreSQL",
-        "Celery",
-        "SQS",
-        "Docker",
-        "docker-compose",
-        "Bitbucket Pipelines",
-        "AWS",
-        "Vimeo API"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "Django REST framework"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "SQS"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Bitbucket Pipelines"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Vimeo API"
+        }
       ]
     },
     {
@@ -1063,33 +1738,77 @@
       "summary": "Crypto currencies trading/investments/exchange platform.",
       "url": null,
       "company": [
-        "Freelance"
+        {
+          "name": "Freelance"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Back-office and business logic code enhancements",
-        "Internal ETL services architecture development and implementation",
-        "Internal ETL services main modules development and implementation",
-        "Internal ETL services integration",
-        "Third part services integration",
-        "Refactoring of the existing codebase to clean and split to reusable components"
+        {
+          "name": "Back-office and business logic code enhancements"
+        },
+        {
+          "name": "Internal ETL services architecture development and implementation"
+        },
+        {
+          "name": "Internal ETL services main modules development and implementation"
+        },
+        {
+          "name": "Internal ETL services integration"
+        },
+        {
+          "name": "Third-party services integration"
+        },
+        {
+          "name": "Refactoring of the existing codebase to clean and split to reusable components"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "Django REST framework",
-        "Python Code Analysis/Quality tools",
-        "PostgreSQL",
-        "Celery",
-        "SQS",
-        "Docker",
-        "docker-compose",
-        "Bitbucket Pipelines",
-        "AWS",
-        "Web3",
-        "aiohttp",
-        "peewee",
-        "Various blockchains"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "Django REST framework"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "SQS"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Bitbucket Pipelines"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "Web3"
+        },
+        {
+          "name": "aiohttp"
+        },
+        {
+          "name": "peewee"
+        },
+        {
+          "name": "Various blockchains"
+        }
       ]
     },
     {
@@ -1099,7 +1818,9 @@
       "summary": "A DAAP (Digital Audio Access Protocol) client library.",
       "url": "https://github.com/vint21h/dart-daap-client/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -1112,38 +1833,95 @@
       "summary": "Internal project that provides an easy possibility to create REST API for pretrained ML models.",
       "url": null,
       "company": [
-        "Anadea"
+        {
+          "name": "Anadea"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "Django REST framework",
-        "Python Code Analysis/Quality tools",
-        "JavaScript Code Analysis/Quality tools",
-        "SASS Code Analysis/Quality tools",
-        "PostgreSQL",
-        "Redis",
-        "Ansible",
-        "Nginx",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "SASS",
-        "Gulp",
-        "Webpack",
-        "Celery",
-        "RabbitMQ",
-        "gRPC",
-        "Dokku",
-        "Docker",
-        "docker-compose",
-        "GitLab CI/CD"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "Django REST framework"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        },
+        {
+          "name": "JavaScript Code Analysis/Quality tools"
+        },
+        {
+          "name": "SASS Code Analysis/Quality tools"
+        },
+        {
+          "name": "Docker Code Analysis/Quality tools"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Ansible"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "SASS"
+        },
+        {
+          "name": "gulp.js"
+        },
+        {
+          "name": "Webpack"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "gRPC"
+        },
+        {
+          "name": "Dokku"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "GitLab CI/CD"
+        }
       ]
     },
     {
@@ -1153,7 +1931,9 @@
       "summary": "Handle security.txt",
       "url": "https://github.com/vint21h/django-security-txt/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -1166,7 +1946,9 @@
       "summary": "Instruction and tools to build fedora custom kernel and live/installation media with kernel supporting Intel remapped NVME device.",
       "url": "https://github.com/vint21h/fedora-intel-remapped-nvme-device-support/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -1179,35 +1961,83 @@
       "summary": "GeoKinesia interface for purchasing InSAR analysis for a selected area anywhere in the world.",
       "url": "https://interfacegeokinesia.com/",
       "company": [
-        "Anadea"
+        {
+          "name": "Anadea"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Third part services integration"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Third-party services integration"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "Django REST framework",
-        "Python Code Analysis/Quality tools",
-        "JavaScript Code Analysis/Quality tools",
-        "PostgreSQL",
-        "Redis",
-        "Nginx",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Webpack",
-        "Celery",
-        "RabbitMQ",
-        "Docker",
-        "docker-compose",
-        "Google Maps API",
-        "React",
-        "PostGIS",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "Django REST framework"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        },
+        {
+          "name": "JavaScript Code Analysis/Quality tools"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "Webpack"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Google Maps API"
+        },
+        {
+          "name": "React"
+        },
+        {
+          "name": "PostGIS"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        }
       ]
     },
     {
@@ -1217,7 +2047,9 @@
       "summary": "Displays a list of the TuneD profiles and allows to switch between them.",
       "url": "https://github.com/vint21h/gnome-shell-extension-tuned-profile-switcher/",
       "company": [
-        "Open Source"
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -1230,27 +2062,62 @@
       "summary": "Powering the Future of Construction Finance.",
       "url": null,
       "company": [
-        "Anadea"
+        {
+          "name": "Anadea"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Internal ETL service architecture development and implementation",
-        "Internal ETL service modules development and implementation",
-        "Integration with internal ETL service",
-        "Improvements of third-party services integrations",
-        "Refactoring of the existing codebase to clean and split to reusable components"
+        {
+          "name": "Internal ETL service architecture development and implementation"
+        },
+        {
+          "name": "Internal ETL service modules development and implementation"
+        },
+        {
+          "name": "Integration with internal ETL service"
+        },
+        {
+          "name": "Improvements of third-party services integrations"
+        },
+        {
+          "name": "Refactoring of the existing codebase to clean and split to reusable components"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "Django REST framework",
-        "Python Code Analysis/Quality tools",
-        "PostgreSQL",
-        "Celery",
-        "RabbitMQ",
-        "Docker",
-        "docker-compose",
-        "AWS"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "Django REST framework"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        },
+        {
+          "name": "JavaScript Code Analysis/Quality tools"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        }
       ]
     },
     {
@@ -1260,8 +2127,12 @@
       "summary": "Tool for checking entry points in the pre-commit config with ShellCheck.",
       "url": "https://github.com/Anadea/pre-commit-config-shellcheck/",
       "company": [
-        "Anadea",
-        "Open Source"
+        {
+          "name": "Anadea"
+        },
+        {
+          "name": "Open Source"
+        }
       ],
       "role": null,
       "responsibilities": null,
@@ -1274,34 +2145,83 @@
       "summary": "Platform for swimming teams/competitions management.",
       "url": "https://www.myswimgenius.com/",
       "company": [
-        "Anadea"
+        {
+          "name": "Anadea"
+        }
       ],
       "role": "Python/Django developer",
       "responsibilities": [
-        "Project architecture development and implementation",
-        "Main modules implementation",
-        "Third part services integration",
-        "Deploy development and implementation"
+        {
+          "name": "Project architecture development and implementation"
+        },
+        {
+          "name": "Main modules implementation"
+        },
+        {
+          "name": "Third-party services integration"
+        },
+        {
+          "name": "Deploy development and implementation"
+        }
       ],
       "technologies": [
-        "Python",
-        "Django",
-        "Django REST framework",
-        "Python Code Analysis/Quality tools",
-        "PostgreSQL",
-        "Redis",
-        "Nginx",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Celery",
-        "RabbitMQ",
-        "Docker",
-        "docker-compose",
-        "Google Maps API",
-        "React",
-        "AWS",
-        "Ansible"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "Django REST framework"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        },
+        {
+          "name": "Docker Code Analysis/Quality tools"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Google Maps API"
+        },
+        {
+          "name": "React"
+        },
+        {
+          "name": "Ansible"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        }
       ]
     }
   ]
