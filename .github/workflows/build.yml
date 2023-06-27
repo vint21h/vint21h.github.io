@@ -1,0 +1,24 @@
+name: "build"
+on:
+  push:
+    branches:
+      - "*"
+    tags:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+  workflow_dispatch:
+  workflow_call:
+env:
+  NAME: "resume"
+  ENVIRONMENT: "dev"
+  DEFAULT_PYTHON_VERSION: "3.11"
+jobs:
+  check-requirements:
+    uses: "./.github/workflows/check-requirements.yml"
+  check:
+    uses: "./.github/workflows/check.yml"
+  test:
+    uses: "./.github/workflows/test.yml"
+    needs: ["check"]
