@@ -2311,7 +2311,7 @@ RESUME = Resume(
                 name="English",
                 language_code="en",
             ),
-            updated=date(year=2023, month=2, day=10),
+            updated=date(year=2023, month=6, day=27),
             version=get_version(),
         ),
 )
