@@ -21,6 +21,7 @@ from resume.schemas import (
 )
 from resume.exceptions import (
     NotResumeError,
+    ResumeGeneratorError,
     IncorrectResumePathError,
     ResumeGeneratorOptionsError,
     IncorrectResumePathFormatError,
@@ -174,6 +175,44 @@ class ResumeGeneratorCliTest(TestCase):
             first=output.getvalue().strip(),
             second=expected.strip(),
         )
+
+    @mock.patch(
+        "sys.argv", ["__main__.py", "-f", "html", "-r", f"{__name__}:TEST_RESUME"]
+    )
+    def test__generate__error(self) -> None:
+        """'_generate' method must return resume in specified format (error case)."""
+        with mock.patch(  # noqa: SIM117
+            target="resume.generators.ResumeGenerator._get_resume",
+            side_effect=NotResumeError(),
+        ):
+            with self.assertRaises(expected_exception=SystemExit) as error:
+                ResumeGeneratorCli()._generate()
+        with mock.patch(  # noqa: SIM117
+            target="resume.generators.ResumeGenerator._get_resume_path",
+            side_effect=IncorrectResumePathFormatError(),
+        ):
+            with self.assertRaises(expected_exception=SystemExit) as error:
+                ResumeGeneratorCli()._generate()
+        with mock.patch(  # noqa: SIM117
+            target="resume.generators.ResumeGenerator._get_resume",
+            side_effect=IncorrectResumePathError(),
+        ):
+            with self.assertRaises(expected_exception=SystemExit) as error:
+                ResumeGeneratorCli()._generate()
+        with mock.patch(  # noqa: SIM117
+            target="resume.generators.ResumeGenerator._generate",
+            side_effect=ResumeGeneratorOptionsError(),
+        ):
+            with self.assertRaises(expected_exception=SystemExit) as error:
+                ResumeGeneratorCli()._generate()
+        with mock.patch(  # noqa: SIM117
+            target="resume.outputs.HtmlResumeOutput._generate",
+            side_effect=ResumeGeneratorError(),
+        ):
+            with self.assertRaises(expected_exception=SystemExit) as error:
+                ResumeGeneratorCli()._generate()
+
+        self.assertEqual(first=error.exception.code, second=2)
 
 
 class ResumeGeneratorTest(TestCase):
@@ -349,7 +388,7 @@ class ResumeGeneratorTest(TestCase):
             format_=OptionsFormat.json,
             resume=f"{__name__}:TEST_RESUME",
         )
-        ResumeGenerator._OUTPUTS = {}
+        ResumeGenerator._OUTPUTS = {}  # type: ignore
 
         with self.assertRaises(expected_exception=ResumeGeneratorOptionsError):
             ResumeGenerator(options=options)._generate()
