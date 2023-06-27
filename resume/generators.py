@@ -2,14 +2,14 @@ import sys
 from enum import Enum
 from argparse import ArgumentParser
 from importlib import import_module
-from typing import List, Final, Tuple
+from typing import List, Type, Final, Tuple
 
 from pydantic import BaseModel
 from rich.console import Console
 
 from resume.schemas import Resume
 from resume.utils import get_version
-from resume.outputs import HtmlResumeOutput, JsonResumeOutput
+from resume.outputs import BaseResumeOutput, HtmlResumeOutput, JsonResumeOutput
 from resume.exceptions import (
     NotResumeError,
     ResumeGeneratorError,
@@ -74,13 +74,25 @@ class ResumeGenerator:
         module, variable = self._get_resume_path(self._options.resume)
         resume = self._get_resume(module=module, variable=variable)
         try:
-            output = self._OUTPUTS[self._options.format_](resume=resume)
+            cls = self._get_output_class(format_=self._options.format_)
+            output = cls(resume=resume)
         except KeyError as error:
             raise ResumeGeneratorOptionsError(
                 f"'{self._options.format_}' output generator does not exist."
             ) from error
 
         return output.generate()
+
+    def _get_output_class(self, format_: str) -> Type[BaseResumeOutput]:
+        """
+        Get resume output generator class.
+
+        :param format_: resume output format
+        :type format_: str
+        :return: resume output generator class
+        :rtype: Type[BaseResumeOutput]
+        """
+        return self._OUTPUTS[format_]
 
     @staticmethod
     def _get_resume_path(path: str) -> Tuple[str, str]:
@@ -142,7 +154,6 @@ class ResumeGeneratorCli:
         """Generate resume in specified format and write it pretty formatted in to stdout."""
         self._generate()
 
-    # TODO (@vint21h): write tests for error case
     def _generate(self) -> None:
         """Generate resume in specified format and write it pretty formatted in to stdout."""
         try:

@@ -6,6 +6,7 @@ from unittest import TestCase, mock
 
 from contextlib2 import redirect_stdout
 
+from resume.outputs import HtmlResumeOutput, JsonResumeOutput
 from resume.generators import (
     Options,
     OptionsFormat,
@@ -388,7 +389,34 @@ class ResumeGeneratorTest(TestCase):
             format_=OptionsFormat.json,
             resume=f"{__name__}:TEST_RESUME",
         )
-        ResumeGenerator._OUTPUTS = {}  # type: ignore
 
-        with self.assertRaises(expected_exception=ResumeGeneratorOptionsError):
-            ResumeGenerator(options=options)._generate()
+        with mock.patch(  # noqa: SIM117
+            target="resume.generators.ResumeGenerator._get_output_class",
+            side_effect=KeyError(),
+        ):
+            with self.assertRaises(expected_exception=ResumeGeneratorOptionsError):
+                ResumeGenerator(options=options)._generate()
+
+    def test__get_output_class(self) -> None:
+        """'_get_output_class' method must return resume output generator class for specified format."""
+        json_options = Options(
+            format_=OptionsFormat.json,
+            resume=f"{__name__}:TEST_RESUME",
+        )
+        html_options = Options(
+            format_=OptionsFormat.json,
+            resume=f"{__name__}:TEST_RESUME",
+        )
+
+        self.assertEqual(
+            first=ResumeGenerator(options=json_options)._get_output_class(
+                format_=OptionsFormat.json
+            ),
+            second=JsonResumeOutput,
+        )
+        self.assertEqual(
+            first=ResumeGenerator(options=html_options)._get_output_class(
+                format_=OptionsFormat.html
+            ),
+            second=HtmlResumeOutput,
+        )

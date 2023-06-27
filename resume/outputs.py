@@ -12,8 +12,10 @@ from resume.exceptions import ResumeGeneratorError
 from resume.constants import (
     HTML_YEAR_FORMAT,
     JSON_DUMPS_KWARGS,
+    HTML_TEMPLATE_NAME,
     JSON_EXCLUDE_FIELDS,
     HTML_MONTH_YEAR_FORMAT,
+    HTML_TEMPLATES_PACKAGE,
     HTML_DAY_MONTH_YEAR_FORMAT,
 )
 
@@ -83,9 +85,10 @@ class HtmlResumeOutput(BaseResumeOutput):
         """
         try:
             jinja = Environment(
-                loader=PackageLoader("resume"), autoescape=select_autoescape()
+                loader=PackageLoader(package_name=HTML_TEMPLATES_PACKAGE),
+                autoescape=select_autoescape(),
             )
-            template = jinja.get_template("resume.html.jinja")
+            template = jinja.get_template(name=HTML_TEMPLATE_NAME)
             output = template.render(
                 RESUME=self.resume,
                 HTML_MONTH_YEAR_FORMAT=HTML_MONTH_YEAR_FORMAT,

@@ -11,6 +11,8 @@ __all__: List[str] = [
     "HTML_MONTH_YEAR_FORMAT",
     "HTML_DAY_MONTH_YEAR_FORMAT",
     "HTML_YEAR_FORMAT",
+    "HTML_TEMPLATES_PACKAGE",
+    "HTML_TEMPLATE_NAME",
 ]
 
 
@@ -29,3 +31,5 @@ JSON_EXCLUDE_FIELDS: Final = {  # noqa: ECE001
 HTML_MONTH_YEAR_FORMAT: str = "%b. %Y"
 HTML_DAY_MONTH_YEAR_FORMAT: str = "%d.%m.%Y"
 HTML_YEAR_FORMAT: str = "%Y"
+HTML_TEMPLATES_PACKAGE: str = "resume"
+HTML_TEMPLATE_NAME: str = "resume.html.jinja"

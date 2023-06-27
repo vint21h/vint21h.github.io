@@ -21,7 +21,7 @@ check:
 	bash -c 'pre-commit run --all-files';\
 
 test:
-	PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}" pytest --import-mode=importlib --cov=$(NAME) -n auto $(TESTS);\
+	PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}" pytest --import-mode=importlib --cov=$(NAME) $(TESTS);\
 
 setup-env:
 	cp .env.example .env;\
