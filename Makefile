@@ -1,6 +1,7 @@
 .ONESHELL:
 default: help
-PHONY: install check test setup-env install-pre-commit-hook bootstrap clean help
+PHONY: install check test setup-env install-pre-commit-hook bootstrap clean bumpversion help
+SHELL = bash
 ENVIRONMENT ?= dev
 NAME ?= resume
 TRASH_DIRS ?= build dist *.egg-info .tox .mypy_cache .pytest_cache __pycache__ htmlcov
