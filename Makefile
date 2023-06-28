@@ -6,7 +6,7 @@ ENVIRONMENT ?= dev
 NAME ?= resume
 TRASH_DIRS ?= build dist *.egg-info .tox .mypy_cache .pytest_cache __pycache__ htmlcov
 TRASH_FILES ?= .coverage
-VERSION ?= `python -c "import configparser; config = configparser.ConfigParser(); config.read('setup.cfg'); print(config['metadata']['version']);"`
+VERSION ?= `python -c "import toml; import pathlib; print(toml.load(f=pathlib.Path('pyproject.toml')).get('project', {}).get('version'));"`
 
 
 install-requirements: install-python-requirements install-js-requirements
