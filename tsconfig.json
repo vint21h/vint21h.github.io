@@ -11,6 +11,6 @@
     "skipLibCheck": true
   },
   "files": [
-    "assets/js/index.ts"
+    "resume/assets/ts/index.ts"
   ]
 }

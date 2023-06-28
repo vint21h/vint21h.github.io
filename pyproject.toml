@@ -94,8 +94,7 @@ py-modules = []
 [tool.mypy]
 python_version = "3.11"
 files = [
-  "src",
-  "tests",
+  "resume",
 ]
 check_untyped_defs = true
 disallow_any_generics = true
@@ -193,7 +192,7 @@ docstring_style = "sphinx"
 [tool.coverage.run]
 branch = true
 source = [
-  "src"
+  "resume"
 ]
 omit =[
   "*/__init__.py",
@@ -225,7 +224,7 @@ multi_line_output = 3
 use_parentheses = true
 virtual_env = "$VIRTUAL_ENV"
 known_third_party = ["bs4", "contextlib2", "fastapi_camelcase", "jinja2", "pydantic", "rich", "toml"]
-src_paths = ["resume", "tests"]
+src_paths = ["resume"]
 
 [tool.bandit]
 skips = [

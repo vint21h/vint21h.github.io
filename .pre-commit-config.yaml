@@ -12,13 +12,13 @@ repos:
       name: "removestar"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'removestar -i \"${NAME}\" tests'"
+      entry: "bash -c 'removestar -i \"${NAME}\"'"
       types: ["python"]
     - id: "autoflake"
       name: "autoflake"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'autoflake -r \"${NAME}\" tests'"
+      entry: "bash -c 'autoflake -r \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "isort"
@@ -31,14 +31,14 @@ repos:
       name: "flynt"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'flynt -ll 88 --no-tf \"${NAME}\" tests'"
+      entry: "bash -c 'flynt -ll 88 --no-tf \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "black"
       name: "black"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'black \"${NAME}\" tests'"
+      entry: "bash -c 'black \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "yesqa"
@@ -58,20 +58,20 @@ repos:
       name: "interrogate"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'interrogate \"${NAME}\" tests -I -M'"
+      entry: "bash -c 'interrogate \"${NAME}\" -I -M'"
       types: ["python"]
     - id: "pylint"
       name: "pylint"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'pylint \"${NAME}\" tests'"
+      entry: "bash -c 'pylint \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "bandit"
       name: "bandit"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'bandit \"${NAME}\" tests --ini=pyproject.toml'"
+      entry: "bash -c 'bandit \"${NAME}\" --ini=pyproject.toml'"
       types: ["python"]
       pass_filenames: false
     - id: "dodgy"
@@ -85,7 +85,7 @@ repos:
       name: "mypy"
       stages: ["commit"]
       language: "system"
-      entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" mypy \"${NAME}\" tests'"
+      entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" mypy \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "dotenv-linter"
@@ -109,6 +109,12 @@ repos:
       language: "system"
       stages: ["commit"]
       types: ["rst"]
+    - id: "eslint"
+      name: "eslint"
+      entry: "npm run eslint"
+      language: "system"
+      stages: ["commit"]
+      pass_filenames: false
 -   repo: "https://github.com/pre-commit/pre-commit-hooks"
     rev: "v4.4.0"
     hooks:
@@ -125,7 +131,6 @@ repos:
       - id: "end-of-file-fixer"
       - id: "forbid-new-submodules"
       - id: "trailing-whitespace"
-        exclude: "tests/fixtures/output.*"
 - repo: "https://github.com/Anadea/pre-commit-config-shellcheck"
   rev: "0.3.4"
   hooks:

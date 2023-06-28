@@ -1,4 +1,4 @@
-declare const themeLight: string, themeDark: string, themeSwitcher: string;
+declare const themeLight = "light", themeDark = "dark", themeSwitcher = "id-theme-switcher";
 /**
  * Set theme.
  *

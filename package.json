@@ -5,8 +5,25 @@
   "dependencies": {
     "typescript": "5.1.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.60.1",
+    "@typescript-eslint/parser": "5.60.1",
+    "eslint": "8.43.0"
+  },
   "scripts": {
-    "build": "node_modules/.bin/tsc"
+    "build-js": "tsc",
+    "eslint": "eslint resume/assets/ts --ext .ts"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ]
   }
 }

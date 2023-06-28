@@ -43,3 +43,11 @@ indent_style = space
 [*.ts]
 indent_style = space
 indent_size = 4
+
+[*.rst]
+indent_style = space
+indent_size = 2
+
+[*.md]
+indent_style = space
+indent_size = 2

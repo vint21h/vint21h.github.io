@@ -14,6 +14,7 @@ env:
   NAME: "resume"
   ENVIRONMENT: "dev"
   DEFAULT_PYTHON_VERSION: "3.11"
+  DEFAULT_NODE_VERSION: "20.3"
 jobs:
   check-requirements:
     uses: "./.github/workflows/check-requirements.yml"
