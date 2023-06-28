@@ -24,6 +24,14 @@ jobs:
         uses: "actions/setup-node@v3.6.0"
         with:
           node-version: "${{ env.DEFAULT_NODE_VERSION }}"
+      - name: "Pip cache"
+        id: "pip-cache"
+        uses: "actions/cache@v3.3.1"
+        with:
+          path: "~/.npm"
+          key: "${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}"
+          restore-keys: |
+            "${{ runner.os }}-pip-"
       - name: "Npm cache"
         id: "npm-cache"
         uses: "actions/cache@v3.3.1"
