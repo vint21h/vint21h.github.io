@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ RESUME.metadata.language.language_code }}">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>{{ RESUME.basics.name }}: {{ RESUME.basics.label }}</title>
-        <meta name="description" content="Oleksii Andrushevych: Python/Django developer" />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="shortcut icon" href="favicon.png" type="image/png" sizes="64x64" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
-        <link href="static/css/styles.css" rel="stylesheet" />
-        <meta property="og:url" content="{{ RESUME.basics.site }}" />
-        <meta property="og:title" content="{{ RESUME.basics.name }}" />
+        <meta name="description" content="Oleksii Andrushevych: Python/Django developer"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="shortcut icon" href="favicon.png" type="image/png" sizes="64x64"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"/>
+        <link href="static/css/styles.css" rel="stylesheet"/>
+        <meta property="og:url" content="{{ RESUME.basics.site }}"/>
+        <meta property="og:title" content="{{ RESUME.basics.name }}"/>
         {% if RESUME.basics.avatar %}
-            <meta property="og:image" content="{{ RESUME.basics.avatar.path }}" />
+            <meta property="og:image" content="{{ RESUME.basics.avatar.path }}"/>
         {% endif %}
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="website"/>
         {% if RESUME.basics.avatar %}
-            <meta property="og:image:width" content="{{ RESUME.basics.avatar.width }}" />
-            <meta property="og:image:height" content="{{ RESUME.basics.avatar.height }}" />
+            <meta property="og:image:width" content="{{ RESUME.basics.avatar.width }}"/>
+            <meta property="og:image:height" content="{{ RESUME.basics.avatar.height }}"/>
         {% endif %}
-        <meta property="og:description" content="{{ RESUME.basics.name }}: {{ RESUME.basics.label }}" />
+        <meta property="og:description" content="{{ RESUME.basics.name }}: {{ RESUME.basics.label }}"/>
     </head>
     <body>
         <div class="container-fluid">
@@ -33,9 +33,9 @@
                         </div>
                         {% if RESUME.basics.avatar %}
                             <div class="col-sm-3 col-xs-12 avatar pull-right" id="id-theme-switcher">
-                                <img class="img-circle img-responsive" alt="{{ RESUME.basics.name }}" src="{{ RESUME.basics.avatar.path }}" />
+                                <img class="img-circle img-responsive" alt="{{ RESUME.basics.name }}" src="{{ RESUME.basics.avatar.path }}"/>
                                 {% if RESUME.basics.avatar.easter_egg %}
-                                    <img class="img-thumbnail img-responsive" alt="{{ RESUME.basics.avatar.easter_egg.nickname }}" src="{{ RESUME.basics.avatar.easter_egg.path }}" />
+                                    <img class="img-thumbnail img-responsive" alt="{{ RESUME.basics.avatar.easter_egg.nickname }}" src="{{ RESUME.basics.avatar.easter_egg.path }}"/>
                                 {% endif %}
                             </div>
                         {% endif %}
