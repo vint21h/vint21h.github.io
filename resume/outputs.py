@@ -2,7 +2,9 @@ from typing import List
 from abc import ABC, abstractmethod
 
 from bs4 import BeautifulSoup
+from bs4.formatter import HTMLFormatter
 from jinja2.loaders import PackageLoader
+from bs4.dammit import EntitySubstitution
 from jinja2.environment import Environment
 from jinja2.utils import select_autoescape
 from jinja2.exceptions import TemplateError
@@ -14,6 +16,7 @@ from resume.constants import (
     JSON_DUMPS_KWARGS,
     HTML_TEMPLATE_NAME,
     JSON_EXCLUDE_FIELDS,
+    HTML_PRETTIFY_KWARGS,
     HTML_MONTH_YEAR_FORMAT,
     HTML_TEMPLATES_PACKAGE,
     HTML_DAY_MONTH_YEAR_FORMAT,
@@ -21,6 +24,13 @@ from resume.constants import (
 
 
 __all__: List[str] = ["HtmlResumeOutput", "JsonResumeOutput"]
+
+
+# customizing BeautifulSoup formatters
+HTMLFormatter.REGISTRY["html.custom"] = HTMLFormatter(
+    entity_substitution=EntitySubstitution.substitute_html,
+    **HTML_PRETTIFY_KWARGS,
+)
 
 
 class BaseResumeOutput(ABC):
@@ -97,7 +107,7 @@ class HtmlResumeOutput(BaseResumeOutput):
             )
             # prettify HTML
             document = BeautifulSoup(markup=output, features="html.parser")
-            output = document.prettify(formatter="html5")
+            output = document.prettify(formatter="html.custom")
         except TemplateError as error:
             raise ResumeGeneratorError(
                 f"A problem occurred during generating output for: {self.resume}. {error}"

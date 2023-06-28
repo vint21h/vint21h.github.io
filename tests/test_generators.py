@@ -145,7 +145,6 @@ class ResumeGeneratorCliTest(TestCase):
         with redirect_stdout(output):
             ResumeGeneratorCli()._generate()
 
-        self.maxDiff = None
         self.assertIsInstance(
             obj=output.getvalue(),
             cls=str,
@@ -167,7 +166,6 @@ class ResumeGeneratorCliTest(TestCase):
         with redirect_stdout(output):
             ResumeGeneratorCli().generate()
 
-        self.maxDiff = None
         self.assertIsInstance(
             obj=output.getvalue(),
             cls=str,

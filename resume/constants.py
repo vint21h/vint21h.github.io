@@ -13,6 +13,7 @@ __all__: List[str] = [
     "HTML_YEAR_FORMAT",
     "HTML_TEMPLATES_PACKAGE",
     "HTML_TEMPLATE_NAME",
+    "HTML_PRETTIFY_KWARGS",
 ]
 
 
@@ -33,3 +34,7 @@ HTML_DAY_MONTH_YEAR_FORMAT: str = "%d.%m.%Y"
 HTML_YEAR_FORMAT: str = "%Y"
 HTML_TEMPLATES_PACKAGE: str = "resume"
 HTML_TEMPLATE_NAME: str = "resume.html.jinja"
+HTML_PRETTIFY_KWARGS: Final[Dict[str, Any]] = {
+    "indent": 4,
+    "void_element_close_prefix": "/",
+}

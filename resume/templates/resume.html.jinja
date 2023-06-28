@@ -40,7 +40,7 @@
                             </div>
                         {% endif %}
                     </section>
-                    <hr>
+                    <hr/>
                     <section id="id-about" class="row">
                         <header class="col-sm-2">
                             <h3>About</h3>
@@ -57,7 +57,7 @@
                             </p>
                         </div>
                     </section>
-                    <hr />
+                    <hr/>
                     {% if RESUME.work %}
                         <section id="id-works" class="row">
                             <header class="col-sm-2">
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                         </section>
-                        <hr />
+                        <hr/>
                     {% endif %}
                     {% if RESUME.projects %}
                         <section id="id-projects" class="row">
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                         </section>
-                        <hr />
+                        <hr/>
                     {% endif %}
                     {% if RESUME.education %}
                         <section id="id-education" class="row">
@@ -142,7 +142,7 @@
                                 </div>
                             </div>
                         </section>
-                        <hr />
+                        <hr/>
                     {% endif %}
                     {% if RESUME.skills_and_technologies %}
                         <section id="id-skills-and-technologies" class="row">
@@ -163,7 +163,7 @@
                                 </div>
                             </div>
                         </section>
-                        <hr />
+                        <hr/>
                     {% endif %}
                     {% if RESUME.languages %}
                         <section id="id-languages" class="row">
@@ -182,9 +182,9 @@
                                 </div>
                             </div>
                         </section>
+                        <hr/>
                     {% endif %}
                     {% if RESUME.metadata %}
-                        <hr />
                         <section id="id-updated" class="row">
                             <header class="col-sm-3">
                                 <strong>Updated:</strong>&nbsp;<abbr class="date" title="{{ RESUME.metadata.updated.strftime(HTML_DAY_MONTH_YEAR_FORMAT) }}">{{ RESUME.metadata.updated.strftime(HTML_MONTH_YEAR_FORMAT) }}</abbr>
