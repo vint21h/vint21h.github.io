@@ -17,9 +17,9 @@ __all__: List[str] = [
 ]
 
 
-RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR: Final[str] = "label-primary"
-RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE: Final[str] = "label-success"
-RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE: Final[str] = "label-warning"
+RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR: Final[str] = "bg-primary"
+RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE: Final[str] = "bg-success"
+RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE: Final[str] = "bg-warning"
 RESUME_PYPROJECT_PATH: Final[str] = "pyproject.toml"
 
 JSON_DUMPS_KWARGS: Final[Dict[str, Any]] = {"indent": 2, "ensure_ascii": False}

@@ -21,6 +21,7 @@ dev = [
   "contextlib2==21.6.0",
   "coverage==7.2.7",
   "darglint==1.8.1",
+  "djlint==1.31.1",
   "dlint==0.14.1",
   "dodgy==0.2.1",
   "dotenv-linter==0.4.0",
@@ -621,3 +622,8 @@ in-place = true
 remove-unused-variables = true
 ignore-pass-after-docstring = true
 remove-all-unused-imports = true
+
+[tool.djlint]
+profile = "jinja"
+extension = "html.jinja"
+ignore = "H031,J004,H006,T028"

@@ -115,6 +115,12 @@ repos:
       language: "system"
       stages: ["commit"]
       pass_filenames: false
+    - id: "djlint"
+      name: "djlint"
+      entry: "bash -c 'djlint \"${NAME}\"/templates/*.jinja'"
+      language: "system"
+      stages: ["commit"]
+      pass_filenames: false
 -   repo: "https://github.com/pre-commit/pre-commit-hooks"
     rev: "v4.4.0"
     hooks:
