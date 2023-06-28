@@ -5,6 +5,7 @@ on:
 env:
   ENVIRONMENT: "dev"
   DEFAULT_PYTHON_VERSION: "3.11"
+  DEFAULT_NODE_VERSION: "20.3"
 jobs:
   check-requirements:
     name: "check-requirements"
@@ -18,18 +19,30 @@ jobs:
         uses: "actions/setup-python@v4.6.1"
         with:
           python-version: "${{ env.DEFAULT_PYTHON_VERSION }}"
-      - name: "Pip cache"
-        id: "pip-cache"
+      - name: "Set up Node.js ${{ env.DEFAULT_NODE_VERSION }}"
+        id: "set-up-node"
+        uses: "actions/setup-node@v3.6.0"
+        with:
+          node-version: "${{ env.DEFAULT_NODE_VERSION }}"
+      - name: "Npm cache"
+        id: "npm-cache"
         uses: "actions/cache@v3.3.1"
         with:
-          path: "~/.cache/pip"
-          key: "${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}"
+          path: "~/.npm"
+          key: "${{ runner.os }}-npm-${{ hashFiles('package.json') }}"
           restore-keys: |
-            "${{ runner.os }}-pip-"
-      - name: "Install requirements"
-        id: "install-requirements"
-        run: "make install ENVIRONMENT=${{ env.ENVIRONMENT }}"
-      - name: "Check outdated requirements"
-        id: "check-outdated-requirements"
+            "${{ runner.os }}-npm-"
+      - name: "Install Python requirements"
+        id: "install-python-requirements"
+        run: "make install-python-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
+      - name: "Install JavaScript requirements"
+        id: "install-js-requirements"
+        run: "npm install"
+      - name: "Check Python outdated requirements"
+        id: "check-python-outdated-requirements"
         continue-on-error: true
-        run: "pip list --outdated"
+        run: "make check-python-requirements"
+      - name: "Check JavaScript outdated requirements"
+        id: "check-js-outdated-requirements"
+        continue-on-error: true
+        run: "make check-js-requirements"

@@ -39,3 +39,7 @@ indent_size = 2
 
 [*.jinja]
 indent_style = space
+
+[*.ts]
+indent_style = space
+indent_size = 4

@@ -1,0 +1,12 @@
+{
+  "name": "vint21h.github.io",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "typescript": "5.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node_modules/.bin/tsc"
+  }
+}

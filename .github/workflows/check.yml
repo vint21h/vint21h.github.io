@@ -27,9 +27,9 @@ jobs:
           key: "${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}"
           restore-keys: |
             "${{ runner.os }}-pip-"
-      - name: "Install requirements"
-        id: "install-requirements"
-        run: "make install ENVIRONMENT=${{ env.ENVIRONMENT }}"
+      - name: "Install Python requirements"
+        id: "install-python-requirements"
+        run: "make install-python-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
       - name: "Perform code checks"
         id: "perform-code-check"
         run: "make check"
