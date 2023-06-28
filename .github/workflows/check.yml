@@ -48,5 +48,5 @@ jobs:
         id: "install-js-requirements"
         run: "npm install"
       - name: "Perform code checks"
-        id: "perform-code-check"
+        id: "perform-code-checks"
         run: "make check"
