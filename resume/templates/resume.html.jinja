@@ -55,6 +55,11 @@
                             <p>
                                 <strong>Location:</strong>&nbsp;{{ RESUME.basics.location.name }}
                             </p>
+                            {% if RESUME.basics.summary %}
+                                <p>
+                                    {{ RESUME.basics.summary | trim }}
+                                </p>
+                            {% endif %}
                         </div>
                     </section>
                     <hr/>

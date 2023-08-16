@@ -75,6 +75,7 @@ class ResumeBasics(CamelModel):
     site: HttpUrl
     location: ResumeBasicsLocation
     avatar: Optional[ResumeBasicsAvatar]
+    summary: Optional[str]
 
 
 class ResumeWorkCompany(CamelModel):
