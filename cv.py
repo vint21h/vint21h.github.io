@@ -52,6 +52,17 @@ RESUME = Resume(
                 nickname="vint21h",
             ),
         ),
+        summary="""
+Linux/Python/Cybersecurity geek.
+Open-source enthuthiast.
+Python/Django developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.
+Expert in creating ETL systems from scratch for a previously mentioned sphere.
+Familiar with blockchain technologies and creating an NFT marketplace from times when that type of token was not popular.
+I know how to make third-party services integration in an easy and intelligent way.
+Last few years involved in developing internal solutions for AI/ML projects.
+Code quality tools evangelist.
+All of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker.
+""",
     ),
     work=[
         ResumeWork(
@@ -1992,9 +2003,7 @@ RESUME = Resume(
                 ResumeProjectTechnology(
                     name="docker-compose",
                 ),
-                ResumeProjectTechnology(
-                    name="GitLab CI/CD"
-                ),
+                ResumeProjectTechnology(name="GitLab CI/CD"),
             ],
         ),
         ResumeProject(
@@ -2307,11 +2316,11 @@ RESUME = Resume(
         ),
     ],
     metadata=ResumeMetadata(
-            language=ResumeMetadataLanguage(
-                name="English",
-                language_code="en",
-            ),
-            updated=date(year=2023, month=6, day=27),
-            version=get_version(),
+        language=ResumeMetadataLanguage(
+            name="English",
+            language_code="en",
         ),
+        updated=date(year=2023, month=8, day=16),
+        version=get_version(),
+    ),
 )
