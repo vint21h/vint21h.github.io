@@ -22,7 +22,7 @@ jobs:
           python-version: "${{ env.DEFAULT_PYTHON_VERSION }}"
       - name: "Set up Node.js ${{ env.DEFAULT_NODE_VERSION }}"
         id: "set-up-node"
-        uses: "actions/setup-node@v3.8.0"
+        uses: "actions/setup-node@v4.0.0"
         with:
           node-version: "${{ env.DEFAULT_NODE_VERSION }}"
       - name: "Pip cache"
