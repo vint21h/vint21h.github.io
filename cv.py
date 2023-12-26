@@ -54,7 +54,7 @@ RESUME = Resume(
         ),
         summary="""
 Linux/Python/Cybersecurity geek.
-Open-source enthuthiast.
+Open-source enthusiast.
 Evangelist of code quality tools and software testing.
 Python/Django developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.
 Expert in creating ETL systems from scratch for a previously mentioned sphere.
@@ -65,6 +65,15 @@ All of that was implemented and deployed using a lot of technologies, but my too
 """,
     ),
     work=[
+        ResumeWork(
+            company=ResumeWorkCompany(
+                original="Accentiko",
+            ),
+            position="Python developer",
+            website="https://www.accentiko.com/",
+            start_date=date(year=2023, month=9, day=10),
+            end_date=date(year=2023, month=12, day=26),
+        ),
         ResumeWork(
             company=ResumeWorkCompany(
                 original="Anadea",
@@ -429,6 +438,18 @@ All of that was implemented and deployed using a lot of technologies, but my too
         ),
         ResumeSkillOrTechnology(
             name="Docker Code Analysis/Quality tools",
+        ),
+        ResumeSkillOrTechnology(
+            name="MediaPipe",
+        ),
+        ResumeSkillOrTechnology(
+            name="FastAPI",
+        ),
+        ResumeSkillOrTechnology(
+            name="OpenCV",
+        ),
+        ResumeSkillOrTechnology(
+            name="Azure Pipelines",
         ),
     ],
     languages=[
@@ -2314,13 +2335,78 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ),
             ],
         ),
+        ResumeProject(
+            name="3motionAI",
+            start_date=date(year=2023, month=9, day=10),
+            end_date=date(year=2023, month=12, day=26),
+            summary="Harness the Power of Movement Intelligence Hidden in Videos.",
+            url="https://3motionai.com/",
+            company=[
+                ResumeProjectCompany(
+                    name="Accentiko",
+                    metadata=ResumeProjectCompanyMetadata(
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                    ),
+                )
+            ],
+            role="Python developer",
+            responsibilities=[
+                ResumeProjectResponsibility(
+                    name="Project code base stabilization",
+                ),
+                ResumeProjectResponsibility(
+                    name="Next-generation architecture development",
+                ),
+                ResumeProjectResponsibility(
+                    name="Improvements of third-party services integrations",
+                ),
+                ResumeProjectResponsibility(
+                    name="Refactoring of the existing codebase to clean it up"
+                ),
+            ],
+            technologies=[
+                ResumeProjectTechnology(
+                    name="Python",
+                ),
+                ResumeProjectTechnology(
+                    name="Python Code Analysis/Quality tools",
+                ),
+                ResumeProjectTechnology(
+                    name="Celery",
+                ),
+                ResumeProjectTechnology(
+                    name="RabbitMQ",
+                ),
+                ResumeProjectTechnology(
+                    name="Docker",
+                ),
+                ResumeProjectTechnology(
+                    name="docker-compose",
+                ),
+                ResumeProjectTechnology(
+                    name="MediaPipe",
+                ),
+                ResumeProjectTechnology(
+                    name="gRPC",
+                ),
+                ResumeProjectTechnology(
+                    name="FastAPI",
+                ),
+                ResumeProjectTechnology(
+                    name="OpenCV",
+                ),
+                ResumeProjectTechnology(
+                    name="Azure Pipelines",
+                ),
+            ],
+        ),
     ],
     metadata=ResumeMetadata(
         language=ResumeMetadataLanguage(
             name="English",
             language_code="en",
         ),
-        updated=date(year=2023, month=8, day=16),
+        updated=date(year=2023, month=12, day=26),
         version=get_version(),
     ),
 )

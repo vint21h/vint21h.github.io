@@ -40,7 +40,7 @@ setup-env:
 install-pre-commit-hook:
 	pre-commit install;\
 
-bootstrap: setup-env install install-pre-commit-hook
+bootstrap: setup-env install-requirements install-pre-commit-hook
 
 shell:
 	PYTHONPATH="$${PYTHONPATH}:$${PWD}" bpython;\
