@@ -8,7 +8,7 @@
     "location": {
       "countryCode": "UA"
     },
-    "summary": "\nLinux/Python/Cybersecurity geek.\nOpen-source enthusiast.\nEvangelist of code quality tools and software testing.\nPython/Django developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.\nExpert in creating ETL systems from scratch for a previously mentioned sphere.\nFamiliar with blockchain technologies and creating an NFT marketplace from times when that type of token was not popular.\nI know how to make third-party services integration in an easy and intelligent way.\nLast few years involved in developing internal solutions for AI/ML projects.\nAll of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker.\n"
+    "summary": "\nLinux/Python/Cybersecurity geek.\nOpen-source enthusiast.\nEvangelist of code quality tools and software testing.\nPython/Django developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.\nExpert in creating ETL systems from scratch.\nFamiliar with blockchain technologies and creating an NFT marketplace from times when that type of token was not popular.\nI know how to make third-party services integration in an easy and intelligent way.\nLast few years involved in developing internal solutions for AI/ML projects.\nAll of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker/FastAPI/gRPC.\n"
   },
   "work": [
     {
@@ -20,6 +20,16 @@
       "website": "https://www.accentiko.com/",
       "startDate": "2023-09-10",
       "endDate": "2023-12-26"
+    },
+    {
+      "company": {
+        "original": "Namecheap",
+        "en": null
+      },
+      "position": "Python developer",
+      "website": "https://www.namecheap.com/",
+      "startDate": "2023-04-05",
+      "endDate": "2023-06-13"
     },
     {
       "company": {
@@ -407,6 +417,15 @@
     },
     {
       "name": "Azure Pipelines"
+    },
+    {
+      "name": "DVC"
+    },
+    {
+      "name": "Jenkins"
+    },
+    {
+      "name": "Rasa"
     }
   ],
   "languages": [
@@ -2248,6 +2267,28 @@
       ]
     },
     {
+      "name": "Under NDA",
+      "startDate": "2023-04-05",
+      "endDate": "2023-06-13",
+      "summary": "Different company internal services.",
+      "url": null,
+      "company": [
+        {
+          "name": "Namecheap"
+        }
+      ],
+      "role": "Python developer",
+      "responsibilities": [
+        {
+          "name": "Different company internal services development and maintenance"
+        },
+        {
+          "name": "Refactoring of the existing codebase to clean it up"
+        }
+      ],
+      "technologies": null
+    },
+    {
       "name": "3motionAI",
       "startDate": "2023-09-10",
       "endDate": "2023-12-26",
@@ -2270,7 +2311,7 @@
           "name": "Improvements of third-party services integrations"
         },
         {
-          "name": "Refactoring of the existing codebase to clean and split to reusable components"
+          "name": "Refactoring of the existing codebase to clean it up"
         }
       ],
       "technologies": [

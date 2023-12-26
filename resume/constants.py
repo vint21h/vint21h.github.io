@@ -2,7 +2,7 @@ from typing import Any, Dict, List, Final
 
 
 __all__: List[str] = [
-    "RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR",
+    "RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY",
     "RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE",
     "RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE",
     "RESUME_PYPROJECT_PATH",
@@ -17,7 +17,7 @@ __all__: List[str] = [
 ]
 
 
-RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR: Final[str] = "label-primary"
+RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY: Final[str] = "label-primary"
 RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE: Final[str] = "label-success"
 RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE: Final[str] = "label-warning"
 RESUME_PYPROJECT_PATH: Final[str] = "pyproject.toml"
@@ -29,11 +29,11 @@ JSON_EXCLUDE_FIELDS: Final = {  # noqa: ECE001
     "metadata": True,
 }
 
-HTML_MONTH_YEAR_FORMAT: str = "%b. %Y"
-HTML_DAY_MONTH_YEAR_FORMAT: str = "%d.%m.%Y"
-HTML_YEAR_FORMAT: str = "%Y"
-HTML_TEMPLATES_PACKAGE: str = "resume"
-HTML_TEMPLATE_NAME: str = "resume.html.jinja"
+HTML_MONTH_YEAR_FORMAT: Final[str] = "%b. %Y"
+HTML_DAY_MONTH_YEAR_FORMAT: Final[str] = "%d.%m.%Y"
+HTML_YEAR_FORMAT: Final[str] = "%Y"
+HTML_TEMPLATES_PACKAGE: Final[str] = "resume"
+HTML_TEMPLATE_NAME: Final[str] = "resume.html.jinja"
 HTML_PRETTIFY_KWARGS: Final[Dict[str, Any]] = {
     "indent": 4,
     "void_element_close_prefix": "/",

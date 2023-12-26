@@ -3,7 +3,7 @@ from datetime import date
 
 from resume.utils import get_version
 from resume.constants import (
-    RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+    RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
     RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE,
     RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE,
 )
@@ -57,11 +57,11 @@ Linux/Python/Cybersecurity geek.
 Open-source enthusiast.
 Evangelist of code quality tools and software testing.
 Python/Django developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.
-Expert in creating ETL systems from scratch for a previously mentioned sphere.
+Expert in creating ETL systems from scratch.
 Familiar with blockchain technologies and creating an NFT marketplace from times when that type of token was not popular.
 I know how to make third-party services integration in an easy and intelligent way.
 Last few years involved in developing internal solutions for AI/ML projects.
-All of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker.
+All of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker/FastAPI/gRPC.
 """,
     ),
     work=[
@@ -73,6 +73,15 @@ All of that was implemented and deployed using a lot of technologies, but my too
             website="https://www.accentiko.com/",
             start_date=date(year=2023, month=9, day=10),
             end_date=date(year=2023, month=12, day=26),
+        ),
+        ResumeWork(
+            company=ResumeWorkCompany(
+                original="Namecheap",
+            ),
+            position="Python developer",
+            website="https://www.namecheap.com/",
+            start_date=date(year=2023, month=4, day=5),
+            end_date=date(year=2023, month=6, day=13),
         ),
         ResumeWork(
             company=ResumeWorkCompany(
@@ -451,6 +460,15 @@ All of that was implemented and deployed using a lot of technologies, but my too
         ResumeSkillOrTechnology(
             name="Azure Pipelines",
         ),
+        ResumeSkillOrTechnology(
+            name="DVC",
+        ),
+        ResumeSkillOrTechnology(
+            name="Jenkins",
+        ),
+        ResumeSkillOrTechnology(
+            name="Rasa",
+        ),
     ],
     languages=[
         ResumeLanguage(
@@ -501,7 +519,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -575,7 +593,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -794,7 +812,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -864,7 +882,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -949,7 +967,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -1029,7 +1047,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -1144,7 +1162,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -1304,7 +1322,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -1324,7 +1342,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -1345,7 +1363,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -1428,7 +1446,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -1449,7 +1467,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -1484,7 +1502,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -1582,7 +1600,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -1723,7 +1741,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Zakaz.ua",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -1938,7 +1956,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -2065,7 +2083,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -2167,7 +2185,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -2235,7 +2253,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -2256,7 +2274,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
@@ -2336,6 +2354,29 @@ All of that was implemented and deployed using a lot of technologies, but my too
             ],
         ),
         ResumeProject(
+            name="Under NDA",
+            start_date=date(year=2023, month=4, day=5),
+            end_date=date(year=2023, month=6, day=13),
+            summary="Different company internal services.",
+            company=[
+                ResumeProjectCompany(
+                    name="Namecheap",
+                    metadata=ResumeProjectCompanyMetadata(
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
+                    ),
+                )
+            ],
+            role="Python developer",
+            responsibilities=[
+                ResumeProjectResponsibility(
+                    name="Different company internal services development and maintenance",
+                ),
+                ResumeProjectResponsibility(
+                    name="Refactoring of the existing codebase to clean it up"
+                ),
+            ],
+        ),
+        ResumeProject(
             name="3motionAI",
             start_date=date(year=2023, month=9, day=10),
             end_date=date(year=2023, month=12, day=26),
@@ -2345,7 +2386,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Accentiko",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
