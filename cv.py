@@ -35,7 +35,7 @@ __all__: List[str] = ["RESUME"]
 RESUME = Resume(
     basics=ResumeBasics(
         name="Oleksii Andrushevych",
-        label="Python/Django developer",
+        label="Python/Django Developer",
         email="vint21h@vint21h.pp.ua",
         linkedin="https://www.linkedin.com/in/vint21h/",
         site="https://www.vint21h.pp.ua/",
@@ -56,7 +56,7 @@ RESUME = Resume(
 Linux/Python/Cybersecurity geek.
 Open-source enthusiast.
 Evangelist of code quality tools and software testing.
-Python/Django developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.
+Python/Django Developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.
 Expert in creating ETL systems from scratch.
 Familiar with blockchain technologies and creating an NFT marketplace from times when that type of token was not popular.
 I know how to make third-party services integration in an easy and intelligent way.
@@ -87,16 +87,17 @@ All of that was implemented and deployed using a lot of technologies, but my too
             company=ResumeWorkCompany(
                 original="Anadea",
             ),
-            position="Python/Django developer",
+            position="Python/Django Developer",
             website="https://anadea.info/",
             start_date=date(year=2020, month=9, day=7),
             end_date=date(year=2023, month=1, day=10),
         ),
         ResumeWork(
             company=ResumeWorkCompany(
-                original="Freelance",
+                original="Beemster Team",
             ),
-            position="Python/Django developer",
+            website="https://beemster.team/",
+            position="Python/Django Developer",
             start_date=date(year=2020, month=4, day=27),
             end_date=date(year=2020, month=8, day=28),
         ),
@@ -113,7 +114,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             company=ResumeWorkCompany(
                 original="Prism Skylabs",
             ),
-            position="Python/Django developer",
+            position="Python/Django Developer",
             website="https://prism.com/",
             start_date=date(year=2019, month=6, day=3),
             end_date=date(year=2019, month=9, day=5),
@@ -122,7 +123,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             company=ResumeWorkCompany(
                 original="DCOD",
             ),
-            position="Python/Django developer",
+            position="Python/Django Developer",
             website="http://d-cod.com/",
             start_date=date(year=2011, month=10, day=25),
             end_date=date(year=2019, month=5, day=28),
@@ -490,6 +491,9 @@ All of that was implemented and deployed using a lot of technologies, but my too
         ResumeSkillOrTechnology(
             name="Doccano",
         ),
+        ResumeSkillOrTechnology(
+            name="TensorFlow",
+        ),
     ],
     languages=[
         ResumeLanguage(
@@ -544,7 +548,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -618,7 +622,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -740,7 +744,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -837,7 +841,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Page generation system development",
@@ -907,7 +911,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -992,7 +996,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1072,7 +1076,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1187,7 +1191,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1388,7 +1392,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1527,7 +1531,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1625,7 +1629,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1738,7 +1742,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Implementing homebrew features for CVAT fork"
@@ -1892,19 +1896,19 @@ All of that was implemented and deployed using a lot of technologies, but my too
             ],
         ),
         ResumeProject(
-            name="Under NDA",
+            name="Kuailian Academy (Kademy)",
             start_date=date(year=2020, month=4, day=28),
             end_date=date(year=2020, month=8, day=28),
             summary="Educational platform for crypto currencies traders/investors.",
             company=[
                 ResumeProjectCompany(
-                    name="Freelance",
+                    name="Beemster Team",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1956,19 +1960,20 @@ All of that was implemented and deployed using a lot of technologies, but my too
             ],
         ),
         ResumeProject(
-            name="Under NDA",
+            name="Kuailian",
             start_date=date(year=2020, month=6, day=24),
             end_date=date(year=2020, month=8, day=19),
             summary="Crypto currencies trading/investments/exchange platform.",
+            url="https://kuailiandp.com/",
             company=[
                 ResumeProjectCompany(
-                    name="Freelance",
+                    name="Beemster Team",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Back-office and business logic code enhancements",
@@ -2064,7 +2069,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -2191,7 +2196,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -2293,7 +2298,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Internal ETL service architecture development and implementation",
@@ -2382,7 +2387,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
