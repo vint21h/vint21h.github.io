@@ -6,5 +6,5 @@
 
 /* SITE */
 
-    Last update: 2023/12/26
+    Last update: 2023/12/27
     Language: English

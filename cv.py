@@ -69,7 +69,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             company=ResumeWorkCompany(
                 original="Accentiko",
             ),
-            position="Python developer",
+            position="Python Developer",
             website="https://www.accentiko.com/",
             start_date=date(year=2023, month=9, day=10),
             end_date=date(year=2023, month=12, day=26),
@@ -78,7 +78,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             company=ResumeWorkCompany(
                 original="Namecheap",
             ),
-            position="Python developer",
+            position="Python Developer",
             website="https://www.namecheap.com/",
             start_date=date(year=2023, month=4, day=5),
             end_date=date(year=2023, month=6, day=13),
@@ -104,10 +104,19 @@ All of that was implemented and deployed using a lot of technologies, but my too
             company=ResumeWorkCompany(
                 original="Zakaz.ua",
             ),
-            position="Python developer",
+            position="Python Developer",
             website="https://zakaz.ua/",
             start_date=date(year=2019, month=10, day=21),
             end_date=date(year=2020, month=1, day=27),
+        ),
+        ResumeWork(
+            company=ResumeWorkCompany(
+                original="Prism Skylabs",
+            ),
+            position="Python/Django developer",
+            website="https://prism.com/",
+            start_date=date(year=2019, month=6, day=3),
+            end_date=date(year=2019, month=9, day=5),
         ),
         ResumeWork(
             company=ResumeWorkCompany(
@@ -468,6 +477,18 @@ All of that was implemented and deployed using a lot of technologies, but my too
         ),
         ResumeSkillOrTechnology(
             name="Rasa",
+        ),
+        ResumeSkillOrTechnology(
+            name="Apache Kafka",
+        ),
+        ResumeSkillOrTechnology(
+            name="Apache ZooKeeper",
+        ),
+        ResumeSkillOrTechnology(
+            name="CVAT",
+        ),
+        ResumeSkillOrTechnology(
+            name="Doccano",
         ),
     ],
     languages=[
@@ -1704,6 +1725,89 @@ All of that was implemented and deployed using a lot of technologies, but my too
             ],
         ),
         ResumeProject(
+            name="This is Prism",
+            start_date=date(year=2019, month=6, day=3),
+            end_date=date(year=2019, month=9, day=5),
+            summary="We’re transforming how the world uses video. Prism is the most comprehensive cloud intelligence platform connecting A.I. to video. Through computer vision and machine learning, Prism unlocks valuable information from video that can be immediately understood, shared, and acted upon. Leading companies in 80 countries around the world use Prism to better understand, manage, and grow their business.",
+            url="https://prism.com/",
+            company=[
+                ResumeProjectCompany(
+                    name="Prism Skylabs",
+                    metadata=ResumeProjectCompanyMetadata(
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
+                    ),
+                )
+            ],
+            role="Python/Django developer",
+            responsibilities=[
+                ResumeProjectResponsibility(
+                    name="Implementing homebrew features for CVAT fork"
+                ),
+                ResumeProjectResponsibility(
+                    name="Maintaining CVAT fork"
+                ),
+                ResumeProjectResponsibility(
+                    name="Refactoring of the existing codebase to clean up"
+                ),
+                ResumeProjectResponsibility(
+                    name="Modules implementation",
+                ),
+            ],
+            technologies=[
+                ResumeProjectTechnology(
+                    name="Python",
+                ),
+                ResumeProjectTechnology(
+                    name="Django",
+                ),
+                ResumeProjectTechnology(
+                    name="PostgreSQL",
+                ),
+                ResumeProjectTechnology(
+                    name="Redis",
+                ),
+                ResumeProjectTechnology(
+                    name="Nginx",
+                ),
+                ResumeProjectTechnology(
+                    name="Amazon Web Services (AWS)",
+                ),
+                ResumeProjectTechnology(
+                    name="GraphQL",
+                ),
+                ResumeProjectTechnology(
+                    name="WebSockets",
+                ),
+                ResumeProjectTechnology(
+                    name="Pushpin",
+                ),
+                ResumeProjectTechnology(
+                    name="HAProxy",
+                ),
+                ResumeProjectTechnology(
+                    name="Docker",
+                ),
+                ResumeProjectTechnology(
+                    name="docker-compose",
+                ),
+                ResumeProjectTechnology(
+                    name="Vagrant",
+                ),
+                ResumeProjectTechnology(
+                    name="consul-templaterb",
+                ),
+                ResumeProjectTechnology(
+                    name="Apache Kafka",
+                ),
+                ResumeProjectTechnology(
+                    name="Apache ZooKeeper",
+                ),
+                ResumeProjectTechnology(
+                    name="CVAT",
+                ),
+            ],
+        ),
+        ResumeProject(
             name="django-humans-txt",
             start_date=date(year=2019, month=8, day=1),
             summary="Handle humans.txt for Django.",
@@ -1745,7 +1849,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python developer",
+            role="Python Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Back-office business workflow requirements implementation",
@@ -2366,7 +2470,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python developer",
+            role="Python Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Different company internal services development and maintenance",
@@ -2390,7 +2494,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python developer",
+            role="Python Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project code base stabilization",
@@ -2447,7 +2551,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             name="English",
             language_code="en",
         ),
-        updated=date(year=2023, month=12, day=26),
+        updated=date(year=2023, month=12, day=27),
         version=get_version(),
     ),
 )

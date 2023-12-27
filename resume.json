@@ -16,7 +16,7 @@
         "original": "Accentiko",
         "en": null
       },
-      "position": "Python developer",
+      "position": "Python Developer",
       "website": "https://www.accentiko.com/",
       "startDate": "2023-09-10",
       "endDate": "2023-12-26"
@@ -26,7 +26,7 @@
         "original": "Namecheap",
         "en": null
       },
-      "position": "Python developer",
+      "position": "Python Developer",
       "website": "https://www.namecheap.com/",
       "startDate": "2023-04-05",
       "endDate": "2023-06-13"
@@ -56,10 +56,20 @@
         "original": "Zakaz.ua",
         "en": null
       },
-      "position": "Python developer",
+      "position": "Python Developer",
       "website": "https://zakaz.ua/",
       "startDate": "2019-10-21",
       "endDate": "2020-01-27"
+    },
+    {
+      "company": {
+        "original": "Prism Skylabs",
+        "en": null
+      },
+      "position": "Python/Django developer",
+      "website": "https://prism.com/",
+      "startDate": "2019-06-03",
+      "endDate": "2019-09-05"
     },
     {
       "company": {
@@ -426,6 +436,18 @@
     },
     {
       "name": "Rasa"
+    },
+    {
+      "name": "Apache Kafka"
+    },
+    {
+      "name": "Apache ZooKeeper"
+    },
+    {
+      "name": "CVAT"
+    },
+    {
+      "name": "Doccano"
     }
   ],
   "languages": [
@@ -1629,6 +1651,86 @@
       ]
     },
     {
+      "name": "This is Prism",
+      "startDate": "2019-06-03",
+      "endDate": "2019-09-05",
+      "summary": "We’re transforming how the world uses video. Prism is the most comprehensive cloud intelligence platform connecting A.I. to video. Through computer vision and machine learning, Prism unlocks valuable information from video that can be immediately understood, shared, and acted upon. Leading companies in 80 countries around the world use Prism to better understand, manage, and grow their business.",
+      "url": "https://prism.com/",
+      "company": [
+        {
+          "name": "Prism Skylabs"
+        }
+      ],
+      "role": "Python/Django developer",
+      "responsibilities": [
+        {
+          "name": "Implementing homebrew features for CVAT fork"
+        },
+        {
+          "name": "Maintaining CVAT fork"
+        },
+        {
+          "name": "Refactoring of the existing codebase to clean up"
+        },
+        {
+          "name": "Modules implementation"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "GraphQL"
+        },
+        {
+          "name": "WebSockets"
+        },
+        {
+          "name": "Pushpin"
+        },
+        {
+          "name": "HAProxy"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Vagrant"
+        },
+        {
+          "name": "consul-templaterb"
+        },
+        {
+          "name": "Apache Kafka"
+        },
+        {
+          "name": "Apache ZooKeeper"
+        },
+        {
+          "name": "CVAT"
+        }
+      ]
+    },
+    {
       "name": "django-humans-txt",
       "startDate": "2019-08-01",
       "endDate": null,
@@ -1669,7 +1771,7 @@
           "name": "Zakaz.ua"
         }
       ],
-      "role": "Python developer",
+      "role": "Python Developer",
       "responsibilities": [
         {
           "name": "Back-office business workflow requirements implementation"
@@ -2277,7 +2379,7 @@
           "name": "Namecheap"
         }
       ],
-      "role": "Python developer",
+      "role": "Python Developer",
       "responsibilities": [
         {
           "name": "Different company internal services development and maintenance"
@@ -2299,7 +2401,7 @@
           "name": "Accentiko"
         }
       ],
-      "role": "Python developer",
+      "role": "Python Developer",
       "responsibilities": [
         {
           "name": "Project code base stabilization"
