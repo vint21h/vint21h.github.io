@@ -3,7 +3,7 @@ from datetime import date
 
 from resume.utils import get_version
 from resume.constants import (
-    RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+    RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
     RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE,
     RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__OPENSOURCE,
 )
@@ -35,7 +35,7 @@ __all__: List[str] = ["RESUME"]
 RESUME = Resume(
     basics=ResumeBasics(
         name="Oleksii Andrushevych",
-        label="Python/Django developer",
+        label="Python/Django Developer",
         email="vint21h@vint21h.pp.ua",
         linkedin="https://www.linkedin.com/in/vint21h/",
         site="https://www.vint21h.pp.ua/",
@@ -54,31 +54,50 @@ RESUME = Resume(
         ),
         summary="""
 Linux/Python/Cybersecurity geek.
-Open-source enthuthiast.
+Open-source enthusiast.
 Evangelist of code quality tools and software testing.
-Python/Django developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.
-Expert in creating ETL systems from scratch for a previously mentioned sphere.
+Python/Django Developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.
+Expert in creating ETL systems from scratch.
 Familiar with blockchain technologies and creating an NFT marketplace from times when that type of token was not popular.
 I know how to make third-party services integration in an easy and intelligent way.
 Last few years involved in developing internal solutions for AI/ML projects.
-All of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker.
+All of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker/FastAPI/gRPC.
 """,
     ),
     work=[
         ResumeWork(
             company=ResumeWorkCompany(
+                original="Accentiko",
+            ),
+            position="Python Developer",
+            website="https://www.accentiko.com/",
+            start_date=date(year=2023, month=9, day=10),
+            end_date=date(year=2023, month=12, day=26),
+        ),
+        ResumeWork(
+            company=ResumeWorkCompany(
+                original="Namecheap",
+            ),
+            position="Python Developer",
+            website="https://www.namecheap.com/",
+            start_date=date(year=2023, month=4, day=5),
+            end_date=date(year=2023, month=6, day=13),
+        ),
+        ResumeWork(
+            company=ResumeWorkCompany(
                 original="Anadea",
             ),
-            position="Python/Django developer",
+            position="Python/Django Developer",
             website="https://anadea.info/",
             start_date=date(year=2020, month=9, day=7),
             end_date=date(year=2023, month=1, day=10),
         ),
         ResumeWork(
             company=ResumeWorkCompany(
-                original="Freelance",
+                original="Beemster Team",
             ),
-            position="Python/Django developer",
+            website="https://beemster.team/",
+            position="Python/Django Developer",
             start_date=date(year=2020, month=4, day=27),
             end_date=date(year=2020, month=8, day=28),
         ),
@@ -86,16 +105,25 @@ All of that was implemented and deployed using a lot of technologies, but my too
             company=ResumeWorkCompany(
                 original="Zakaz.ua",
             ),
-            position="Python developer",
+            position="Python Developer",
             website="https://zakaz.ua/",
             start_date=date(year=2019, month=10, day=21),
             end_date=date(year=2020, month=1, day=27),
         ),
         ResumeWork(
             company=ResumeWorkCompany(
+                original="Prism Skylabs",
+            ),
+            position="Python/Django Developer",
+            website="https://prism.com/",
+            start_date=date(year=2019, month=6, day=3),
+            end_date=date(year=2019, month=9, day=5),
+        ),
+        ResumeWork(
+            company=ResumeWorkCompany(
                 original="DCOD",
             ),
-            position="Python/Django developer",
+            position="Python/Django Developer",
             website="http://d-cod.com/",
             start_date=date(year=2011, month=10, day=25),
             end_date=date(year=2019, month=5, day=28),
@@ -430,6 +458,42 @@ All of that was implemented and deployed using a lot of technologies, but my too
         ResumeSkillOrTechnology(
             name="Docker Code Analysis/Quality tools",
         ),
+        ResumeSkillOrTechnology(
+            name="MediaPipe",
+        ),
+        ResumeSkillOrTechnology(
+            name="FastAPI",
+        ),
+        ResumeSkillOrTechnology(
+            name="OpenCV",
+        ),
+        ResumeSkillOrTechnology(
+            name="Azure Pipelines",
+        ),
+        ResumeSkillOrTechnology(
+            name="DVC",
+        ),
+        ResumeSkillOrTechnology(
+            name="Jenkins",
+        ),
+        ResumeSkillOrTechnology(
+            name="Rasa",
+        ),
+        ResumeSkillOrTechnology(
+            name="Apache Kafka",
+        ),
+        ResumeSkillOrTechnology(
+            name="Apache ZooKeeper",
+        ),
+        ResumeSkillOrTechnology(
+            name="CVAT",
+        ),
+        ResumeSkillOrTechnology(
+            name="Doccano",
+        ),
+        ResumeSkillOrTechnology(
+            name="TensorFlow",
+        ),
     ],
     languages=[
         ResumeLanguage(
@@ -480,11 +544,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -554,11 +618,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -680,7 +744,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -773,11 +837,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Page generation system development",
@@ -843,11 +907,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -928,11 +992,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1008,11 +1072,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1123,11 +1187,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1283,7 +1347,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -1303,7 +1367,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -1324,11 +1388,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1407,7 +1471,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -1428,7 +1492,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -1463,11 +1527,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1561,11 +1625,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="DCOD",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1665,6 +1729,89 @@ All of that was implemented and deployed using a lot of technologies, but my too
             ],
         ),
         ResumeProject(
+            name="This is Prism",
+            start_date=date(year=2019, month=6, day=3),
+            end_date=date(year=2019, month=9, day=5),
+            summary="We’re transforming how the world uses video. Prism is the most comprehensive cloud intelligence platform connecting A.I. to video. Through computer vision and machine learning, Prism unlocks valuable information from video that can be immediately understood, shared, and acted upon. Leading companies in 80 countries around the world use Prism to better understand, manage, and grow their business.",
+            url="https://prism.com/",
+            company=[
+                ResumeProjectCompany(
+                    name="Prism Skylabs",
+                    metadata=ResumeProjectCompanyMetadata(
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
+                    ),
+                )
+            ],
+            role="Python/Django Developer",
+            responsibilities=[
+                ResumeProjectResponsibility(
+                    name="Implementing homebrew features for CVAT fork"
+                ),
+                ResumeProjectResponsibility(
+                    name="Maintaining CVAT fork"
+                ),
+                ResumeProjectResponsibility(
+                    name="Refactoring of the existing codebase to clean up"
+                ),
+                ResumeProjectResponsibility(
+                    name="Modules implementation",
+                ),
+            ],
+            technologies=[
+                ResumeProjectTechnology(
+                    name="Python",
+                ),
+                ResumeProjectTechnology(
+                    name="Django",
+                ),
+                ResumeProjectTechnology(
+                    name="PostgreSQL",
+                ),
+                ResumeProjectTechnology(
+                    name="Redis",
+                ),
+                ResumeProjectTechnology(
+                    name="Nginx",
+                ),
+                ResumeProjectTechnology(
+                    name="Amazon Web Services (AWS)",
+                ),
+                ResumeProjectTechnology(
+                    name="GraphQL",
+                ),
+                ResumeProjectTechnology(
+                    name="WebSockets",
+                ),
+                ResumeProjectTechnology(
+                    name="Pushpin",
+                ),
+                ResumeProjectTechnology(
+                    name="HAProxy",
+                ),
+                ResumeProjectTechnology(
+                    name="Docker",
+                ),
+                ResumeProjectTechnology(
+                    name="docker-compose",
+                ),
+                ResumeProjectTechnology(
+                    name="Vagrant",
+                ),
+                ResumeProjectTechnology(
+                    name="consul-templaterb",
+                ),
+                ResumeProjectTechnology(
+                    name="Apache Kafka",
+                ),
+                ResumeProjectTechnology(
+                    name="Apache ZooKeeper",
+                ),
+                ResumeProjectTechnology(
+                    name="CVAT",
+                ),
+            ],
+        ),
+        ResumeProject(
             name="django-humans-txt",
             start_date=date(year=2019, month=8, day=1),
             summary="Handle humans.txt for Django.",
@@ -1702,11 +1849,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Zakaz.ua",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python developer",
+            role="Python Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Back-office business workflow requirements implementation",
@@ -1749,19 +1896,19 @@ All of that was implemented and deployed using a lot of technologies, but my too
             ],
         ),
         ResumeProject(
-            name="Under NDA",
+            name="Kuailian Academy (Kademy)",
             start_date=date(year=2020, month=4, day=28),
             end_date=date(year=2020, month=8, day=28),
             summary="Educational platform for crypto currencies traders/investors.",
             company=[
                 ResumeProjectCompany(
-                    name="Freelance",
+                    name="Beemster Team",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -1813,19 +1960,20 @@ All of that was implemented and deployed using a lot of technologies, but my too
             ],
         ),
         ResumeProject(
-            name="Under NDA",
+            name="Kuailian",
             start_date=date(year=2020, month=6, day=24),
             end_date=date(year=2020, month=8, day=19),
             summary="Crypto currencies trading/investments/exchange platform.",
+            url="https://kuailiandp.com/",
             company=[
                 ResumeProjectCompany(
-                    name="Freelance",
+                    name="Beemster Team",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__FREELANCE,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Back-office and business logic code enhancements",
@@ -1917,11 +2065,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -2044,11 +2192,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -2146,11 +2294,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Internal ETL service architecture development and implementation",
@@ -2214,7 +2362,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 ),
                 ResumeProjectCompany(
@@ -2235,11 +2383,11 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ResumeProjectCompany(
                     name="Anadea",
                     metadata=ResumeProjectCompanyMetadata(
-                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__REGULAR,
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
                     ),
                 )
             ],
-            role="Python/Django developer",
+            role="Python/Django Developer",
             responsibilities=[
                 ResumeProjectResponsibility(
                     name="Project architecture development and implementation",
@@ -2314,13 +2462,101 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ),
             ],
         ),
+        ResumeProject(
+            name="Under NDA",
+            start_date=date(year=2023, month=4, day=5),
+            end_date=date(year=2023, month=6, day=13),
+            summary="Different company internal services.",
+            company=[
+                ResumeProjectCompany(
+                    name="Namecheap",
+                    metadata=ResumeProjectCompanyMetadata(
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
+                    ),
+                )
+            ],
+            role="Python Developer",
+            responsibilities=[
+                ResumeProjectResponsibility(
+                    name="Different company internal services development and maintenance",
+                ),
+                ResumeProjectResponsibility(
+                    name="Refactoring of the existing codebase to clean it up"
+                ),
+            ],
+        ),
+        ResumeProject(
+            name="3motionAI",
+            start_date=date(year=2023, month=9, day=10),
+            end_date=date(year=2023, month=12, day=26),
+            summary="Harness the Power of Movement Intelligence Hidden in Videos.",
+            url="https://3motionai.com/",
+            company=[
+                ResumeProjectCompany(
+                    name="Accentiko",
+                    metadata=ResumeProjectCompanyMetadata(
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
+                    ),
+                )
+            ],
+            role="Python Developer",
+            responsibilities=[
+                ResumeProjectResponsibility(
+                    name="Project code base stabilization",
+                ),
+                ResumeProjectResponsibility(
+                    name="Next-generation architecture development",
+                ),
+                ResumeProjectResponsibility(
+                    name="Improvements of third-party services integrations",
+                ),
+                ResumeProjectResponsibility(
+                    name="Refactoring of the existing codebase to clean it up"
+                ),
+            ],
+            technologies=[
+                ResumeProjectTechnology(
+                    name="Python",
+                ),
+                ResumeProjectTechnology(
+                    name="Python Code Analysis/Quality tools",
+                ),
+                ResumeProjectTechnology(
+                    name="Celery",
+                ),
+                ResumeProjectTechnology(
+                    name="RabbitMQ",
+                ),
+                ResumeProjectTechnology(
+                    name="Docker",
+                ),
+                ResumeProjectTechnology(
+                    name="docker-compose",
+                ),
+                ResumeProjectTechnology(
+                    name="MediaPipe",
+                ),
+                ResumeProjectTechnology(
+                    name="gRPC",
+                ),
+                ResumeProjectTechnology(
+                    name="FastAPI",
+                ),
+                ResumeProjectTechnology(
+                    name="OpenCV",
+                ),
+                ResumeProjectTechnology(
+                    name="Azure Pipelines",
+                ),
+            ],
+        ),
     ],
     metadata=ResumeMetadata(
         language=ResumeMetadataLanguage(
             name="English",
             language_code="en",
         ),
-        updated=date(year=2023, month=8, day=16),
+        updated=date(year=2023, month=12, day=27),
         version=get_version(),
     ),
 )
