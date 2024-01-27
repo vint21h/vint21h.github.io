@@ -56,11 +56,11 @@ RESUME = Resume(
 Linux/Python/Cybersecurity geek.
 Open-source enthusiast.
 Evangelist of code quality tools and software testing.
-Python/Django Developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.
+Python/Django Developer with much experience in building complex solutions for statistics/analytics in the agricultural business sector.
 Expert in creating ETL systems from scratch.
-Familiar with blockchain technologies and creating an NFT marketplace from times when that type of token was not popular.
-I know how to make third-party services integration in an easy and intelligent way.
-Last few years involved in developing internal solutions for AI/ML projects.
+Familiar with blockchain technologies and creating an NFT marketplace from times when that type of token was unpopular.
+I know how to make third-party services integration easily and intelligently.
+In the last few years involved in developing internal solutions for AI/ML projects.
 All of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker/FastAPI/gRPC.
 """,
     ),
@@ -72,7 +72,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             position="Python Developer",
             website="https://www.accentiko.com/",
             start_date=date(year=2023, month=9, day=10),
-            end_date=date(year=2023, month=12, day=26),
+            end_date=None,
         ),
         ResumeWork(
             company=ResumeWorkCompany(
@@ -2488,7 +2488,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
         ResumeProject(
             name="3motionAI",
             start_date=date(year=2023, month=9, day=10),
-            end_date=date(year=2023, month=12, day=26),
+            end_date=None,
             summary="Harness the Power of Movement Intelligence Hidden in Videos.",
             url="https://3motionai.com/",
             company=[
@@ -2556,7 +2556,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             name="English",
             language_code="en",
         ),
-        updated=date(year=2023, month=12, day=27),
+        updated=date(year=2024, month=1, day=27),
         version=get_version(),
     ),
 )
