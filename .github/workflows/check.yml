@@ -6,7 +6,7 @@ env:
   NAME: "resume"
   ENVIRONMENT: "dev"
   DEFAULT_PYTHON_VERSION: "3.12"
-  DEFAULT_NODE_VERSION: "20.3"
+  DEFAULT_NODE_VERSION: "20.12"
 jobs:
   check:
     name: "check"
