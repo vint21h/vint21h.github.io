@@ -46,7 +46,7 @@ class ResumeMetadata(CamelModel):
 
     updated: date
     language: ResumeMetadataLanguage
-    version: Optional[str]
+    version: Optional[str] = None
 
 
 class ResumeBasicsAvatarEasterEgg(CamelModel):
@@ -62,7 +62,7 @@ class ResumeBasicsAvatar(CamelModel):
     path: str
     width: int
     height: int
-    easter_egg: Optional[ResumeBasicsAvatarEasterEgg]
+    easter_egg: Optional[ResumeBasicsAvatarEasterEgg] = None
 
 
 class ResumeBasics(CamelModel):
@@ -74,15 +74,15 @@ class ResumeBasics(CamelModel):
     linkedin: HttpUrl
     site: HttpUrl
     location: ResumeBasicsLocation
-    avatar: Optional[ResumeBasicsAvatar]
-    summary: Optional[str]
+    avatar: Optional[ResumeBasicsAvatar] = None
+    summary: Optional[str] = None
 
 
 class ResumeWorkCompany(CamelModel):
     """Resume work company list field representation."""
 
     original: str
-    en: Optional[str]
+    en: Optional[str] = None
 
 
 class ResumeWork(CamelModel):
@@ -90,16 +90,16 @@ class ResumeWork(CamelModel):
 
     company: ResumeWorkCompany
     position: str
-    website: Optional[HttpUrl]
+    website: Optional[HttpUrl] = None
     start_date: date
-    end_date: Optional[date]
+    end_date: Optional[date] = None
 
 
 class ResumeEducationInstitution(CamelModel):
     """Resume education institution field representation."""
 
     original: str
-    en: Optional[str]
+    en: Optional[str] = None
 
 
 class ResumeEducation(CamelModel):
@@ -107,7 +107,7 @@ class ResumeEducation(CamelModel):
 
     institution: ResumeEducationInstitution
     start_date: date
-    end_date: Optional[date]
+    end_date: Optional[date] = None
 
 
 class ResumeSkillOrTechnology(CamelModel):
@@ -145,7 +145,7 @@ class ResumeProjectCompany(CamelModel):
     """Resume projects list company field representation."""
 
     name: str
-    metadata: Optional[ResumeProjectCompanyMetadata]
+    metadata: Optional[ResumeProjectCompanyMetadata] = None
 
 
 class ResumeProject(CamelModel):
@@ -153,13 +153,13 @@ class ResumeProject(CamelModel):
 
     name: str
     start_date: date
-    end_date: Optional[date]
+    end_date: Optional[date] = None
     summary: str
-    url: Optional[HttpUrl]
-    company: List[ResumeProjectCompany]
-    role: Optional[str]
-    responsibilities: Optional[List[ResumeProjectResponsibility]]
-    technologies: Optional[List[ResumeProjectTechnology]]
+    url: Optional[HttpUrl] = None
+    company: List[ResumeProjectCompany] = None
+    role: Optional[str] = None
+    responsibilities: Optional[List[ResumeProjectResponsibility]] = None
+    technologies: Optional[List[ResumeProjectTechnology]] = None
 
 
 class Resume(CamelModel):
@@ -171,9 +171,9 @@ class Resume(CamelModel):
     """
 
     basics: ResumeBasics
-    work: Optional[List[ResumeWork]]
-    education: Optional[List[ResumeEducation]]
-    skills_and_technologies: Optional[List[ResumeSkillOrTechnology]]
-    languages: Optional[List[ResumeLanguage]]
-    projects: Optional[List[ResumeProject]]
-    metadata: Optional[ResumeMetadata]
+    work: Optional[List[ResumeWork]] = None
+    education: Optional[List[ResumeEducation]] = None
+    skills_and_technologies: Optional[List[ResumeSkillOrTechnology]] = None
+    languages: Optional[List[ResumeLanguage]] = None
+    projects: Optional[List[ResumeProject]] = None
+    metadata: Optional[ResumeMetadata] = None

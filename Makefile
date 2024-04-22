@@ -22,7 +22,7 @@ install-python-requirements:
 install-js-requirements:
 	ENVIRONMENT="{$(ENVIRONMENT) | tr -d \'[:blank:]\'}";\
 	if [[ "${ENVIRONMENT}" ]]; then
-		npm install --include=[$(ENVIRONMENT)];\
+		npm install --include=$(ENVIRONMENT) --legacy-peer-deps;\
 	else
 		npm install;\
 	fi

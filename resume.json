@@ -1,33 +1,53 @@
 {
   "basics": {
     "name": "Oleksii Andrushevych",
-    "label": "Python/Django developer",
+    "label": "Python/Django Developer",
     "email": "vint21h@vint21h.pp.ua",
     "linkedin": "https://www.linkedin.com/in/vint21h/",
     "site": "https://www.vint21h.pp.ua/",
     "location": {
       "countryCode": "UA"
     },
-    "summary": "\nLinux/Python/Cybersecurity geek.\nOpen-source enthuthiast.\nEvangelist of code quality tools and software testing.\nPython/Django developer with a lot of experience in building complex solutions for statistics/analytics in the agricultural business sector.\nExpert in creating ETL systems from scratch for a previously mentioned sphere.\nFamiliar with blockchain technologies and creating an NFT marketplace from times when that type of token was not popular.\nI know how to make third-party services integration in an easy and intelligent way.\nLast few years involved in developing internal solutions for AI/ML projects.\nAll of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker.\n"
+    "summary": "\nLinux/Python/Cybersecurity geek.\nOpen-source enthusiast.\nEvangelist of code quality tools and software testing.\nPython/Django Developer with much experience in building complex solutions for statistics/analytics in the agricultural business sector.\nExpert in creating ETL systems from scratch.\nFamiliar with blockchain technologies and creating an NFT marketplace from times when that type of token was unpopular.\nI know how to make third-party services integration easily and intelligently.\nIn the last few years involved in developing internal solutions for AI/ML projects.\nAll of that was implemented and deployed using a lot of technologies, but my toolbelt is Linux/Python/Django/Celery/RabbitMQ/Django REST framework/Redis/PostgreSQL/Ansible/Docker/FastAPI/gRPC.\n"
   },
   "work": [
+    {
+      "company": {
+        "original": "Accentiko",
+        "en": null
+      },
+      "position": "Python Developer",
+      "website": "https://www.accentiko.com/",
+      "startDate": "2023-09-10",
+      "endDate": "2024-04-18"
+    },
+    {
+      "company": {
+        "original": "Namecheap",
+        "en": null
+      },
+      "position": "Python Developer",
+      "website": "https://www.namecheap.com/",
+      "startDate": "2023-04-05",
+      "endDate": "2023-06-13"
+    },
     {
       "company": {
         "original": "Anadea",
         "en": null
       },
-      "position": "Python/Django developer",
+      "position": "Python/Django Developer",
       "website": "https://anadea.info/",
       "startDate": "2020-09-07",
       "endDate": "2023-01-10"
     },
     {
       "company": {
-        "original": "Freelance",
+        "original": "Beemster Team",
         "en": null
       },
-      "position": "Python/Django developer",
-      "website": null,
+      "position": "Python/Django Developer",
+      "website": "https://beemster.team/",
       "startDate": "2020-04-27",
       "endDate": "2020-08-28"
     },
@@ -36,17 +56,27 @@
         "original": "Zakaz.ua",
         "en": null
       },
-      "position": "Python developer",
+      "position": "Python Developer",
       "website": "https://zakaz.ua/",
       "startDate": "2019-10-21",
       "endDate": "2020-01-27"
     },
     {
       "company": {
+        "original": "Prism Skylabs",
+        "en": null
+      },
+      "position": "Python/Django Developer",
+      "website": "https://prism.com/",
+      "startDate": "2019-06-03",
+      "endDate": "2019-09-05"
+    },
+    {
+      "company": {
         "original": "DCOD",
         "en": null
       },
-      "position": "Python/Django developer",
+      "position": "Python/Django Developer",
       "website": "http://d-cod.com/",
       "startDate": "2011-10-25",
       "endDate": "2019-05-28"
@@ -385,6 +415,42 @@
     },
     {
       "name": "Docker Code Analysis/Quality tools"
+    },
+    {
+      "name": "MediaPipe"
+    },
+    {
+      "name": "FastAPI"
+    },
+    {
+      "name": "OpenCV"
+    },
+    {
+      "name": "Azure Pipelines"
+    },
+    {
+      "name": "DVC"
+    },
+    {
+      "name": "Jenkins"
+    },
+    {
+      "name": "Rasa"
+    },
+    {
+      "name": "Apache Kafka"
+    },
+    {
+      "name": "Apache ZooKeeper"
+    },
+    {
+      "name": "CVAT"
+    },
+    {
+      "name": "Doccano"
+    },
+    {
+      "name": "TensorFlow"
     }
   ],
   "languages": [
@@ -439,7 +505,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -510,7 +576,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -629,7 +695,7 @@
           "name": "Freelance"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -724,7 +790,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Page generation system development"
@@ -792,7 +858,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -875,7 +941,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -952,7 +1018,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -1065,7 +1131,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -1262,7 +1328,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -1393,7 +1459,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -1488,7 +1554,7 @@
           "name": "DCOD"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -1588,6 +1654,86 @@
       ]
     },
     {
+      "name": "This is Prism",
+      "startDate": "2019-06-03",
+      "endDate": "2019-09-05",
+      "summary": "We’re transforming how the world uses video. Prism is the most comprehensive cloud intelligence platform connecting A.I. to video. Through computer vision and machine learning, Prism unlocks valuable information from video that can be immediately understood, shared, and acted upon. Leading companies in 80 countries around the world use Prism to better understand, manage, and grow their business.",
+      "url": "https://prism.com/",
+      "company": [
+        {
+          "name": "Prism Skylabs"
+        }
+      ],
+      "role": "Python/Django Developer",
+      "responsibilities": [
+        {
+          "name": "Implementing homebrew features for CVAT fork"
+        },
+        {
+          "name": "Maintaining CVAT fork"
+        },
+        {
+          "name": "Refactoring of the existing codebase to clean up"
+        },
+        {
+          "name": "Modules implementation"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "name": "GraphQL"
+        },
+        {
+          "name": "WebSockets"
+        },
+        {
+          "name": "Pushpin"
+        },
+        {
+          "name": "HAProxy"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Vagrant"
+        },
+        {
+          "name": "consul-templaterb"
+        },
+        {
+          "name": "Apache Kafka"
+        },
+        {
+          "name": "Apache ZooKeeper"
+        },
+        {
+          "name": "CVAT"
+        }
+      ]
+    },
+    {
       "name": "django-humans-txt",
       "startDate": "2019-08-01",
       "endDate": null,
@@ -1628,7 +1774,7 @@
           "name": "Zakaz.ua"
         }
       ],
-      "role": "Python developer",
+      "role": "Python Developer",
       "responsibilities": [
         {
           "name": "Back-office business workflow requirements implementation"
@@ -1671,17 +1817,17 @@
       ]
     },
     {
-      "name": "Under NDA",
+      "name": "Kuailian Academy (Kademy)",
       "startDate": "2020-04-28",
       "endDate": "2020-08-28",
       "summary": "Educational platform for crypto currencies traders/investors.",
       "url": null,
       "company": [
         {
-          "name": "Freelance"
+          "name": "Beemster Team"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -1733,17 +1879,17 @@
       ]
     },
     {
-      "name": "Under NDA",
+      "name": "Kuailian",
       "startDate": "2020-06-24",
       "endDate": "2020-08-19",
       "summary": "Crypto currencies trading/investments/exchange platform.",
-      "url": null,
+      "url": "https://kuailiandp.com/",
       "company": [
         {
-          "name": "Freelance"
+          "name": "Beemster Team"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Back-office and business logic code enhancements"
@@ -1838,7 +1984,7 @@
           "name": "Anadea"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -1966,7 +2112,7 @@
           "name": "Anadea"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -2067,7 +2213,7 @@
           "name": "Anadea"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Internal ETL service architecture development and implementation"
@@ -2150,7 +2296,7 @@
           "name": "Anadea"
         }
       ],
-      "role": "Python/Django developer",
+      "role": "Python/Django Developer",
       "responsibilities": [
         {
           "name": "Project architecture development and implementation"
@@ -2222,6 +2368,90 @@
         },
         {
           "name": "Amazon Web Services (AWS)"
+        }
+      ]
+    },
+    {
+      "name": "Under NDA",
+      "startDate": "2023-04-05",
+      "endDate": "2023-06-13",
+      "summary": "Different company internal services.",
+      "url": null,
+      "company": [
+        {
+          "name": "Namecheap"
+        }
+      ],
+      "role": "Python Developer",
+      "responsibilities": [
+        {
+          "name": "Different company internal services development and maintenance"
+        },
+        {
+          "name": "Refactoring of the existing codebase to clean it up"
+        }
+      ],
+      "technologies": null
+    },
+    {
+      "name": "3motionAI",
+      "startDate": "2023-09-10",
+      "endDate": "2024-04-18",
+      "summary": "Harness the Power of Movement Intelligence Hidden in Videos.",
+      "url": "https://3motionai.com/",
+      "company": [
+        {
+          "name": "Accentiko"
+        }
+      ],
+      "role": "Python Developer",
+      "responsibilities": [
+        {
+          "name": "Project code base stabilization"
+        },
+        {
+          "name": "Next-generation architecture development"
+        },
+        {
+          "name": "Improvements of third-party services integrations"
+        },
+        {
+          "name": "Refactoring of the existing codebase to clean it up"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        },
+        {
+          "name": "Celery"
+        },
+        {
+          "name": "RabbitMQ"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "MediaPipe"
+        },
+        {
+          "name": "gRPC"
+        },
+        {
+          "name": "FastAPI"
+        },
+        {
+          "name": "OpenCV"
+        },
+        {
+          "name": "Azure Pipelines"
         }
       ]
     }

@@ -13,7 +13,7 @@ from resume.schemas import Resume
 from resume.exceptions import ResumeGeneratorError
 from resume.constants import (
     HTML_YEAR_FORMAT,
-    JSON_DUMPS_KWARGS,
+    JSON_DUMPS_INDENT,
     HTML_TEMPLATE_NAME,
     JSON_EXCLUDE_FIELDS,
     HTML_PRETTIFY_KWARGS,
@@ -36,7 +36,7 @@ HTMLFormatter.REGISTRY["html.custom"] = HTMLFormatter(
 class BaseResumeOutput(ABC):
     """Base resume output generator."""
 
-    resume: Resume
+    _resume: Resume
 
     def __init__(self, resume: Resume) -> None:
         """
@@ -45,7 +45,7 @@ class BaseResumeOutput(ABC):
         :param resume: resume instance
         :type resume: Resume
         """
-        self.resume = resume
+        self._resume = resume
 
     def generate(self) -> str:
         """
@@ -77,8 +77,8 @@ class JsonResumeOutput(BaseResumeOutput):
         :return: resume in JSON format
         :rtype: str
         """
-        return self.resume.json(
-            exclude=JSON_EXCLUDE_FIELDS, by_alias=True, **JSON_DUMPS_KWARGS
+        return self._resume.model_dump_json(
+            exclude=JSON_EXCLUDE_FIELDS, by_alias=True, indent=JSON_DUMPS_INDENT
         )
 
 
@@ -100,7 +100,7 @@ class HtmlResumeOutput(BaseResumeOutput):
             )
             template = jinja.get_template(name=HTML_TEMPLATE_NAME)
             output = template.render(
-                RESUME=self.resume,
+                RESUME=self._resume,
                 HTML_MONTH_YEAR_FORMAT=HTML_MONTH_YEAR_FORMAT,
                 HTML_DAY_MONTH_YEAR_FORMAT=HTML_DAY_MONTH_YEAR_FORMAT,
                 HTML_YEAR_FORMAT=HTML_YEAR_FORMAT,
@@ -110,7 +110,7 @@ class HtmlResumeOutput(BaseResumeOutput):
             output = document.prettify(formatter="html.custom")
         except TemplateError as error:
             raise ResumeGeneratorError(
-                f"A problem occurred during generating output for: {self.resume}. {error}"
+                f"A problem occurred during generating output for: {self._resume}. {error}"
             ) from error
 
         return output
