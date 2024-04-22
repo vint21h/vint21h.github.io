@@ -13,7 +13,7 @@ from resume.schemas import Resume
 from resume.exceptions import ResumeGeneratorError
 from resume.constants import (
     HTML_YEAR_FORMAT,
-    JSON_DUMPS_KWARGS,
+    JSON_DUMPS_INDENT,
     HTML_TEMPLATE_NAME,
     JSON_EXCLUDE_FIELDS,
     HTML_PRETTIFY_KWARGS,
@@ -77,8 +77,8 @@ class JsonResumeOutput(BaseResumeOutput):
         :return: resume in JSON format
         :rtype: str
         """
-        return self._resume.json(
-            exclude=JSON_EXCLUDE_FIELDS, by_alias=True, **JSON_DUMPS_KWARGS
+        return self._resume.model_dump_json(
+            exclude=JSON_EXCLUDE_FIELDS, by_alias=True, indent=JSON_DUMPS_INDENT
         )
 
 

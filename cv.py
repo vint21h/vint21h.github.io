@@ -72,7 +72,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             position="Python Developer",
             website="https://www.accentiko.com/",
             start_date=date(year=2023, month=9, day=10),
-            end_date=None,
+            end_date=date(year=2024, month=4, day=18),
         ),
         ResumeWork(
             company=ResumeWorkCompany(
@@ -2488,7 +2488,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
         ResumeProject(
             name="3motionAI",
             start_date=date(year=2023, month=9, day=10),
-            end_date=None,
+            end_date=date(year=2024, month=4, day=18),
             summary="Harness the Power of Movement Intelligence Hidden in Videos.",
             url="https://3motionai.com/",
             company=[
@@ -2556,7 +2556,7 @@ All of that was implemented and deployed using a lot of technologies, but my too
             name="English",
             language_code="en",
         ),
-        updated=date(year=2024, month=1, day=27),
+        updated=date(year=2024, month=4, day=22),
         version=get_version(),
     ),
 )
