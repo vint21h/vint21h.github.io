@@ -46,7 +46,7 @@ jobs:
         run: "make install-python-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
       - name: "Install JavaScript requirements"
         id: "install-js-requirements"
-        run: "npm install"
+        run: "make install-js-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
       - name: "Perform code checks"
         id: "perform-code-check"
         run: "make check"

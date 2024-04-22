@@ -45,7 +45,7 @@ jobs:
         run: "make install-python-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
       - name: "Install JavaScript requirements"
         id: "install-js-requirements"
-        run: "npm install"
+        run: "make install-js-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
       - name: "Check Python outdated requirements"
         id: "check-python-outdated-requirements"
         continue-on-error: true
