@@ -22,7 +22,7 @@ jobs:
           python-version: "${{ env.DEFAULT_PYTHON_VERSION }}"
       - name: "Set up uv"
         id: "set-up-uv"
-        uses: "actions/setup-uv@v5.4.1"
+        uses: "astral-sh/setup-uv@v5.4.1"
         with:
           version: "${{ env.DEFAULT_UV_VERSION }}"
       - name: "uv cache"
