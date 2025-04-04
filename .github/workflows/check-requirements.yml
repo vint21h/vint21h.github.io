@@ -4,8 +4,9 @@ on:
   workflow_call:
 env:
   ENVIRONMENT: "dev"
-  DEFAULT_PYTHON_VERSION: "3.12"
-  DEFAULT_NODE_VERSION: "20.12"
+  DEFAULT_PYTHON_VERSION: "3.13"
+  DEFAULT_NODE_VERSION: "22.14"
+  DEFAULT_UV_VERSION: "0.6.12"
 jobs:
   check-requirements:
     name: "check-requirements"
@@ -13,28 +14,33 @@ jobs:
     steps:
       - name: "Git clone"
         id: "git-clone"
-        uses: "actions/checkout@v4.1.1"
+        uses: "actions/checkout@v4.1.7"
       - name: "Set up Python ${{ env.DEFAULT_PYTHON_VERSION }}"
         id: "set-up-python"
-        uses: "actions/setup-python@v4.7.1"
+        uses: "actions/setup-python@v5.1.1"
         with:
           python-version: "${{ env.DEFAULT_PYTHON_VERSION }}"
       - name: "Set up Node.js ${{ env.DEFAULT_NODE_VERSION }}"
         id: "set-up-node"
-        uses: "actions/setup-node@v4.0.0"
+        uses: "actions/setup-node@v4.0.3"
         with:
           node-version: "${{ env.DEFAULT_NODE_VERSION }}"
-      - name: "Pip cache"
-        id: "pip-cache"
-        uses: "actions/cache@v3.3.2"
+      - name: "Set up uv"
+        id: "set-up-uv"
+        uses: "actions/setup-uv@v5.4.1"
         with:
-          path: "~/.npm"
-          key: "${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}"
+          version: "${{ env.DEFAULT_UV_VERSION }}"
+      - name: "uv cache"
+        id: "uv-cache"
+        uses: "actions/cache@v4.0.2"
+        with:
+          path: "~/.cache/uv"
+          key: "${{ runner.os }}-uv-${{ hashFiles('pyproject.toml') }}"
           restore-keys: |
-            "${{ runner.os }}-pip-"
-      - name: "Npm cache"
+            "${{ runner.os }}-uv-"
+      - name: "npm cache"
         id: "npm-cache"
-        uses: "actions/cache@v3.3.2"
+        uses: "actions/cache@v4.0.2"
         with:
           path: "~/.npm"
           key: "${{ runner.os }}-npm-${{ hashFiles('package.json') }}"

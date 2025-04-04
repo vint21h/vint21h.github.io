@@ -13,13 +13,14 @@ on:
 env:
   NAME: "resume"
   ENVIRONMENT: "dev"
-  DEFAULT_PYTHON_VERSION: "3.12"
-  DEFAULT_NODE_VERSION: "20.12"
+  DEFAULT_PYTHON_VERSION: "3.13"
+  DEFAULT_NODE_VERSION: "22.14"
+  DEFAULT_UV_VERSION: "0.6.12"
 jobs:
-  check-requirements:
-    uses: "./.github/workflows/check-requirements.yml"
   check:
     uses: "./.github/workflows/check.yml"
   test:
     uses: "./.github/workflows/test.yml"
     needs: ["check"]
+  check-requirements:
+    uses: "./.github/workflows/check-requirements.yml"

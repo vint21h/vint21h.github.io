@@ -14,9 +14,9 @@ install-requirements: install-python-requirements install-js-requirements
 install-python-requirements:
 	ENVIRONMENT="{$(ENVIRONMENT) | tr -d \'[:blank:]\'}";\
 	if [[ "${ENVIRONMENT}" ]]; then
-		python -m pip install .[$(ENVIRONMENT)];\
+		uv pip install .[$(ENVIRONMENT)];\
 	else
-		python -m pip install .;\
+		uv pip install .;\
 	fi
 
 install-js-requirements:
@@ -59,7 +59,7 @@ bumpversion:
 check-requirements: check-python-requirements check-js-requirements
 
 check-python-requirements:
-	pip list --outdated;\
+	uv pip list --outdated;\
 
 check-js-requirements:
 	npm outdated;\

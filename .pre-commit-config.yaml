@@ -3,87 +3,113 @@ repos:
   hooks:
     - id: "seed-isort-config"
       name: "seed-isort-config"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       pass_filenames: false
       entry: "seed-isort-config"
       types: ["python"]
     - id: "removestar"
       name: "removestar"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "bash -c 'removestar -i \"${NAME}\"'"
       types: ["python"]
     - id: "autoflake"
       name: "autoflake"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "bash -c 'autoflake -r \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "isort"
       name: "isort"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "isort"
       types: ["python"]
     - id: "flynt"
       name: "flynt"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "bash -c 'flynt -ll 88 --no-tf \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "black"
       name: "black"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "bash -c 'black \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "yesqa"
       name: "yesqa"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       pass_filenames: false
       entry: "yesqa"
       types: ["python"]
     - id: "flake8"
       name: "flake8"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "flake8"
       types: ["python"]
     - id: "interrogate"
       name: "interrogate"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "bash -c 'interrogate \"${NAME}\" -I -M'"
       types: ["python"]
     - id: "pylint"
       name: "pylint"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "bash -c 'pylint \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
     - id: "bandit"
       name: "bandit"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "bash -c 'bandit \"${NAME}\" --ini=pyproject.toml'"
       types: ["python"]
       pass_filenames: false
     - id: "dodgy"
       name: "dodgy"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "dodgy"
       types: ["python"]
       pass_filenames: false
     - id: "mypy"
       name: "mypy"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       language: "system"
       entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" mypy \"${NAME}\"'"
       types: ["python"]
@@ -92,7 +118,9 @@ repos:
       name: "dotenv-linter"
       entry: "dotenv-linter"
       language: "system"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       types: ["text"]
       files: '\.env*'
       exclude: ".envrc"
@@ -101,19 +129,25 @@ repos:
       name: "markdown-linter"
       entry: "pymarkdown -d md013 scan"
       language: "system"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       types: ["markdown"]
     - id: "rstcheck"
       name: "rstcheck"
       entry: "rstcheck"
       language: "system"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       types: ["rst"]
     - id: "eslint"
       name: "eslint"
       entry: "npm run eslint"
       language: "system"
-      stages: ["commit"]
+      stages: [
+        "pre-commit",
+      ]
       pass_filenames: false
     - id: "djlint"
       name: "djlint"
@@ -122,7 +156,7 @@ repos:
       stages: ["commit"]
       pass_filenames: false
 -   repo: "https://github.com/pre-commit/pre-commit-hooks"
-    rev: "v4.6.0"
+    rev: "v5.0.0"
     hooks:
       - id: "check-added-large-files"
       - id: "check-ast"
