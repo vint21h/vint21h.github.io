@@ -4,9 +4,10 @@ PHONY: install-requirements install-python-requirements install-js-requirements 
 SHELL = bash
 ENVIRONMENT ?= dev
 NAME ?= resume
-TRASH_DIRS ?= build dist *.egg-info .tox .mypy_cache .pytest_cache __pycache__ htmlcov
+TRASH_DIRS ?= build dist *.egg-info .mypy_cache .pytest_cache __pycache__ htmlcov
 TRASH_FILES ?= .coverage
 VERSION ?= `python -c "import toml; import pathlib; print(toml.load(f=pathlib.Path('pyproject.toml')).get('project', {}).get('version'));"`
+PYTHON_ENV ?= PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}"
 
 
 install-requirements: install-python-requirements install-js-requirements
@@ -31,7 +32,7 @@ check:
 	bash -c 'pre-commit run --all-files';\
 
 test:
-	PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}" pytest --import-mode=importlib --cov=$(NAME) $(TESTS);\
+	$(PYTHON_ENV) pytest --import-mode=importlib --cov=$(NAME) $(TESTS);\
 
 setup-env:
 	cp .env.example .env;\
@@ -43,7 +44,7 @@ install-pre-commit-hook:
 bootstrap: setup-env install-requirements install-pre-commit-hook
 
 shell:
-	PYTHONPATH="$${PYTHONPATH}:$${PWD}" bpython;\
+	$(PYTHON_ENV) bpython;\
 
 clean:
 	for file in $(TRASH_FILES); do\

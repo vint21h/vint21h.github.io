@@ -5,28 +5,29 @@ on:
 env:
   NAME: "resume"
   ENVIRONMENT: "dev"
-  DEFAULT_PYTHON_VERSION: "3.13"
-  DEFAULT_UV_VERSION: "0.6.12"
+  PYTHON_VERSION: "3.13"
+  UV_VERSION: "0.6.12"
+  UBUNTU_VERSION: "ubuntu-24.04"
 jobs:
   test:
     name: "test"
-    runs-on: "ubuntu-latest"
+    runs-on: "${{ env.UBUNTU_VERSION }}"
     steps:
       - name: "Git clone"
         id: "git-clone"
         uses: "actions/checkout@v4.1.7"
-      - name: "Set up Python ${{ env.DEFAULT_PYTHON_VERSION }}"
+      - name: "Set up Python ${{ env.PYTHON_VERSION }}"
         id: "set-up-python"
-        uses: "actions/setup-python@v5.1.1"
+        uses: "actions/setup-python@v5.5.0"
         with:
-          python-version: "${{ env.DEFAULT_PYTHON_VERSION }}"
+          python-version: "${{ env.PYTHON_VERSION }}"
       - name: "Set up uv"
         id: "set-up-uv"
         uses: "astral-sh/setup-uv@v5.4.1"
         with:
-          version: "${{ env.DEFAULT_UV_VERSION }}"
-      - name: "uv cache"
-        id: "uv-cache"
+          version: "${{ env.UV_VERSION }}"
+      - name: "Configuring uv cache"
+        id: "configure-uv-cache"
         uses: "actions/cache@v4.2.3"
         with:
           path: "~/.cache/uv"

@@ -1,3 +1,4 @@
+- write README
 - mb add .rst/.md formats
 - mb rewrite html output markup using bootstrap 5
 - mb generate humans.txt file
