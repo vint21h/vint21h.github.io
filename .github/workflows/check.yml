@@ -8,11 +8,12 @@ env:
   PYTHON_VERSION: "3.13"
   NODE_VERSION: "22.14"
   UV_VERSION: "0.6.12"
+vars:
   UBUNTU_VERSION: "ubuntu-24.04"
 jobs:
   check:
     name: "check"
-    runs-on: "${{ env.UBUNTU_VERSION }}"
+    runs-on: "${{ vars.UBUNTU_VERSION }}"
     steps:
       - name: "Git clone"
         id: "git-clone"
