@@ -1,19 +1,30 @@
 name: "check"
 on:
   workflow_dispatch:
+    inputs:
+      ubuntu-version:
+        type: "string"
+        required: false
+        description: "Ubuntu version"
+        default: "ubuntu-24.04"
   workflow_call:
+    inputs:
+      ubuntu-version:
+        type: "string"
+        required: false
+        description: "Ubuntu version"
+        default: "ubuntu-24.04"
 env:
   NAME: "resume"
   ENVIRONMENT: "dev"
   PYTHON_VERSION: "3.13"
   NODE_VERSION: "22.14"
   UV_VERSION: "0.6.12"
-vars:
   UBUNTU_VERSION: "ubuntu-24.04"
 jobs:
   check:
     name: "check"
-    runs-on: "${{ vars.UBUNTU_VERSION }}"
+    runs-on: "${{ inputs.ubuntu-version }}"
     steps:
       - name: "Git clone"
         id: "git-clone"
