@@ -1,7 +1,19 @@
 name: "check-requirements"
 on:
   workflow_dispatch:
+    inputs:
+      ubuntu-version:
+        type: "string"
+        required: false
+        description: "Ubuntu version"
+        default: "ubuntu-24.04"
   workflow_call:
+    inputs:
+      ubuntu-version:
+        type: "string"
+        required: false
+        description: "Ubuntu version"
+        default: "ubuntu-24.04"
 env:
   ENVIRONMENT: "dev"
   PYTHON_VERSION: "3.13"
@@ -11,7 +23,7 @@ env:
 jobs:
   check-requirements:
     name: "check-requirements"
-    runs-on: "${{ env.UBUNTU_VERSION }}"
+    runs-on: "${{ inputs.ubuntu-version }}"
     steps:
       - name: "Git clone"
         id: "git-clone"
