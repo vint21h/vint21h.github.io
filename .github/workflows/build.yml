@@ -10,6 +10,21 @@ on:
       - "*"
   workflow_dispatch:
     inputs:
+      python-version:
+        type: "string"
+        required: false
+        description: "Python version"
+        default: "3.13"
+      node-version:
+        type: "string"
+        required: false
+        description: "Node.js version"
+        default: "22.14"
+      uv-version:
+        type: "string"
+        required: false
+        description: "uv version"
+        default: "0.6.12"
       ubuntu-version:
         type: "string"
         required: false
@@ -17,6 +32,21 @@ on:
         default: "ubuntu-24.04"
   workflow_call:
     inputs:
+      python-version:
+        type: "string"
+        required: false
+        description: "Python version"
+        default: "3.13"
+      node-version:
+        type: "string"
+        required: false
+        description: "Node.js version"
+        default: "22.14"
+      uv-version:
+        type: "string"
+        required: false
+        description: "uv version"
+        default: "0.6.12"
       ubuntu-version:
         type: "string"
         required: false
@@ -25,10 +55,6 @@ on:
 env:
   NAME: "resume"
   ENVIRONMENT: "dev"
-  PYTHON_VERSION: "3.13"
-  NODE_VERSION: "22.14"
-  UV_VERSION: "0.6.12"
-  UBUNTU_VERSION: "ubuntu-24.04"
 jobs:
   check:
     uses: "./.github/workflows/check.yml"

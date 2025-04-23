@@ -2,6 +2,21 @@ name: "check"
 on:
   workflow_dispatch:
     inputs:
+      python-version:
+        type: "string"
+        required: false
+        description: "Python version"
+        default: "3.13"
+      node-version:
+        type: "string"
+        required: false
+        description: "Node.js version"
+        default: "22.14"
+      uv-version:
+        type: "string"
+        required: false
+        description: "uv version"
+        default: "0.6.12"
       ubuntu-version:
         type: "string"
         required: false
@@ -9,6 +24,21 @@ on:
         default: "ubuntu-24.04"
   workflow_call:
     inputs:
+      python-version:
+        type: "string"
+        required: false
+        description: "Python version"
+        default: "3.13"
+      node-version:
+        type: "string"
+        required: false
+        description: "Node.js version"
+        default: "22.14"
+      uv-version:
+        type: "string"
+        required: false
+        description: "uv version"
+        default: "0.6.12"
       ubuntu-version:
         type: "string"
         required: false
@@ -17,10 +47,6 @@ on:
 env:
   NAME: "resume"
   ENVIRONMENT: "dev"
-  PYTHON_VERSION: "3.13"
-  NODE_VERSION: "22.14"
-  UV_VERSION: "0.6.12"
-  UBUNTU_VERSION: "ubuntu-24.04"
 jobs:
   check:
     name: "check"
@@ -29,21 +55,21 @@ jobs:
       - name: "Git clone"
         id: "git-clone"
         uses: "actions/checkout@v4.1.7"
-      - name: "Set up Python ${{ env.PYTHON_VERSION }}"
+      - name: "Set up Python ${{ inputs.python-version }}"
         id: "set-up-python"
         uses: "actions/setup-python@v5.5.0"
         with:
-          python-version: "${{ env.PYTHON_VERSION }}"
-      - name: "Set up Node.js ${{ env.NODE_VERSION }}"
+          python-version: "${{ inputs.python-version }}"
+      - name: "Set up Node.js ${{ inputs.node-version }}"
         id: "set-up-node"
         uses: "actions/setup-node@v4.3.0"
         with:
-          node-version: "${{ env.NODE_VERSION }}"
-      - name: "Set up uv"
+          node-version: "${{ inputs.node-version }}"
+      - name: "Set up uv ${{ inputs.uv-version }}"
         id: "set-up-uv"
         uses: "astral-sh/setup-uv@v5.4.1"
         with:
-          version: "${{ env.UV_VERSION }}"
+          version: "${{ inputs.uv-version }}"
       - name: "Configuring uv cache"
         id: "configure-uv-cache"
         uses: "actions/cache@v4.2.3"
