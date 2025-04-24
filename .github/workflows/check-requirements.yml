@@ -95,9 +95,9 @@ jobs:
       - name: "Install Python requirements"
         id: "install-python-requirements"
         run: |
-          "echo which uv"
-          "uv venv ${{ env.VIRTUAL_ENV }}"
-          "make install-python-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
+          "which uv"
+#           "uv venv ${{ env.VIRTUAL_ENV }}"
+#           "make install-python-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
       - name: "Install JavaScript requirements"
         id: "install-js-requirements"
         run: "make install-js-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
