@@ -44,9 +44,6 @@ on:
         required: false
         description: "Ubuntu version"
         default: "ubuntu-24.04"
-env:
-  NAME: "resume"
-  ENVIRONMENT: "dev"
 jobs:
   check:
     name: "check"

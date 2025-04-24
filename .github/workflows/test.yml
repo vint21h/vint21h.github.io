@@ -44,12 +44,6 @@ on:
         required: false
         description: "Ubuntu version"
         default: "ubuntu-24.04"
-env:
-  NAME: "resume"
-  ENVIRONMENT: "dev"
-  PYTHON_VERSION: "3.13"
-  UV_VERSION: "0.6.12"
-  UBUNTU_VERSION: "ubuntu-24.04"
 jobs:
   test:
     name: "test"
@@ -82,3 +76,9 @@ jobs:
       - name: "Run tests"
         id: "run-tests"
         run: "make test"
+      - name: "Temporarily save coverage statistics"
+        id: "temporarily-save-coverage-statistics"
+        uses: "actions/cache@v4.2.3"
+        with:
+          path: ".coverage"
+          key: ".coverage-${{ github.run_id }}-${{ github.run_number }}"
