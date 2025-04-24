@@ -56,7 +56,6 @@ env:
   NAME: "resume"
   ENVIRONMENT: "dev"
   VIRTUAL_ENV: "~/.venv"
-  PATH: "~/.venv/bin:${PATH}"
 jobs:
   check:
     uses: "./.github/workflows/check.yml"

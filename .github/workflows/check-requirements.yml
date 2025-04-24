@@ -47,12 +47,14 @@ on:
 env:
   ENVIRONMENT: "dev"
   VIRTUAL_ENV: "~/.venv"
-  PATH: "~/.venv/bin:${PATH}"
 jobs:
   check-requirements:
     name: "check-requirements"
     runs-on: "${{ inputs.ubuntu-version }}"
     steps:
+      - name: "Prepend custom path"
+        id: "prepend-custom-path"
+        run: "echo \"${{ env.VIRTUAL_ENV }}\" >> $GITHUB_PATH"
       - name: "Git clone"
         id: "git-clone"
         uses: "actions/checkout@v4.1.7"
