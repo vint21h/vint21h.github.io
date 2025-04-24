@@ -24,7 +24,7 @@ on:
         type: "string"
         required: false
         description: "uv version"
-        default: "0.6.12"
+        default: "0.6.16"
       ubuntu-version:
         type: "string"
         required: false
@@ -46,16 +46,12 @@ on:
         type: "string"
         required: false
         description: "uv version"
-        default: "0.6.12"
+        default: "0.6.16"
       ubuntu-version:
         type: "string"
         required: false
         description: "Ubuntu version"
         default: "ubuntu-24.04"
-env:
-  NAME: "resume"
-  ENVIRONMENT: "dev"
-  VIRTUAL_ENV: "~/.venv"
 jobs:
   check:
     uses: "./.github/workflows/check.yml"

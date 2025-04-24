@@ -16,7 +16,7 @@ on:
         type: "string"
         required: false
         description: "uv version"
-        default: "0.6.12"
+        default: "0.6.16"
       ubuntu-version:
         type: "string"
         required: false
@@ -38,7 +38,7 @@ on:
         type: "string"
         required: false
         description: "uv version"
-        default: "0.6.12"
+        default: "0.6.16"
       ubuntu-version:
         type: "string"
         required: false
@@ -46,7 +46,8 @@ on:
         default: "ubuntu-24.04"
 env:
   ENVIRONMENT: "dev"
-  VIRTUAL_ENV: "~/.venv"
+  VIRTUAL_ENV: "${{ github.workspace }}/.venv"
+  NODE_MODULES_PATH: "${{ github.workspace }}/node_modules"
 jobs:
   check-requirements:
     name: "check-requirements"
@@ -57,7 +58,7 @@ jobs:
         uses: "actions/checkout@v4.1.7"
       - name: "Prepend custom path"
         id: "prepend-custom-path"
-        run: "echo \"PATH=${{ env.VIRTUAL_ENV }}/bin:\"${PATH}\"\" >> \"${GITHUB_ENV}\""
+        run: "echo \"PATH=${{ env.VIRTUAL_ENV }}/bin:${{ env.NODE_MODULES_PATH }}/.bin:\"${PATH}\"\" >> \"${GITHUB_ENV}\""
       - name: "Set up Python ${{ inputs.python-version }}"
         id: "set-up-python"
         uses: "actions/setup-python@v5.5.0"
@@ -73,6 +74,7 @@ jobs:
         uses: "astral-sh/setup-uv@v5.4.1"
         with:
           version: "${{ inputs.uv-version }}"
+          cache-local-path: "~/.cache/uv"
       - name: "Create Python virtual environment"
         id: "create-python-virtual-environment"
         run: "uv venv ${{ env.VIRTUAL_ENV }} --relocatable"
@@ -81,7 +83,7 @@ jobs:
         uses: "actions/cache@v4.2.3"
         with:
           path: |
-            "${{ env.UV_CACHE_DIR }}"
+            "~/.cache/uv"
             "${{ env.VIRTUAL_ENV }}"
           key: "${{ runner.os }}-uv-${{ hashFiles('pyproject.toml') }}"
           restore-keys: |
@@ -92,7 +94,7 @@ jobs:
         with:
           path: |
             "~/.npm"
-            "${{ github.workspace }}/node_modules"
+            "${{ env.NODE_MODULES_PATH }}"
           key: "${{ runner.os }}-npm-${{ hashFiles('package.json') }}"
           restore-keys: |
             "${{ runner.os }}-npm-"

@@ -16,7 +16,7 @@ on:
         type: "string"
         required: false
         description: "uv version"
-        default: "0.6.12"
+        default: "0.6.16"
       ubuntu-version:
         type: "string"
         required: false
@@ -38,7 +38,7 @@ on:
         type: "string"
         required: false
         description: "uv version"
-        default: "0.6.12"
+        default: "0.6.16"
       ubuntu-version:
         type: "string"
         required: false
@@ -47,7 +47,7 @@ on:
 env:
   NAME: "resume"
   ENVIRONMENT: "dev"
-  VIRTUAL_ENV: "~/.venv"
+  VIRTUAL_ENV: "${{ github.workspace }}/.venv"
 jobs:
   test:
     name: "test"
