@@ -55,7 +55,7 @@ on:
 env:
   NAME: "resume"
   ENVIRONMENT: "dev"
-  VIRTUAL_ENV: "/.venv"
+  VIRTUAL_ENV: "~/.venv"
   PATH: "${VIRTUAL_ENV}/bin:${PATH}"
 jobs:
   check:
