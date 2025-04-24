@@ -24,16 +24,6 @@ on:
         default: "ubuntu-24.04"
   workflow_call:
     inputs:
-      python-version:
-        type: "string"
-        required: false
-        description: "Python version"
-        default: "3.13"
-      node-version:
-        type: "string"
-        required: false
-        description: "Node.js version"
-        default: "22.14"
       uv-version:
         type: "string"
         required: false
@@ -56,19 +46,22 @@ jobs:
       - name: "Git clone"
         id: "git-clone"
         uses: "actions/checkout@v4.1.7"
-      - name: "Prepend custom path"
-        id: "prepend-custom-path"
-        run: "echo \"PATH=${{ env.VIRTUAL_ENV }}/bin:${{ env.NODE_MODULES_PATH }}/.bin:\"${PATH}\"\" >> \"${GITHUB_ENV}\""
-      - name: "Set up Python ${{ inputs.python-version }}"
+      - name: "Update environment variables with dynamic values"
+        id: "update-environment-variables-with-dynamic-values"
+        run: |
+          "echo \"PATH=${{ env.VIRTUAL_ENV }}/bin:\"${PATH}\"\" >> \"${GITHUB_ENV}\"; \"
+          "echo \"PYTHON_VERSION=`cat .python-version`\" >> \"${GITHUB_ENV}\"; \"
+          "echo \"NODE_VERSION=`cat .nvmrc`\" >> \"${GITHUB_ENV}\""
+      - name: "Set up Python ${{ env.PYTHON_VERSION }}"
         id: "set-up-python"
         uses: "actions/setup-python@v5.5.0"
         with:
-          python-version: "${{ inputs.python-version }}"
-      - name: "Set up Node.js ${{ inputs.node-version }}"
+          python-version: "${{ env.PYTHON_VERSION }}"
+      - name: "Set up Node.js ${{ env.NODE_VERSION }}"
         id: "set-up-node"
         uses: "actions/setup-node@v4.3.0"
         with:
-          node-version: "${{ inputs.node-version }}"
+          node-version: "${{ env.NODE_VERSION }}"
       - name: "Set up uv ${{ inputs.uv-version }}"
         id: "set-up-uv"
         uses: "astral-sh/setup-uv@v5.4.1"
