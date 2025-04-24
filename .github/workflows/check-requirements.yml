@@ -86,7 +86,7 @@ jobs:
       - name: "Install Python requirements"
         id: "install-python-requirements"
         run: |
-          "uv venv ${VIRTUAL_ENV} --relocatable"
+          "uv venv ${{ env.VIRTUAL_ENV }} --relocatable"
           "make install-python-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
       - name: "Install JavaScript requirements"
         id: "install-js-requirements"
