@@ -48,6 +48,7 @@ env:
   NAME: "resume"
   ENVIRONMENT: "dev"
   VIRTUAL_ENV: "${{ github.workspace }}/.venv"
+  NODE_MODULES_PATH: "${{ github.workspace }}/node_modules"
 jobs:
   check:
     name: "check"
@@ -56,6 +57,9 @@ jobs:
       - name: "Git clone"
         id: "git-clone"
         uses: "actions/checkout@v4.1.7"
+      - name: "Prepend custom path"
+        id: "prepend-custom-path"
+        run: "echo \"PATH=${{ env.VIRTUAL_ENV }}/bin:${{ env.NODE_MODULES_PATH }}/.bin:\"${PATH}\"\" >> \"${GITHUB_ENV}\""
       - name: "Set up Python ${{ inputs.python-version }}"
         id: "set-up-python"
         uses: "actions/setup-python@v5.5.0"
@@ -71,11 +75,17 @@ jobs:
         uses: "astral-sh/setup-uv@v5.4.1"
         with:
           version: "${{ inputs.uv-version }}"
+          cache-local-path: "~/.cache/uv"
+      - name: "Create Python virtual environment"
+        id: "create-python-virtual-environment"
+        run: "uv venv ${{ env.VIRTUAL_ENV }} --relocatable"
       - name: "Configuring uv cache"
         id: "configure-uv-cache"
         uses: "actions/cache@v4.2.3"
         with:
-          path: "~/.cache/uv"
+          path: |
+            "~/.cache/uv"
+            "${{ env.VIRTUAL_ENV }}"
           key: "${{ runner.os }}-uv-${{ hashFiles('pyproject.toml') }}"
           restore-keys: |
             "${{ runner.os }}-uv-"
@@ -83,7 +93,9 @@ jobs:
         id: "configure-npm-cache"
         uses: "actions/cache@v4.2.3"
         with:
-          path: "~/.npm"
+          path: |
+            "~/.npm"
+            "${{ env.NODE_MODULES_PATH }}"
           key: "${{ runner.os }}-npm-${{ hashFiles('package.json') }}"
           restore-keys: |
             "${{ runner.os }}-npm-"
