@@ -44,6 +44,11 @@ on:
         required: false
         description: "Ubuntu version"
         default: "ubuntu-24.04"
+env:
+  NAME: "resume"
+  ENVIRONMENT: "dev"
+  VIRTUAL_ENV: "~/.venv"
+  PATH: "${VIRTUAL_ENV}/bin:${PATH}"
 jobs:
   check:
     name: "check"
