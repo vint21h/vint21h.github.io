@@ -52,12 +52,12 @@ jobs:
     name: "check-requirements"
     runs-on: "${{ inputs.ubuntu-version }}"
     steps:
-      - name: "Prepend custom path"
-        id: "prepend-custom-path"
-        run: "echo \"${{ env.VIRTUAL_ENV }}\" >> $GITHUB_PATH"
       - name: "Git clone"
         id: "git-clone"
         uses: "actions/checkout@v4.1.7"
+      - name: "Prepend custom path"
+        id: "prepend-custom-path"
+        run: "echo \"PATH=${{ env.VIRTUAL_ENV }}/bin:\"${PATH}\"\" >> \"${GITHUB_ENV}\""
       - name: "Set up Python ${{ inputs.python-version }}"
         id: "set-up-python"
         uses: "actions/setup-python@v5.5.0"
@@ -83,6 +83,7 @@ jobs:
           key: "${{ runner.os }}-uv-${{ hashFiles('pyproject.toml') }}"
           restore-keys: |
             "${{ runner.os }}-uv-"
+      # TODO: add node_modules
       - name: "Configuring npm cache"
         id: "configure-npm-cache"
         uses: "actions/cache@v4.2.3"
