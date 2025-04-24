@@ -73,6 +73,9 @@ jobs:
         uses: "astral-sh/setup-uv@v5.4.1"
         with:
           version: "${{ inputs.uv-version }}"
+      - name: "Create Python virtual environment"
+        id: "create-python-virtual-environment"
+        run: "uv venv ${{ env.VIRTUAL_ENV }} --relocatable"
       - name: "Configuring uv cache"
         id: "configure-uv-cache"
         uses: "actions/cache@v4.2.3"
@@ -83,26 +86,22 @@ jobs:
           key: "${{ runner.os }}-uv-${{ hashFiles('pyproject.toml') }}"
           restore-keys: |
             "${{ runner.os }}-uv-"
-      # TODO: add node_modules
       - name: "Configuring npm cache"
         id: "configure-npm-cache"
         uses: "actions/cache@v4.2.3"
         with:
-          path: "~/.npm"
+          path: |
+            "~/.npm"
+            "${{ github.workspace }}/node_modules"
           key: "${{ runner.os }}-npm-${{ hashFiles('package.json') }}"
           restore-keys: |
             "${{ runner.os }}-npm-"
-      - name: "Create Python virtual environment"
-        id: "create-python-virtual-environment"
-        run: "uv venv ${{ env.VIRTUAL_ENV }} --relocatable"
       - name: "Install Python requirements"
         id: "install-python-requirements"
         run: "make install-python-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
       - name: "Install JavaScript requirements"
         id: "install-js-requirements"
         run: "make install-js-requirements ENVIRONMENT=${{ env.ENVIRONMENT }}"
-      - name: "T"
-        run: "ls -lah"
       - name: "Check Python outdated requirements"
         id: "check-python-outdated-requirements"
         continue-on-error: true
