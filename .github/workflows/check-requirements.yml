@@ -93,7 +93,7 @@ jobs:
           restore-keys: |
             "${{ runner.os }}-npm-"
       - name: "Create Python virtual environment"
-        id: "create-python-virtuål-environment"
+        id: "create-python-virtual-environment"
         run: "uv venv ${{ env.VIRTUAL_ENV }} --relocatable"
       - name: "Install Python requirements"
         id: "install-python-requirements"
