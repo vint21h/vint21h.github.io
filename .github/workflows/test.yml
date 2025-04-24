@@ -48,7 +48,7 @@ env:
   NAME: "resume"
   ENVIRONMENT: "dev"
   VIRTUAL_ENV: "~/.venv"
-  PATH: "${VIRTUAL_ENV}/bin:${PATH}"
+  PATH: "~/.venv/bin:${PATH}"
 jobs:
   test:
     name: "test"
