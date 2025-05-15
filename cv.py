@@ -67,6 +67,14 @@ All of that was implemented and deployed using a lot of technologies, but my too
     work=[
         ResumeWork(
             company=ResumeWorkCompany(
+                original="LeadingAds Media",
+            ),
+            position="Python/Django Developer",
+            website="https://leadingads.media/",
+            start_date=date(year=2024, month=11, day=20),
+        ),
+        ResumeWork(
+            company=ResumeWorkCompany(
                 original="Accentiko",
             ),
             position="Python Developer",
@@ -2550,13 +2558,65 @@ All of that was implemented and deployed using a lot of technologies, but my too
                 ),
             ],
         ),
+        ResumeProject(
+            name="LeadingCards",
+            start_date=date(year=2022, month=11, day=20),
+            summary="One stop shop to issue cards worldwide via intuitive and easy dashboard.",
+            url="https://app.leadingcards.media/",
+            company=[
+                ResumeProjectCompany(
+                    name="LeadingAds Media",
+                    metadata=ResumeProjectCompanyMetadata(
+                        css_class=RESUME_PROJECT_COMPANY_METADATA_CSS_CLASS__COMPANY,
+                    ),
+                )
+            ],
+            role="Python/Django Developer",
+            responsibilities=[
+                ResumeProjectResponsibility(
+                    name="Project code base improvements",
+                ),
+                ResumeProjectResponsibility(
+                    name="New features development",
+                ),
+            ],
+            technologies=[
+                ResumeProjectTechnology(
+                    name="Python",
+                ),
+                ResumeProjectTechnology(
+                    name="Django",
+                ),
+                ResumeProjectTechnology(
+                    name="Python Code Analysis/Quality tools",
+                ),
+                ResumeProjectTechnology(
+                    name="Redis",
+                ),
+                ResumeProjectTechnology(
+                    name="Dramatiq",
+                ),
+                ResumeProjectTechnology(
+                    name="Docker",
+                ),
+                ResumeProjectTechnology(
+                    name="docker-compose",
+                ),
+                ResumeProjectTechnology(
+                    name="Nginx",
+                ),
+                ResumeProjectTechnology(
+                    name="PostgreSQL",
+                ),
+            ],
+        ),
     ],
     metadata=ResumeMetadata(
         language=ResumeMetadataLanguage(
             name="English",
             language_code="en",
         ),
-        updated=date(year=2024, month=4, day=22),
+        updated=date(year=2025, month=5, day=15),
         version=get_version(),
     ),
 )
