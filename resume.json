@@ -13,6 +13,16 @@
   "work": [
     {
       "company": {
+        "original": "LeadingAds Media",
+        "en": null
+      },
+      "position": "Python/Django Developer",
+      "website": "https://leadingads.media/",
+      "startDate": "2024-11-20",
+      "endDate": null
+    },
+    {
+      "company": {
         "original": "Accentiko",
         "en": null
       },
@@ -2452,6 +2462,56 @@
         },
         {
           "name": "Azure Pipelines"
+        }
+      ]
+    },
+    {
+      "name": "LeadingCards",
+      "startDate": "2022-11-20",
+      "endDate": null,
+      "summary": "One stop shop to issue cards worldwide via intuitive and easy dashboard.",
+      "url": "https://app.leadingcards.media/",
+      "company": [
+        {
+          "name": "LeadingAds Media"
+        }
+      ],
+      "role": "Python/Django Developer",
+      "responsibilities": [
+        {
+          "name": "Project code base improvements"
+        },
+        {
+          "name": "New features development"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "Python Code Analysis/Quality tools"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Dramatiq"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "docker-compose"
+        },
+        {
+          "name": "Nginx"
+        },
+        {
+          "name": "PostgreSQL"
         }
       ]
     }
