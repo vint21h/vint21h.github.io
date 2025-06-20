@@ -5,7 +5,7 @@ SHELL = bash
 ENVIRONMENT ?= dev
 NAME ?= resume
 TRASH_DIRS ?= build dist *.egg-info .mypy_cache .pytest_cache __pycache__ htmlcov
-TRASH_FILES ?= .coverage
+TRASH_FILES ?= .coverage package-lock.json uv.lock
 VERSION ?= `python -c "import toml; import pathlib; print(toml.load(f=pathlib.Path('pyproject.toml')).get('project', {}).get('version'));"`
 PYTHON_ENV ?= PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$${PYTHONPATH}:$${PWD}"
 
@@ -32,7 +32,7 @@ check:
 	bash -c 'pre-commit run --all-files';\
 
 test:
-	$(PYTHON_ENV) pytest --import-mode=importlib --cov=$(NAME) $(TESTS);\
+	$(PYTHON_ENV) pytest $(TESTS);\
 
 setup-env:
 	cp .env.example .env;\

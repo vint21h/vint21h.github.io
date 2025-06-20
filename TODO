@@ -1,3 +1,4 @@
+- do not use bootstrap from CDN
 - write README
 - mb add .rst/.md formats
 - mb rewrite html output markup using bootstrap 5

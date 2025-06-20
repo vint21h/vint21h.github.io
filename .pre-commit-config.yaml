@@ -114,6 +114,15 @@ repos:
       entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" mypy \"${NAME}\"'"
       types: ["python"]
       pass_filenames: false
+    - id: "skylos"
+      name: "skylos"
+      stages: [
+        "pre-commit",
+      ]
+      language: "system"
+      entry: "bash -c 'PYTHONPATH=\"${PYTHONPATH}:${PWD}\" skylos \"${NAME}\"'"
+      types: ["python"]
+      pass_filenames: false
     - id: "dotenv-linter"
       name: "dotenv-linter"
       entry: "dotenv-linter"
@@ -125,6 +134,14 @@ repos:
       files: '\.env*'
       exclude: ".envrc"
       exclude_types: ["json"]
+    - id: "tomlcheck"
+      name: "tomlcheck"
+      entry: "tomlcheck"
+      language: "system"
+      stages: [
+        "pre-commit",
+      ]
+      types: ["toml"]
     - id: "markdown-linter"
       name: "markdown-linter"
       entry: "pymarkdown -d md013 scan"
